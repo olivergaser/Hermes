@@ -36,6 +36,13 @@ sudo apt-get install python3-pip python3-cffi python3-brotli libpango-1.0-0 libp
 
 ```bash
 python converter.py input_email.eml output_file.pdf
+
+## Testing
+
+To run the regression tests (which convert all `.eml` files in the `eml/` directory):
+
+```bash
+python -m unittest tests/test_conversion.py
 ```
 
 ## Features

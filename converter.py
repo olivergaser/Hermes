@@ -228,14 +228,14 @@ def process_eml(eml_path, output_pdf_path):
             # Sanitization and Fixes
             soup = BeautifulSoup(body_content, 'html.parser')
             
-            # 1. Remove mix-blend-mode
-            if soup.find('style'):
-                for style in soup.find_all('style'):
-                    if style.string:
-                        style.string = style.string.replace('mix-blend-mode:multiply', 'mix-blend-mode:normal')
-                        style.string = style.string.replace('mix-blend-mode:initial', 'mix-blend-mode:normal')
+            # 1. Aggressive CSS Cleanup
+            # Remove style tags that contain problematic rules causing WeasyPrint rendering issues
+            # (e.g., hidden mix-blend-modes or mobile-specific max-heights for product images)
+            for style in soup.find_all('style'):
+                if style.string and ('mix-blend-mode' in style.string or '.productImage' in style.string):
+                    style.decompose()
 
-            # 2. Embed images as Base64 to ensure WeasyPrint renders them
+            # 2. Embed images as Base64 and normalize styles
             import ssl
             import urllib.request
             
@@ -246,9 +246,10 @@ def process_eml(eml_path, output_pdf_path):
             opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36')]
             urllib.request.install_opener(opener)
 
-            for img_tag in soup.find_all('img', src=True):
-                src = img_tag['src']
-                if src.startswith('http'):
+            for img_tag in soup.find_all('img'):
+                # 2a. Embed src if present
+                src = img_tag.get('src')
+                if src and src.startswith('http'):
                     try:
                         logger.info(f"Downloading and embedding: {src}")
                         with urllib.request.urlopen(src, timeout=10) as response:
@@ -258,11 +259,68 @@ def process_eml(eml_path, output_pdf_path):
                             img_tag['src'] = f"data:{content_type};base64,{b64_data}"
                     except Exception as e:
                         logger.warning(f"Failed to embed image {src}: {e}")
+                
+                # 2b. Normalize styles based on context
+                current_style = img_tag.get('style', '')
+                classes = img_tag.get('class', [])
+                
+                # Amazon Product Image Fix: FORCE reset of style inline
+                # We completely overwrite to remove potential restrictive max-widths/heights present in the email HTML
+                if 'productImage' in classes:
+                     logger.info(f"Fixing Amazon Product Image: {src}")
+                     # Remove HTML attributes that might conflict
+                     if img_tag.has_attr('width'): del img_tag['width']
+                     if img_tag.has_attr('height'): del img_tag['height']
+                     
+                     # Force robust sizing for responsive layout without overflow
+                     # width: auto + max-width: 100% allows intrinsic size but prevents overflow
+                     img_tag['style'] = (
+                         "display: block !important; "
+                         "width: auto !important; "
+                         "max-width: 100% !important; "
+                         "height: auto !important; "
+                         "box-sizing: border-box !important; "
+                         "margin: 0 auto !important;"
+                     )
+                
+                # General Fix (Steam etc): Needs display:block to escape line-height:0 containers
+                elif 'display' not in current_style:
+                     img_tag['style'] = f"{current_style}; display: block;"
+
+            # 3. Fix bgcolor for WeasyPrint (convert legacy attribute to CSS)
+            for tag in soup.find_all(attrs={"bgcolor": True}):
+                bg_color = tag['bgcolor']
+                current_style = tag.get('style', '')
+                if 'background-color' not in current_style:
+                    tag['style'] = f"{current_style}; background-color: {bg_color};"
             
-            # 3. Specific fix for Amazon product images in tables (often have 1px/0px sizing issues in PDF)
-            # Find images that look like product images and ensure they have a size
-            for img in soup.find_all('img', class_='productImage'):
-                 img['style'] = "display: block; max-width: 100%; height: auto;"
+            # 4. Inject global styles for rendering consistency (colors, visibility)
+            override_style = soup.new_tag('style', type='text/css')
+            override_style.string = """
+                img {
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    mix-blend-mode: normal !important;
+                }
+                /* Specific fix for Amazon product images */
+                .productImage {
+                    display: block !important;
+                    width: 100% !important;
+                    height: auto !important;
+                    max-width: none !important;
+                }
+                /* Ensure background colors print */
+                * {
+                    -webkit-print-color-adjust: exact !important;
+                    print-color-adjust: exact !important;
+                }
+            """
+            if soup.head:
+                soup.head.append(override_style)
+            else:
+                if not soup.body:
+                    soup.append(soup.new_tag('body'))
+                soup.body.insert(0, override_style)
 
             body_content = str(soup)
         else:
