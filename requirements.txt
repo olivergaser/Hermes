@@ -1,0 +1,6 @@
+weasyprint
+pypdf
+Pillow
+beautifulsoup4
+lxml
+pdf2image
