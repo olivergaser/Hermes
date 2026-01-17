@@ -1,0 +1,1957 @@
+Return-path: <202601170959551e7fa434c03144db9271aad48b90p0eu-C3E3SNG5A5M7II@bounces.amazon.de>
+Delivery-date: Sat, 17 Jan 2026 11:00:07 +0100
+Received: from mi016.mc1.hosteurope.de ([80.237.138.239])
+	by wp186.webpack.hosteurope.de running ExIM with esmtps (TLS1.2:ECDHE_X25519__RSA_SHA512__AES_256_GCM:256)
+	id 1vh36F-00DOh3-2P;
+	Sat, 17 Jan 2026 11:00:07 +0100
+Received: from a1-16.smtp-out.eu-west-1.amazonses.com ([54.240.1.16])
+	by mx0.webpack.hosteurope.de (mi016) with esmtps  (TLSv1.2:AES128-SHA256:128)
+	(Exim)
+	id 1vh365-0002bC-6W
+	for oliver@gaser.de; Sat, 17 Jan 2026 11:00:07 +0100
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=oh3t3hujtzjgoyk4jpthyrvrimucwqwq; d=amazon.de; t=1768643996;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=dJHs4i2ehMUR7QjA+JaovL5E3yBis4FMAXdRH4cjGwg=;
+	b=E0OzwzPVsgxqab9zs9yojpVSOLHyUW1aM8dfR+1ZoxV3dP84L7+hzx9PXJnMGYo4
+	EZQKWu37oOyyeHREyrKp+fBmXvrYsPdAwAUCRvFm2ovwxKknscyDAlJnWfWyJldamBc
+	b3SmEZFuhQoI1w67QluG5M54lci8HwPo36EDB74A=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ihchhvubuqgjsxyuhssfvqohv7z3u4hn; d=amazonses.com; t=1768643996;
+	h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type:Feedback-ID;
+	bh=dJHs4i2ehMUR7QjA+JaovL5E3yBis4FMAXdRH4cjGwg=;
+	b=olHeLk6Wz6l+OGQvoo/g6CZKHbrmjBJ5fMenDxZ23JeRtArb6QyAYfNzT8uvnAWp
+	x5dHL5M+UAQHQ5mf96a/+8JjuFF1dkwQFxa5f09p7z4HHsXqZU24+cQ5oS4TlC2vksl
+	oPG5ntl5OzgP6yJr76ceSlu23D1/Ot5+39JLnsxY=
+Date: Sat, 17 Jan 2026 09:59:56 +0000
+From: "Amazon.de" <bestellbestaetigung@amazon.de>
+To: oliver@gaser.de
+Message-ID: <0102019bcb65abda-98802f69-802b-4bbc-9a60-4ed032a8d4be-000000@eu-west-1.amazonses.com>
+Subject: =?UTF-8?B?QmVzdGVsbHQ6IOKAnlVHUkVFTiBIRE1JIDIuMCBTd2l0Y2guLi7igJw=?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_7997559_160551820.1768643996515"
+X-AMAZON-MAIL-RELAY-TYPE: notification
+Bounces-to: 202601170959551e7fa434c03144db9271aad48b90p0eu-C3E3SNG5A5M7II@bounces.amazon.de
+X-AMAZON-METADATA: CA=C3E3SNG5A5M7II-CU=A36KH7FBCYWPEI
+X-Original-MessageID: <urn.rtn.msg.202601170959551e7fa434c03144db9271aad48b90p0eu@1768643996517.>
+Feedback-ID: 1111661321::1.eu-west-1.UIAUrMfbpGrxavqnRE0yoZrAUBI9C7GRNUx/kUDo6B4=:AmazonSES
+X-SES-Outgoing: 2026.01.17-54.240.1.16
+X-HE-Spam-Level: /
+X-HE-Spam-Score: -0.1
+X-HE-Spam-Report: Content analysis details:   (-0.1 points)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+                              no trust
+                             [54.240.1.16 listed in list.dnswl.org]
+  0.0 RCVD_IN_MSPIKE_H5      RBL: Excellent reputation (+5)
+                             [54.240.1.16 listed in wl.mailspike.net]
+  0.1 HTML_MESSAGE           BODY: HTML included in message
+  0.0 HTML_FONT_LOW_CONTRAST BODY: HTML font color similar or
+                             identical to background
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+  0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+  0.0 T_REMOTE_IMAGE         Message contains an external image
+Envelope-to: oliver@gaser.de
+
+------=_Part_7997559_160551820.1768643996515
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+ =20
+
+
+    Vielen Dank f=C3=BCr deine Bestellung, Oliver!
+Bestellt
+
+Versendet
+
+In Zustellung
+
+Zugestellt
+
+
+
+
+
+
+
+
+
+
+Zustellung: Montag
+
+
+
+Oliver =E2=80=93 Elmshorn
+
+Bestellnr.
+028-1905622-7468340
+
+Bestellung ansehen oder =C3=A4ndern
+https://www.amazon.de/your-orders/order-details?orderID=3D028-1905622-74683=
+40&ref_=3Dp_btn_fed_veo
+
+* UGREEN HDMI 2.0 Switch 4K@60Hz Bidirektional HDMI Switch Splitter 1 in 2 =
+Out/2 in 1 Out f=C3=BCr PS5, PS4, Xbox,TV Box, TV Stick, Switch, Monitor, P=
+C usw
+  Menge: 1
+  5.99 EUR
+
+
+Summe
+5.99 EUR
+
+
+
+
+
+Amazon.de ist ein Handelsname f=C3=BCr Amazon EU Sarl, f=C3=BCr Amazon Euro=
+pe Core Sarl, f=C3=BCr Amazon Media EU Sarl und f=C3=BCr Amazon Services Eu=
+rope Sarl, die alle ihren eingetragenen Sitz unter 38 avenue John F. Kenned=
+y, L-1855 Luxemburg haben und f=C3=BCr die Amazon Digital Germany GmbH, mit=
+ eingetragenem Anni-Albers-Strasse 21, 80807 Munich, Deutschland. =C2=A9202=
+6 Amazon.com, Inc. oder verbundene Unternehmen. Amazon sowie alle zugeh=C3=
+=B6rigen Marken sind Marken der Amazon.com, Inc. oder deren verbundenen Unt=
+ernehmen. Es k=C3=B6nnen Versandkosten anfallen. F=C3=BCr Ihren Kauf gilt d=
+er Preis und die Verf=C3=BCgbarkeit, die zum Zeitpunkt des Kaufs auf amazon=
+.de angezeigt werden
+
+Diese E-Mail ist nur eine Empfangsbest=C3=A4tigung deiner Bestellung. Dein =
+Vertrag =C3=BCber den Kauf dieser Artikel kommt erst zustande, wenn wir dir=
+ eine [E-Mail schicken, in der wir dich =C3=BCber den Versand der Artikel i=
+nformieren](https://www.amazon.de/gp/help/customer/display.html/?nodeId=3D2=
+01909000&ref_=3Dfed_roclt_acknowledgement). Artikel mit [Versand durch Amaz=
+on](https://www.amazon.de/help/en/fba?ref_=3Dfed_roclt_default_helpfba) (ge=
+w=C3=B6hnlich als FBA bezeichnet) werden in der Regel von Drittanbietern ve=
+rkauft, aber in einem Amazon-Versandzentrum gelagert und von dort aus an di=
+ch versandt. Artikel, die von Warehouse Deals verkauft werden, sind ebenfal=
+ls mit dem Hinweis =E2=80=9EVersand durch Amazon=E2=80=9C versehen. Warehou=
+se Deals ist ein Handelsname von Amazon EU Sarl und ist Teil der Amazon.com=
+-Gruppe. Wenn dein(e) Artikel vom [Amazon Marketplace](https://www.amazon.d=
+e/help/en/marketplace?ref_=3Dfed_roclt_notsoldbyamznpen) gekauft werden, ka=
+nn der Verk=C3=A4ufer zus=C3=A4tzliche Informationen wie deine Umsatzsteuer=
+-Identifikationsnummer oder deinen Umsatzsteuercode verlangen, um eine g=C3=
+=BCltige Rechnung ausstellen zu k=C3=B6nnen.
+
+Amazon.de
+------=_Part_7997559_160551820.1768643996515
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html><html lang=3D"de" dir=3D"auto" xmlns=3D"http://www.w3.org/19=
+99/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-=
+microsoft-com:office:office"><head><title></title><!--[if !mso]><!--><meta =
+http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><meta =
+http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><style t=
+ype=3D"text/css">#outlook a{padding:0}body{margin:0;padding:0;-webkit-text-=
+size-adjust:100%;-ms-text-size-adjust:100%}table,td{border-collapse:collaps=
+e;mso-table-lspace:0pt;mso-table-rspace:0pt}img{border:0;height:auto;line-h=
+eight:100%;outline:0;text-decoration:none;-ms-interpolation-mode:bicubic}p{=
+display:block;margin:13px 0}</style><!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]--><!--[if lte mso 11]>
+    <style type=3D"text/css">.mj-outlook-group-fix{width:100%!important}</s=
+tyle>
+    <![endif]--><style type=3D"text/css">@media only screen and (min-width:=
+600px){.mj-column-per-100{width:100%!important;max-width:100%}.mj-column-px=
+-584{width:584px!important;max-width:584px}.mj-column-px-144{width:144px!im=
+portant;max-width:144px}.mj-column-px-NaN{width:NaNNaN%!important;max-width=
+:NaNNaN%}.mj-column-px-128{width:128px!important;max-width:128px}.mj-column=
+-per-25{width:25%!important;max-width:25%}.mj-column-per-75{width:75%!impor=
+tant;max-width:75%}.mj-column-per-50{width:50%!important;max-width:50%}}</s=
+tyle><style media=3D"screen and (min-width:600px)">.moz-text-html .mj-colum=
+n-per-100 { width:100% !important; max-width: 100%; }
+.moz-text-html .mj-column-px-584 { width:584px !important; max-width: 584px=
+; }
+.moz-text-html .mj-column-px-144 { width:144px !important; max-width: 144px=
+; }
+.moz-text-html .mj-column-px-NaN { width:NaNNaN% !important; max-width: NaN=
+NaN%; }
+.moz-text-html .mj-column-px-128 { width:128px !important; max-width: 128px=
+; }
+.moz-text-html .mj-column-per-25 { width:25% !important; max-width: 25%; }
+.moz-text-html .mj-column-per-75 { width:75% !important; max-width: 75%; }
+.moz-text-html .mj-column-per-50 { width:50% !important; max-width: 50%; }<=
+/style><style type=3D"text/css">
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+
+                   =20
+               =20
+            @media (prefers-color-scheme:dark){.rio-header-197,.rio-header-=
+197 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-header-198,.rio-heade=
+r-198 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-header-199,.rio-heade=
+r-199 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2380{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-225{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-225{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-text-2381{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2382{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2383{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2384{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2385{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2386{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2387{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2388{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2389{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2390{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2391{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2392{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2393{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2394{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2395{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-200,.rio-heade=
+r-200 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2396{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2397{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2398{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2399{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2400{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2401{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2402{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2403{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2404{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2405{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2406{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2407{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2408{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2409{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2410{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-201,.rio-heade=
+r-201 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2411{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2412{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2413{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2414{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2415{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2416{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2417{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2418{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2419{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2420{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2421{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2422{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-202,.rio-heade=
+r-202 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2423{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2424{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2425{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2426{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2427{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2428{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2429{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2430{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2431{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2432{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2433{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2434{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-203,.rio-heade=
+r-203 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2435{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2436{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2437{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2438{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2439{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2440{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2441{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2442{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2443{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-204,.rio-heade=
+r-204 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2444{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2445{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2446{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2447{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2448{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2449{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2450{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2451{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2452{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-205,.rio-heade=
+r-205 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2453{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2454{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2455{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2456{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2457{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2458{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-206,.rio-heade=
+r-206 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2459{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2460{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2461{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2462{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2463{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2464{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-207,.rio-heade=
+r-207 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-header-208,.rio-heade=
+r-208 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2465{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-226{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-226{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-text-2466{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2467{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2468{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2469{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2470{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2471{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2472{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-227{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-227{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-button-228{
+          color: #565959 !important;
+          background: #FEFEFE !important;
+          border-color: #D5D9D9 !important;
+          }.rio-button-cta-secondary{
+          background: #FEFEFE !important;
+          }}[data-ogsc] .rio-button-228{
+        color: #565959 !important;
+        background: #FEFEFE !important;
+        border-color: #D5D9D9 !important;
+        }[data-ogsc] .rio-button-cta-secondary{
+        background: #FEFEFE !important;
+        }@media only screen and (max-width:480px){.rio-asin-image-tmP2rCPDB=
+uBJkkv8GzZkFN .productImageTd{height:64px!important}.rio-asin-image-tmP2rCP=
+DBuBJkkv8GzZkFN .productImage{max-height:64px!important;max-width:64px!impo=
+rtant}}@media only screen and (max-width:480px){.rio-asin-image-x434zUzf188=
+EmqecdiEQYp .productImageTd{height:64px!important}.rio-asin-image-x434zUzf1=
+88EmqecdiEQYp .productImage{max-height:64px!important;max-width:64px!import=
+ant}}@media only screen and (max-width:480px){.rio-asin-image-paUYT3kvTAXVp=
+yQyjpmk7Q .productImageTd{height:64px!important}.rio-asin-image-paUYT3kvTAX=
+VpyQyjpmk7Q .productImage{max-height:64px!important;max-width:64px!importan=
+t}}@media (prefers-color-scheme:dark){.rio-text-2473{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2474{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2475{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2476{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2477{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2478{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2479{
+            color: #FFFFFF;
+            }}@media only screen and (max-width:480px){.rio-asin-image-dHHz=
+cPxq7PX9nKFFKSpezn .productImageTd{height:64px!important}.rio-asin-image-dH=
+HzcPxq7PX9nKFFKSpezn .productImage{max-height:64px!important;max-width:64px=
+!important}}@media (prefers-color-scheme:dark){.rio-text-2480{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2481{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2482{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2483{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2484{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2485{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2486{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2487{
+            color: #2162A1;
+            }}@media (prefers-color-scheme:dark){.rio-text-2488{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2489{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2490{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2491{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2492{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2493{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2494{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2495{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2496{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2497{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2498{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2499{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2500{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2501{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2502{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2503{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2504{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2505{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2506{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-229{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-229{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-button-230{
+          color: #565959 !important;
+          background: #FEFEFE !important;
+          border-color: #D5D9D9 !important;
+          }.rio-button-cta-secondary{
+          background: #FEFEFE !important;
+          }}[data-ogsc] .rio-button-230{
+        color: #565959 !important;
+        background: #FEFEFE !important;
+        border-color: #D5D9D9 !important;
+        }[data-ogsc] .rio-button-cta-secondary{
+        background: #FEFEFE !important;
+        }@media only screen and (max-width:480px){.rio-asin-image-vvxV2xzi4=
+bV9VDSizrKQgB .productImageTd{height:64px!important}.rio-asin-image-vvxV2xz=
+i4bV9VDSizrKQgB .productImage{max-height:64px!important;max-width:64px!impo=
+rtant}}@media only screen and (max-width:480px){.rio-asin-image-3Q6DxRXcNzU=
+Vaap97gHNGo .productImageTd{height:64px!important}.rio-asin-image-3Q6DxRXcN=
+zUVaap97gHNGo .productImage{max-height:64px!important;max-width:64px!import=
+ant}}@media only screen and (max-width:480px){.rio-asin-image-jDbkUFLZTRjhH=
+WzhRJFzuj .productImageTd{height:64px!important}.rio-asin-image-jDbkUFLZTRj=
+hHWzhRJFzuj .productImage{max-height:64px!important;max-width:64px!importan=
+t}}@media (prefers-color-scheme:dark){.rio-text-2507{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2508{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2509{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2510{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2511{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2512{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2513{
+            color: #FFFFFF;
+            }}@media only screen and (max-width:480px){.rio-asin-image-neui=
+ULDDc8dyL4qbbAMfXS .productImageTd{height:64px!important}.rio-asin-image-ne=
+uiULDDc8dyL4qbbAMfXS .productImage{max-height:64px!important;max-width:64px=
+!important}}@media (prefers-color-scheme:dark){.rio-text-2514{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2515{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2516{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2517{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2518{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2519{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2520{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2521{
+            color: #2162A1;
+            }}@media (prefers-color-scheme:dark){.rio-text-2522{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2523{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2524{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2525{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2526{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2527{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2528{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2529{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2530{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2531{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2532{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2533{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2534{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2535{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2536{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2537{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2538{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2539{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2540{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-231{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-231{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-button-232{
+          color: #565959 !important;
+          background: #FEFEFE !important;
+          border-color: #D5D9D9 !important;
+          }.rio-button-cta-secondary{
+          background: #FEFEFE !important;
+          }}[data-ogsc] .rio-button-232{
+        color: #565959 !important;
+        background: #FEFEFE !important;
+        border-color: #D5D9D9 !important;
+        }[data-ogsc] .rio-button-cta-secondary{
+        background: #FEFEFE !important;
+        }@media only screen and (max-width:480px){.rio-asin-image-oBBT1grME=
+1WRjs1B52GQxv .productImageTd{height:64px!important}.rio-asin-image-oBBT1gr=
+ME1WRjs1B52GQxv .productImage{max-height:64px!important;max-width:64px!impo=
+rtant}}@media only screen and (max-width:480px){.rio-asin-image-bRs3jR9CWJK=
+mKMW6NBD2kG .productImageTd{height:64px!important}.rio-asin-image-bRs3jR9CW=
+JKmKMW6NBD2kG .productImage{max-height:64px!important;max-width:64px!import=
+ant}}@media only screen and (max-width:480px){.rio-asin-image-miu49pz5T4HMN=
+pWBaaxqG4 .productImageTd{height:64px!important}.rio-asin-image-miu49pz5T4H=
+MNpWBaaxqG4 .productImage{max-height:64px!important;max-width:64px!importan=
+t}}@media (prefers-color-scheme:dark){.rio-text-2541{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2542{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2543{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2544{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2545{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2546{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2547{
+            color: #FFFFFF;
+            }}@media only screen and (max-width:480px){.rio-asin-image-9LJw=
+Ucgs9E82RHN7efaoup .productImageTd{height:64px!important}.rio-asin-image-9L=
+JwUcgs9E82RHN7efaoup .productImage{max-height:64px!important;max-width:64px=
+!important}}@media (prefers-color-scheme:dark){.rio-text-2548{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2549{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2550{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2551{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2552{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2553{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2554{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2555{
+            color: #2162A1;
+            }}@media (prefers-color-scheme:dark){.rio-text-2556{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2557{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2558{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2559{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2560{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2561{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2562{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2563{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2564{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2565{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2566{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2567{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2568{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2569{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2570{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2571{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2572{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2573{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2574{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-233{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-233{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-button-234{
+          color: #565959 !important;
+          background: #FEFEFE !important;
+          border-color: #D5D9D9 !important;
+          }.rio-button-cta-secondary{
+          background: #FEFEFE !important;
+          }}[data-ogsc] .rio-button-234{
+        color: #565959 !important;
+        background: #FEFEFE !important;
+        border-color: #D5D9D9 !important;
+        }[data-ogsc] .rio-button-cta-secondary{
+        background: #FEFEFE !important;
+        }@media only screen and (max-width:480px){.rio-asin-image-vQtYEL2GP=
+tW7cMFtjBg1ru .productImageTd{height:64px!important}.rio-asin-image-vQtYEL2=
+GPtW7cMFtjBg1ru .productImage{max-height:64px!important;max-width:64px!impo=
+rtant}}@media only screen and (max-width:480px){.rio-asin-image-aiNE7BuqCPN=
+yopTUi2AxdV .productImageTd{height:64px!important}.rio-asin-image-aiNE7BuqC=
+PNyopTUi2AxdV .productImage{max-height:64px!important;max-width:64px!import=
+ant}}@media only screen and (max-width:480px){.rio-asin-image-5kJQQAsyKSuyE=
+mmVpURjiT .productImageTd{height:64px!important}.rio-asin-image-5kJQQAsyKSu=
+yEmmVpURjiT .productImage{max-height:64px!important;max-width:64px!importan=
+t}}@media (prefers-color-scheme:dark){.rio-text-2575{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2576{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2577{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2578{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2579{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2580{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2581{
+            color: #FFFFFF;
+            }}@media only screen and (max-width:480px){.rio-asin-image-pdzk=
+mn2KryJkeenZyQMDvF .productImageTd{height:64px!important}.rio-asin-image-pd=
+zkmn2KryJkeenZyQMDvF .productImage{max-height:64px!important;max-width:64px=
+!important}}@media (prefers-color-scheme:dark){.rio-text-2582{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2583{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2584{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2585{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2586{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2587{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2588{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2589{
+            color: #2162A1;
+            }}@media (prefers-color-scheme:dark){.rio-text-2590{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2591{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2592{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2593{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2594{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2595{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2596{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2597{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2598{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2599{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2600{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2601{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-209,.rio-heade=
+r-209 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-button-235{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-235{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-header-210,.rio-header-210=
+ *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-text-2602{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-button-236{
+          color: #565959 !important;
+          background: #FEFEFE !important;
+          border-color: #D5D9D9 !important;
+          }.rio-button-cta-secondary{
+          background: #FEFEFE !important;
+          }}[data-ogsc] .rio-button-236{
+        color: #565959 !important;
+        background: #FEFEFE !important;
+        border-color: #D5D9D9 !important;
+        }[data-ogsc] .rio-button-cta-secondary{
+        background: #FEFEFE !important;
+        }@media (prefers-color-scheme:dark){.rio-button-237{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-237{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media (prefers-color-scheme:dark){.rio-text-2603{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2604{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2605{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-text-2606{
+            color: #FFFFFF;
+            }}@media (prefers-color-scheme:dark){.rio-header-211,.rio-heade=
+r-211 *{
+            color: #FFFFFF !important;
+            }}@media (prefers-color-scheme:dark){.rio-button-238{
+          color: #0F1111 !important;
+          background: #FFD916 !important;
+          border-color: #FCD200 !important;
+          }.rio-button-cta-primary{
+          background: #FFD916 !important;
+          }}[data-ogsc] .rio-button-238{
+        color: #0F1111 !important;
+        background: #FFD916 !important;
+        border-color: #FCD200 !important;
+        }[data-ogsc] .rio-button-cta-primary{
+        background: #FFD916 !important;
+        }@media only screen and (max-width:599px){table.mj-full-width-mobil=
+e{width:100%!important}td.mj-full-width-mobile{width:auto!important}}.amazo=
+n-navbar-content{font-family:Ember,'Amazon Ember',Arial,sans-serif;font-siz=
+e:14px!important;font-weight:700!important}.amazon-logo.full{padding-left:0=
+!important;padding-right:0!important}.amazon-logo.zeroBorder{border:0;borde=
+r-collapse:collapse;border-spacing:0}.amazon-logo .full{padding-left:0!impo=
+rtant;padding-right:0!important}.amazon-logo .zeroBorder{border:0;border-co=
+llapse:collapse;border-spacing:0}.amazon-logo .light-img{background-color:#=
+fff;background-image:linear-gradient(#fff,#fff)}@media (prefers-color-schem=
+e:light){.amazon-logo .light-img{display:block!important}.amazon-logo .dark=
+-img{display:none!important}
+            .amazon-navbar-content {
+                font-family:Ember,'Amazon Ember',Arial,sans-serif;
+                background-color: #FFFFFF !important;
+                color:  #0F1111!important;
+            }
+             }@media (prefers-color-scheme:dark){.amazon-logo{background-co=
+lor:#181a1a!important}=20
+            .amazon-navbar-content {
+                background-color: #161D26 !important;
+                color:#FFFFFF!important;
+            }
+             .amazon-logo .light-img{display:none!important}.amazon-logo .d=
+ark-img{display:block!important}}[data-ogsc] .amazon-logo .content{backgrou=
+nd-color:#181a1a!important}[data-ogsc] .amazon-logo .light-img{display:none=
+!important}[data-ogsc] .amazon-logo .dark-img{display:block!important}@medi=
+a (prefers-color-scheme:dark){.rio-card,.rio-card-text,.rio-card-text>table=
+,.rio-card>table{background-color:#181a1a!important}}[data-ogsc] .rio-card,=
+[data-ogsc] .rio-card-text,[data-ogsc] .rio-card-text>table,[data-ogsc] .ri=
+o-card>table{background-color:#181a1a!important}.rio-card-text p+p{margin-t=
+op:1.2em}.rio-header strong{color:#067d62}@media (prefers-color-scheme:dark=
+){.rio-header *{
+            color: #FFFFFF !important;
+            }.rio-header a{color:#6ed6e6!important}.rio-header strong{color=
+:#13bd96!important}}
+        [data-ogsc] .rio-header,
+        [data-ogsc] .rio-header * {
+          color: #FFFFFF !important;
+        }
+        [data-ogsc] .rio-header a,[data-ogsc] .rio-header a>*{color:#6ed6e6=
+!important}[data-ogsc] .rio-header strong{color:#13bd96!important}@media (p=
+refers-color-scheme:dark){.rio-table-grid-td-bg{background:#252626!importan=
+t}}[data-ogsc] .rio-table-grid-td-bg{background:#252626!important}.rio-text=
+ strong{color:#067d62}.rio-text img{width:100%;height:auto}@media (prefers-=
+color-scheme:dark){.rio-text *{
+            color: #FFFFFF !important;
+            }.rio-text a,.rio-text a>*{color:#6ed6e6!important}.rio-text st=
+rong{color:#13bd96!important}}[data-ogsc] .rio-text *{
+          color: #FFFFFF !important;
+          }[data-ogsc] .rio-text a,[data-ogsc] .rio-text a>*{color:#6ed6e6!=
+important}[data-ogsc] .rio-text strong{color:#13bd96!important}@media (pref=
+ers-color-scheme:dark){.rio-button *{
+          color: #0F1111 !important;
+          }}[data-ogsc] .rio-button *{
+        color: #0F1111 !important;
+        }
+        .alert-message a {
+            color: #007185 !important;
+            text-decoration: none !important;
+        }
+        @media (prefers-color-scheme:dark){
+            .alert-message a {
+                color: #6ED6E6 !important;
+            }
+            }
+        [data-ogsc] .alert-message a {
+            color: #6ED6E6 !important;
+        }
+        .rio-asin-image .productImage{mix-blend-mode:multiply}u+.body .rio-=
+asin-image .productImage{mix-blend-mode:initial!important}@media (prefers-c=
+olor-scheme:dark){.rio-asin-image .productImageTd{background-image:linear-g=
+radient(#fff,#fff)!important}.rio-asin-image .productImage{mix-blend-mode:i=
+nitial!important}}[data-ogsc] .rio-asin-image .productImageTd{background-im=
+age:linear-gradient(#fff,#fff)!important}[data-ogsc] .rio-asin-image .produ=
+ctImage{mix-blend-mode:initial!important}@media only screen and (min-width:=
+600px){u+.body .rio-asin-image .productImage{mix-blend-mode:multiply!import=
+ant}}@media (prefers-color-scheme:dark){.asin-container{background:#252626!=
+important}}[data-ogsc] .asin-container{background:#252626!important}.rio-as=
+in-container-image img{mix-blend-mode:multiply;object-fit:contain}@media (p=
+refers-color-scheme:dark){.rio-asin-container-image img{mix-blend-mode:init=
+ial!important}}u+.body .rio-asin-container-image img{mix-blend-mode:initial=
+!important}@media only screen and (min-width:600px){u+.body .rio-asin-conta=
+iner-image img{mix-blend-mode:multiply!important}}[data-ogsc] .rio-asin-con=
+tainer-image img{mix-blend-mode:initial!important}
+      @media (prefers-color-scheme: dark) {
+          .productHvePrimeDayPrice {
+              color: #FFFFFF !important;
+          }
+          .priceBadge {
+              color: #FF8C8C !important;
+          },
+          .priceDiscount {
+              background-color: #FF8C8C !important;
+          },
+          .productListPrice {
+              color: #FFFFFF !important;
+          }
+      }
+      [data-ogsc]  .productListPrice {
+          color: #FFFFFF !important;
+      }
+      [data-ogsc] .productHvePrimeDayPrice {
+          color: #FFFFFF !important;
+      }
+      [data-ogsc] .priceBadge {
+          color: #FF8C8C !important;
+      }=20
+      [data-ogsc] .priceDiscount {
+          background-color: #FF8C8C !important;
+      }=20
+     =20
+        @media (prefers-color-scheme: dark) {
+            .productHveDiscount {
+                color: #FF8C8C !important;
+            }
+            .productHvePrice {
+                color: #FFFFFF !important;
+            }
+        }
+        [data-ogsc]  .productHveDiscount {
+            color: #FF8C8C !important;
+        }
+        [data-ogsc] .productHvePrice {
+            color: #FFFFFF !important;
+        }
+       =20
+        .footer-text, .footer-card p, .footer-card li {
+            color: #494D4D;
+        }
+        .footer-card p{margin-top:20px}
+        .footer-card a {
+            color: #007185 !important;
+            text-decoration: none !important;
+        }
+        @media (prefers-color-scheme:dark){
+            .footer-card {
+                background-color: #303333 !important;
+            }
+           =20
+            .footer-card a {
+                color: #6ED6E6 !important;
+            }
+           =20
+            .footer-text, .footer-card p, .footer-card li {
+                color: #C8CCCC !important;
+            }
+            .lightFooterImg{display:none!important}.darkFooterImg{display:b=
+lock!important}}[data-ogsb] .footer-card{background-color:#303333!important=
+}
+        [data-ogsc] .footer-card a {
+            color: #6ED6E6 !important;
+        }
+        [data-ogsc] .footer-card li,[data-ogsc] .footer-card p,[data-ogsc] =
+.footer-text{color:#c8cccc!important}[data-ogsc] .lightFooterImg{display:no=
+ne!important}[data-ogsc] .darkFooterImg{display:block!important}</style><st=
+yle type=3D"text/css">@font-face{font-family:Ember;font-weight:700;src:loca=
+l("Ember"),url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_=
+Bd._CB1515450239_.WOFF) format("woff");mso-generic-font-family:swiss;mso-fo=
+nt-alt:"Arial"}@font-face{font-family:Ember;font-weight:600;src:local("Embe=
+r"),url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Bd._CB1=
+515450239_.WOFF) format("woff");mso-generic-font-family:swiss;mso-font-alt:=
+"Arial"}@font-face{font-family:Ember;font-weight:500;src:local("Ember"),url=
+(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Md._CB15154502=
+39_.WOFF) format("woff");mso-generic-font-family:swiss;mso-font-alt:"Arial"=
+}@font-face{font-family:Ember;font-weight:400;font-style:normal;src:local("=
+Ember"),url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Rg.=
+_CB1515450239_.WOFF) format("woff");mso-generic-font-family:swiss;mso-font-=
+alt:"Arial"}@font-face{font-family:Ember;font-weight:200;src:local("Ember")=
+,url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_Lt._CB1515=
+450239_.WOFF) format("woff");mso-generic-font-family:swiss;mso-font-alt:"Ar=
+ial"}@font-face{font-family:"Amazon Ember";font-weight:700;src:local("Amazo=
+n Ember"),url(https://m.media-amazon.com/images/G/01/outbound/AmazonEmber_B=
+d._CB1515450239_.WOFF) format("woff");mso-generic-font-family:swiss;mso-fon=
+t-alt:"Arial"}@font-face{font-family:"Amazon Ember";font-weight:600;src:loc=
+al("Amazon Ember"),url(https://m.media-amazon.com/images/G/01/outbound/Amaz=
+onEmber_Bd._CB1515450239_.WOFF) format("woff");mso-generic-font-family:swis=
+s;mso-font-alt:"Arial"}@font-face{font-family:"Amazon Ember";font-weight:50=
+0;src:local("Amazon Ember"),url(https://m.media-amazon.com/images/G/01/outb=
+ound/AmazonEmber_Md._CB1515450239_.WOFF) format("woff");mso-generic-font-fa=
+mily:swiss;mso-font-alt:"Arial"}@font-face{font-family:"Amazon Ember";font-=
+style:normal;font-weight:400;src:local("Amazon Ember"),url(https://m.media-=
+amazon.com/images/G/01/outbound/AmazonEmber_Rg._CB1515450239_.WOFF) format(=
+"woff");mso-generic-font-family:swiss;mso-font-alt:"Arial"}@font-face{font-=
+family:"Amazon Ember";font-weight:200;src:local("Amazon Ember"),url(https:/=
+/m.media-amazon.com/images/G/01/outbound/AmazonEmber_Lt._CB1515450239_.WOFF=
+) format("woff");mso-generic-font-family:swiss;mso-font-alt:"Arial"}*{font-=
+family:Ember,'Amazon Ember',Arial,sans-serif;border-spacing:0;margin:0;padd=
+ing:0}ol,ul{margin-left:32px!important}[data-ogsc] :root{--body-bg:#181A1A;=
+--body-color:#ffffff}.rootContent{background:#fff!important}.fonts,.sans,h1=
+,h2,h3,h4,h5,li,p,table,td,th{color:#0f1111}a{color:#007185;text-decoration=
+:none}@media screen and (max-width:599px){.mobile-only{display:initial!impo=
+rtant}.desktop-only{display:none!important;mso-hide:all!important}}@media s=
+creen and (min-width:600px){.mobile-only{display:none!important;mso-hide:al=
+l!important}}@media (prefers-color-scheme:light){:root{--body-bg:#ffffff;--=
+body-color:#000000}}@media (prefers-color-scheme:dark){:root{--body-bg:#181=
+A1A;--body-color:#ffffff}body{background-color:#181a1a!important}.fonts,.sa=
+ns,h1,h2,h3,h4,h5,li,p,table,td,th{color:#fff}a{color:#6ed6e6}.rootContent,=
+.rootContent>table{background:#181a1a!important}}[data-ogsc] .fonts,[data-o=
+gsc] .sans,[data-ogsc] h1,[data-ogsc] h2,[data-ogsc] h3,[data-ogsc] h4,[dat=
+a-ogsc] h5,[data-ogsc] li,[data-ogsc] p{color:#fff}[data-ogsc] a{color:#6ed=
+6e6}[data-ogsc] .rootContent,[data-ogsc] .rootContent>table{background:#181=
+a1a!important}body{background-color:var(--body-bg)!important;color:var(--bo=
+dy-color)!important;margin:0!important;padding:0}body>img{position:absolute=
+}table{border-spacing:0}h3,h4,h5,p,table th{font-weight:400;margin:0;paddin=
+g:0}td{padding:0}img{border:0}a,span,td{word-break:break-word!important}.bu=
+tton{background-color:#ffd814;color:#0f1111!important;border-radius:24px;pa=
+dding:1px 16px;display:inline-block;box-shadow:1px 2px 4px rgba(153,153,153=
+,.2);font-size:13px;line-height:29px;white-space:nowrap;text-decoration:non=
+e;margin-top:4px}.box-shadow a{box-shadow:1px 2px 4px rgba(153,153,153,.2)}=
+a,body,table,td{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}.ap=
+pleBody a,.appleFooter a{color:#007185!important;text-decoration:none}a[x-a=
+pple-data-detectors]{color:#007185!important;font-family:inherit!important;=
+font-size:inherit!important;font-weight:inherit!important;line-height:inher=
+it!important}u+#body a{color:#007185!important;font-family:inherit!importan=
+t;font-size:inherit!important;font-weight:inherit!important;line-height:inh=
+erit!important}#MessageViewBody a{color:#007185!important;font-family:inher=
+it!important;font-size:inherit!important;font-weight:inherit!important;line=
+-height:inherit!important}</style><meta content=3D"text/html; charset=3DUTF=
+-8" http-equiv=3D"Content-Type"><meta content=3D"telephone=3Dno" name=3D"fo=
+rmat-detection"><meta content=3D"width=3Ddevice-width,initial-scale=3D1;use=
+r-scalable=3Dno;" name=3D"viewport"><meta content=3D"IE=3D9; IE=3D8; IE=3D7=
+; IE=3DEDGE" http-equiv=3D"X-UA-Compatible"><meta name=3D"x-apple-disable-m=
+essage-reformatting"><meta content=3D"light dark" name=3D"color-scheme"><me=
+ta content=3D"light dark" name=3D"supported-color-schemes"><!--
+             =20
+             =20
+             =20
+              --><style type=3D"text/css">.productListPrice{color:#565959}.=
+productDiscount{color:#cc0c39}.productPrice{color:#0f1111}@media (prefers-c=
+olor-scheme:dark){.productListPrice{color:#fff!important}.productDiscount{c=
+olor:#ff8c8c!important}.productPrice{color:#fff!important}}[data-ogsc] .pro=
+ductListPrice{color:#fff!important}[data-ogsc] .productDiscount{color:#ff8c=
+8c!important}[data-ogsc] .productPrice{color:#fff!important}</style><style =
+type=3D"text/css">.dealBadge{background-color:#cc0c39;color:#fff}.dealText{=
+color:#cc0c39}@media (prefers-color-scheme:dark){.dealBadge{background-colo=
+r:#ff8c8c!important;color:#000!important}.dealText{color:#ff8c8c!important}=
+}[data-ogsc] .dealBadge{background-color:#ff8c8c!important;color:#000!impor=
+tant}[data-ogsc] .dealText{color:#ff8c8c!important}</style><!--[if gte mso =
+9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG />
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <style>
+        body, h1, h2, h3, h4, table, th, td, p, li, a, .sans, .fonts {
+            font-family: Helvetica, Arial, sans-serif !important;
+        }
+        [data-ogsc] .rootContent, [data-ogsc] .rootContent > table{
+          background: #181A1A !important;
+        }
+    </style>
+    <![endif]--></head><body class=3D"body" style=3D"word-spacing:normal;">=
+<img width=3D"1" height=3D"1" src=3D"https://www.amazon.de/gp/r.html?C=3D37=
+CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144db=
+9271aad48b90p0eu&R=3D3GJP78PK8T9TX&T=3DO&U=3Dhttps%3A%2F%2Fimages-eu.ssl-im=
+ages-amazon.com%2Fimages%2FG%2F01%2Fnav%2Ftransp.gif&H=3DYMPPXMAARF6FFIYAQV=
+E6RDWK788A&ref_=3Dpe_111929571_1111661321_opens" alt=3D"" /><div style=3D"d=
+isplay:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-=
+width:0px;opacity:0;overflow:hidden;">Bestellt: =E2=80=9EUGREEN HDMI 2.0 Sw=
+itch...=E2=80=9C&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#81=
+99; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &sh=
+y;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847=
+; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj=
+; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp=
+; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#819=
+9; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy=
+;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;=
+ &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;=
+ &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;=
+ &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199=
+; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;=
+&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; =
+&zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; =
+&nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; =
+&#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199;=
+ &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&=
+#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &=
+zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &=
+nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &=
+#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; =
+&shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#=
+847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &z=
+wnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &n=
+bsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#=
+8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &=
+shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#8=
+47; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zw=
+nj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nb=
+sp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8=
+199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &s=
+hy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#84=
+7; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwn=
+j; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbs=
+p; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#81=
+99; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &sh=
+y;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847=
+; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj=
+; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp=
+; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#819=
+9; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy=
+;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847;=
+ &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj;=
+ &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp;=
+ &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199=
+; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;=
+&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; =
+&zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; =
+&nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; =
+&#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199;=
+ &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&=
+#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &=
+zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &=
+nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &=
+#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; =
+&shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#=
+847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &z=
+wnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &n=
+bsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#=
+8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &=
+shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#8=
+47; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zw=
+nj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nb=
+sp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8=
+199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &s=
+hy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#84=
+7; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwn=
+j; &nbsp; &#8199; &shy;&#847; &zwnj; &nbsp; &#8199; &shy;&#847; &zwnj; &nbs=
+p; &#8199; &shy;</div><div class=3D"body" lang=3D"de" dir=3D"auto"> <!--[if=
+ mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"rootContent-outlook moduleId-brandIdentity-outlook" role=
+=3D"presentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#ffffff" =
+><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;"><![endif]--><div class=3D"rootContent moduleId-brandIdentity" style=3D"=
+background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px=
+;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"background:#ffffff;background-color:#ffffff=
+;width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:0px;padding:0=
+px 0px 4px 0px;text-align:left;"><!--[if mso | IE]><table role=3D"presentat=
+ion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><![endif]--> <!--[if =
+mso | IE]><tr><td align=3D"left" class=3D"" width=3D"600px" ><![endif]-->  =
+           <mj-raw>    </mj-raw><table border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"width:100%"><tr>=
+<td width=3D"100%" align=3D"center" valign=3D"middle" style=3D"text-align:c=
+enter;width:100%;padding:8px 0;background-color:#232F3E;background:linear-g=
+radient(to right, #232F3E, #232F3E);font-size:14px;font-weight:bold;line-he=
+ight:20px;font-familiy:Ember,'Amazon Ember',Arial,sans-serif;"><!--[if mso =
+| IE]><table width=3D"600" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"width:600px"><tr><td width=3D"600" align=3D=
+"center" valign=3D"middle" style=3D"width:600px; mso-line-height-rule:exact=
+ly; background-color: #232F3E; background: linear-gradient(to right, #232F3=
+E, #232F3E);"><![endif]--><div role=3D"list" style=3D"width:100%;">   <span=
+ role=3D"listitem" style=3D"display:inline-block;">&#xA0;&#xA0;&#xA0;<a hre=
+f=3D"https://www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=
+=3Durn:rtn:msg:202601170959551e7fa434c03144db9271aad48b90p0eu&R=3DH7GJTNHJA=
+K9H&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2Fgp%2Fcss%2Forder-history%3Fref_=
+%3Dpe_111929571_1111661321_TLH0001BT_TLH00_fed_yo_default&H=3DSYUBX0IQGIIQ2=
+4GKBHGFGKAA1HCA&ref_=3Dpe_111929571_1111661321_TLH0001BT_TLH00_fed_yo_defau=
+lt" target=3D"_blank" style=3D"color:#FFFFFF;text-decoration:none;white-spa=
+ce:nowrap;">Meine Bestellungen</a>&#xA0;&#xA0;&#xA0;</span>    <span role=
+=3D"listitem" style=3D"display:inline-block;">&#xA0;&#xA0;&#xA0;<a href=3D"=
+https://www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:=
+rtn:msg:202601170959551e7fa434c03144db9271aad48b90p0eu&R=3DTPNJZCIINLYU&T=
+=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2Fyour-account%3Fref_%3Dpe_111929571_1=
+111661321_TLH0002BT_TLH00_fed_ya_default&H=3DRFUPMQZQUKEYLH8H2IBPA8PLKKSA&r=
+ef_=3Dpe_111929571_1111661321_TLH0002BT_TLH00_fed_ya_default" target=3D"_bl=
+ank" style=3D"color:#FFFFFF;text-decoration:none;white-space:nowrap;">Mein =
+Konto</a>&#xA0;&#xA0;&#xA0;</span>    <span role=3D"listitem" style=3D"disp=
+lay:inline-block;">&#xA0;&#xA0;&#xA0;<a href=3D"https://www.amazon.de/gp/r.=
+html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa=
+434c03144db9271aad48b90p0eu&R=3D3TP0SWDLQWIQS&T=3DC&U=3Dhttps%3A%2F%2Fwww.a=
+mazon.de%2Fgp%2Fbuyagain%3Fref_%3Dpe_111929571_1111661321_TLH0003BT_TLH00_f=
+ed_bia_default&H=3D2LNW2YFUAWOWKF27UTS5KXD2TOKA&ref_=3Dpe_111929571_1111661=
+321_TLH0003BT_TLH00_fed_bia_default" target=3D"_blank" style=3D"color:#FFFF=
+FF;text-decoration:none;white-space:nowrap;">Erneut kaufen</a>&#xA0;&#xA0;&=
+#xA0;</span></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr=
+><tr></tr></table><!--[if mso | IE]></td></tr><![endif]--> <!--[if mso | IE=
+]></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></t=
+d></tr></table><![endif]--> <!--[if mso | IE]><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rootContent-outlook mo=
+duleId-stepTracker-outlook" role=3D"presentation" style=3D"width:600px;" wi=
+dth=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"line-height:0px;font-size=
+:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"rootContent m=
+oduleId-stepTracker" style=3D"background:#ffffff;background-color:#ffffff;m=
+argin:0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#f=
+fffff;background-color:#ffffff;width:100%;"><tbody><tr><td style=3D"directi=
+on:ltr;font-size:0px;padding:4px 8px 4px 8px;text-align:left;"><!--[if mso =
+| IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0"><![endif]--> <!--[if mso | IE]><tr><td align=3D"left" class=3D"" w=
+idth=3D"600px" ><![endif]-->        <!--[if mso | IE]><table align=3D"cente=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rio-card-outlo=
+ok" role=3D"presentation" style=3D"width:584px;" width=3D"584" bgcolor=3D"#=
+ffffff" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rul=
+e:exactly;"><![endif]--><div class=3D"rio-card" style=3D"background:#ffffff=
+;background-color:#ffffff;margin:0px auto;border-radius:4px;max-width:584px=
+;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"background:#ffffff;background-color:#ffffff=
+;width:100%;border-radius:4px;"><tbody><tr><td style=3D"direction:ltr;font-=
+size:0px;padding:4px 8px 4px 8px;text-align:left;"><!--[if mso | IE]><table=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr=
+><td align=3D"left" class=3D"" width=3D"584px" ><![endif]-->  <!--[if mso |=
+ IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" class=3D"" role=3D"presentation" style=3D"width:568px;" width=3D"568" ><=
+tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;=
+"><![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-si=
+ze:0px;padding:0;text-align:left;"><!--[if mso | IE]><table role=3D"present=
+ation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td align=3D"le=
+ft" class=3D"" style=3D"" ><![endif]--><div style=3D"font-family:Ember,'Ama=
+zon Ember',Arial,sans-serif;font-size:15px;line-height:1;text-align:center;=
+color:#000000;"><h2 style=3D"margin:0;padding:0;font-family:Ember,'Amazon E=
+mber',Arial,sans-serif;font-weight:700;font-size:18px;line-height:22px;colo=
+r:#0F1111;" class=3D"rio-header rio-header-202"><div style=3D"padding-botto=
+m:10px">Vielen Dank f=C3=BCr deine Bestellung, Oliver!</div></h2></div><!--=
+[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div=
+><!--[if mso | IE]></td></tr></table><![endif]--> <!--[if mso | IE]></td></=
+tr><tr><td align=3D"left" class=3D"" width=3D"584px" ><![endif]-->  <table =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"list" width=3D"100%" border=3D"=
+0" style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-serif=
+;font-size:15px;line-height:22px;table-layout:auto;width:100%;border:none;"=
+><tr><td width=3D"25%" valign=3D"top" role=3D"listitem"><table cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" border=3D"0" =
+style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-serif;fo=
+nt-size:15px;line-height:22px;table-layout:auto;width:100%;border:none;"><t=
+r><td style=3D"height:18px"><table cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" width=3D"100%" border=3D"0" style=3D"color:#000000;font-f=
+amily:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;line-height:22px=
+;table-layout:auto;width:100%;border:none;"><tr><td width=3D"50%" height=3D=
+"18"> <table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" widt=
+h=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Em=
+ber',Arial,sans-serif;font-size:15px;line-height:22px;table-layout:auto;wid=
+th:100%;border:none;"><tr><td height=3D"7"></td></tr><tr><td height=3D"4"><=
+/td></tr><tr><td height=3D"7"></td></tr></table> </td><td height=3D"18"> <t=
+able cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"18"=
+ border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial=
+,sans-serif;font-size:15px;line-height:22px;table-layout:auto;width:18;bord=
+er:none;"><tr><td width=3D"18" height=3D"18" align=3D"center"><div style=3D=
+"border-radius:18px;background:#1196AB;line-height:17px;box-shadow:0 0 0 2p=
+x #1196AB;"><img aria-label=3D"Abgeschlossen" src=3D"https://m.media-amazon=
+.com/images/G/01/outbound/etc/steptracker-checkmark._CB552848383_.png" widt=
+h=3D"19" height=3D"19" style=3D"width:18px;height:18px;display:block;" alt=
+=3D"Abgeschlossen"></div></td></tr></table> </td><td width=3D"50%" height=
+=3D"18"> <table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" w=
+idth=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon=
+ Ember',Arial,sans-serif;font-size:15px;line-height:22px;table-layout:auto;=
+width:100%;border:none;"><tr><td height=3D"7"></td></tr><tr><td height=3D"4=
+" style=3D"background:#1196AB"><div style=3D"width:100%;height:0;border-wid=
+th:0;background:#1196AB;border-bottom:4px solid #1196AB;border-radius:0 2px=
+ 2px 0;"></div></td></tr><tr><td height=3D"7"></td></tr></table> </td></tr>=
+</table></td></tr><tr><td height=3D"5"></td></tr><tr><td><div style=3D"font=
+-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;font-weight:70=
+0;line-height:21px;text-align:center;color:#0F1111;"><span class=3D"rio-tex=
+t rio-text-2411">Bestellt</span></div>  </td></tr></table></td><td width=3D=
+"25%" valign=3D"top" role=3D"listitem"><table cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%" border=3D"0" style=3D"color:#00=
+0000;font-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;line-=
+height:22px;table-layout:auto;width:100%;border:none;"><tr><td style=3D"hei=
+ght:18px"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+width=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazo=
+n Ember',Arial,sans-serif;font-size:15px;line-height:22px;table-layout:auto=
+;width:100%;border:none;"><tr><td width=3D"50%" height=3D"18">  <table cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" border=
+=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-s=
+erif;font-size:15px;line-height:22px;table-layout:auto;width:100%;border:no=
+ne;"><tr><td height=3D"7"></td></tr><tr><td height=3D"4" style=3D"backgroun=
+d:#E9E7E7"><div style=3D"width:100%;height:0;border-width:0;background:#E9E=
+7E7;border-bottom:4px solid #E9E7E7;"></div></td></tr><tr><td height=3D"7">=
+</td></tr></table></td><td height=3D"18">  <table cellpadding=3D"0" cellspa=
+cing=3D"0" role=3D"presentation" width=3D"18" border=3D"0" style=3D"color:#=
+000000;font-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;lin=
+e-height:22px;table-layout:auto;width:18;border:none;"><tr><td width=3D"18"=
+ height=3D"18" align=3D"center"><div style=3D"border-radius:18px;background=
+:#E9E7E7;line-height:17px;box-shadow:0 0 0 2px #E9E7E7;"><img aria-label=3D=
+"Ausstehend" src=3D"https://m.media-amazon.com/images/G/01/outbound/etc/pix=
+el.gif" width=3D"19" height=3D"19" style=3D"width:18px;height:18px;display:=
+block;" alt=3D"Ausstehend"></div></td></tr></table></td><td width=3D"50%" h=
+eight=3D"18">  <table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" width=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Ember,'=
+Amazon Ember',Arial,sans-serif;font-size:15px;line-height:22px;table-layout=
+:auto;width:100%;border:none;"><tr><td height=3D"7"></td></tr><tr><td heigh=
+t=3D"4" style=3D"background:#E9E7E7"><div style=3D"width:100%;height:0;bord=
+er-width:0;background:#E9E7E7;border-bottom:4px solid #E9E7E7;"></div></td>=
+</tr><tr><td height=3D"7"></td></tr></table></td></tr></table></td></tr><tr=
+><td height=3D"5"></td></tr><tr><td> <div style=3D"font-family:Ember,'Amazo=
+n Ember',Arial,sans-serif;font-size:15px;font-weight:400;line-height:21px;t=
+ext-align:center;color:#0F1111;"><span class=3D"rio-text rio-text-2415">Ver=
+sendet</span></div> </td></tr></table></td><td width=3D"25%" valign=3D"top"=
+ role=3D"listitem"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" width=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Emb=
+er,'Amazon Ember',Arial,sans-serif;font-size:15px;line-height:22px;table-la=
+yout:auto;width:100%;border:none;"><tr><td style=3D"height:18px"><table cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" borde=
+r=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-=
+serif;font-size:15px;line-height:22px;table-layout:auto;width:100%;border:n=
+one;"><tr><td width=3D"50%" height=3D"18">  <table cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" width=3D"100%" border=3D"0" style=3D"colo=
+r:#000000;font-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;=
+line-height:22px;table-layout:auto;width:100%;border:none;"><tr><td height=
+=3D"7"></td></tr><tr><td height=3D"4" style=3D"background:#E9E7E7"><div sty=
+le=3D"width:100%;height:0;border-width:0;background:#E9E7E7;border-bottom:4=
+px solid #E9E7E7;"></div></td></tr><tr><td height=3D"7"></td></tr></table><=
+/td><td height=3D"18">  <table cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" width=3D"18" border=3D"0" style=3D"color:#000000;font-family:=
+Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;line-height:22px;table=
+-layout:auto;width:18;border:none;"><tr><td width=3D"18" height=3D"18" alig=
+n=3D"center"><div style=3D"border-radius:18px;background:#E9E7E7;line-heigh=
+t:17px;box-shadow:0 0 0 2px #E9E7E7;"><img aria-label=3D"Ausstehend" src=3D=
+"https://m.media-amazon.com/images/G/01/outbound/etc/pixel.gif" width=3D"19=
+" height=3D"19" style=3D"width:18px;height:18px;display:block;" alt=3D"Auss=
+tehend"></div></td></tr></table></td><td width=3D"50%" height=3D"18">  <tab=
+le cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"=
+ border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial=
+,sans-serif;font-size:15px;line-height:22px;table-layout:auto;width:100%;bo=
+rder:none;"><tr><td height=3D"7"></td></tr><tr><td height=3D"4" style=3D"ba=
+ckground:#E9E7E7"><div style=3D"width:100%;height:0;border-width:0;backgrou=
+nd:#E9E7E7;border-bottom:4px solid #E9E7E7;"></div></td></tr><tr><td height=
+=3D"7"></td></tr></table></td></tr></table></td></tr><tr><td height=3D"5"><=
+/td></tr><tr><td> <div style=3D"font-family:Ember,'Amazon Ember',Arial,sans=
+-serif;font-size:15px;font-weight:400;line-height:21px;text-align:center;co=
+lor:#0F1111;"><span class=3D"rio-text rio-text-2418">In Zustellung</span></=
+div> </td></tr></table></td><td width=3D"25%" valign=3D"top" role=3D"listit=
+em"><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=
+=3D"100%" border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon Emb=
+er',Arial,sans-serif;font-size:15px;line-height:22px;table-layout:auto;widt=
+h:100%;border:none;"><tr><td style=3D"height:18px"><table cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" width=3D"100%" border=3D"0" style=
+=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-serif;font-si=
+ze:15px;line-height:22px;table-layout:auto;width:100%;border:none;"><tr><td=
+ width=3D"50%" height=3D"18">  <table cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" width=3D"100%" border=3D"0" style=3D"color:#000000;fon=
+t-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;line-height:2=
+2px;table-layout:auto;width:100%;border:none;"><tr><td height=3D"7"></td></=
+tr><tr><td height=3D"4" style=3D"background:#E9E7E7"><div style=3D"width:10=
+0%;height:0;border-width:0;background:#E9E7E7;border-bottom:4px solid #E9E7=
+E7;"></div></td></tr><tr><td height=3D"7"></td></tr></table></td><td height=
+=3D"18">  <table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+width=3D"18" border=3D"0" style=3D"color:#000000;font-family:Ember,'Amazon =
+Ember',Arial,sans-serif;font-size:15px;line-height:22px;table-layout:auto;w=
+idth:18;border:none;"><tr><td width=3D"18" height=3D"18" align=3D"center"><=
+div style=3D"border-radius:18px;background:#E9E7E7;line-height:17px;box-sha=
+dow:0 0 0 2px #E9E7E7;"><img aria-label=3D"Ausstehend" src=3D"https://m.med=
+ia-amazon.com/images/G/01/outbound/etc/pixel.gif" width=3D"19" height=3D"19=
+" style=3D"width:18px;height:18px;display:block;" alt=3D"Ausstehend"></div>=
+</td></tr></table></td><td width=3D"50%" height=3D"18">  <table cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" border=3D"0" =
+style=3D"color:#000000;font-family:Ember,'Amazon Ember',Arial,sans-serif;fo=
+nt-size:15px;line-height:22px;table-layout:auto;width:100%;border:none;"><t=
+r><td height=3D"7"></td></tr><tr><td height=3D"4"></td></tr><tr><td height=
+=3D"7"></td></tr></table></td></tr></table></td></tr><tr><td height=3D"5"><=
+/td></tr><tr><td> <div style=3D"font-family:Ember,'Amazon Ember',Arial,sans=
+-serif;font-size:15px;font-weight:400;line-height:21px;text-align:center;co=
+lor:#0F1111;"><span class=3D"rio-text rio-text-2421">Zugestellt</span></div=
+> </td></tr></table></td></tr></table><!--[if mso | IE]></td></tr></table><=
+![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></ta=
+ble></td></tr><![endif]-->  <!--[if mso | IE]></table><![endif]--></td></tr=
+></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--> <!-=
+-[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" class=3D"rootContent-outlook moduleId-divider-outlook" role=3D=
+"presentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#ffffff" ><t=
+r><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"=
+><![endif]--><div class=3D"rootContent moduleId-divider" style=3D"backgroun=
+d:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;"><table=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" style=3D"background:#ffffff;background-color:#ffffff;width:10=
+0%;"><tbody><tr><td style=3D"direction:ltr;font-size:0px;padding:4px 8px 4p=
+x 8px;text-align:left;"><!--[if mso | IE]><table role=3D"presentation" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0"><![endif]--><!--[if mso | IE]>=
+<tr><td align=3D"left" class=3D"" width=3D"600px" ><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rio-card-outlook"=
+ role=3D"presentation" style=3D"width:584px;" width=3D"584" ><tr><td style=
+=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-=
+-><div class=3D"rio-card" style=3D"margin:0px auto;border-radius:4px;max-wi=
+dth:584px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"width:100%;border-radius:4px;"><tb=
+ody><tr><td style=3D"direction:ltr;font-size:0px;padding:0px 8px 0px 8px;te=
+xt-align:left;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0"><tr><td align=3D"left" class=3D"" widt=
+h=3D"584px" ><![endif]--><p style=3D"border-top:solid 1px #BBBFBF;font-size=
+:1px;margin:0px auto;width:100%;"></p><!--[if mso | IE]><table align=3D"lef=
+t" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-top:sol=
+id 1px #BBBFBF;font-size:1px;margin:0px auto;width:568px;" role=3D"presenta=
+tion" width=3D"568px" ><tr><td style=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table></td></tr></table><![endif]--></td></tr></tbody></table><=
+/div><!--[if mso | IE]></td></tr></table></td></tr><![endif]--><!--[if mso =
+| IE]></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]=
+></td></tr></table><![endif]--> <!--[if mso | IE]><table align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rootContent-outloo=
+k moduleId-rexMultiOrderCard-outlook" role=3D"presentation" style=3D"width:=
+600px;" width=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"line-height:0px=
+;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"roo=
+tContent moduleId-rexMultiOrderCard" style=3D"background:#ffffff;background=
+-color:#ffffff;margin:0px auto;max-width:600px;"><table align=3D"center" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"background:#ffffff;background-color:#ffffff;width:100%;"><tbody><tr><td=
+ style=3D"direction:ltr;font-size:0px;padding:4px 8px 4px 8px;text-align:le=
+ft;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0"><![endif]--> <!--[if mso | IE]><tr><td align=3D"l=
+eft" class=3D"rex-multi-order-card-outlook rex-multi-order-card-v1-outlook"=
+ width=3D"600px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"rio-card-outlook" role=3D"presentation" style=3D"w=
+idth:584px;" width=3D"584" bgcolor=3D"#ffffff" ><tr><td style=3D"line-heigh=
+t:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div class=
+=3D"rio-card" style=3D"background:#ffffff;background-color:#ffffff;margin:0=
+px auto;border-radius:4px;max-width:584px;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+ackground:#ffffff;background-color:#ffffff;width:100%;border-radius:4px;"><=
+tbody><tr><td style=3D"direction:ltr;font-size:0px;padding:4px 8px 4px 8px;=
+text-align:left;"><!--[if mso | IE]><table role=3D"presentation" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0"><![endif]-->        <!--[if mso | IE=
+]><tr><td align=3D"left" class=3D"" width=3D"584px" ><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"prese=
+ntation" style=3D"width:568px;" width=3D"568" ><tr><td style=3D"line-height=
+:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D=
+"margin:0px auto;max-width:568px;"><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;=
+"><tbody><tr><td style=3D"direction:ltr;font-size:0px;padding:0;text-align:=
+left;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0"><tr><td align=3D"left" class=3D"" style=3D"vert=
+ical-align:top;width:568px;" ><![endif]--><div class=3D"mj-column-per-100 m=
+j-outlook-group-fix" style=3D"font-size:0px;text-align:left;direction:ltr;d=
+isplay:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbod=
+y><tr><td style=3D"vertical-align:top;padding:0;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody>=
+<tr><td align=3D"left" style=3D"font-size:0px;padding:0;word-break:break-wo=
+rd;"><!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:568px;=
+" width=3D"568" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-he=
+ight-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:568=
+px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"dire=
+ction:ltr;font-size:0px;padding:0;text-align:left;"><!--[if mso | IE]><tabl=
+e role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><t=
+r><td align=3D"left" class=3D"" style=3D"vertical-align:top;width:568px;" >=
+<![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"=
+font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-a=
+lign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-al=
+ign:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"left" style=
+=3D"font-size:0px;padding:0;word-break:break-word;"><div style=3D"font-fami=
+ly:Ember,'Amazon Ember',Arial,sans-serif;font-size:18px;font-weight:700;lin=
+e-height:22px;text-align:left;color:#0F1111;"><span class=3D"rio-text rio-t=
+ext-2568">Zustellung: Montag</span></div></td></tr><tr><td align=3D"left" c=
+lass=3D"rio-spacer" style=3D"font-size:0px;padding:0;word-break:break-word;=
+"><div aria-hidden=3D"true" style=3D"height:4px;line-height:4px">&nbsp;</di=
+v></td></tr><tr><td align=3D"left" style=3D"font-size:0px;padding:0;word-br=
+eak:break-word;"><div style=3D"font-family:Ember,'Amazon Ember',Arial,sans-=
+serif;font-size:15px;font-weight:400;line-height:21px;text-align:left;color=
+:#0F1111;"><span class=3D"rio-text rio-text-2571"><b>Oliver =E2=80=93 Elmsh=
+orn</b></span></div></td></tr><tr><td align=3D"left" style=3D"font-size:0px=
+;padding:0;word-break:break-word;"><div style=3D"font-family:Ember,'Amazon =
+Ember',Arial,sans-serif;font-size:15px;font-weight:400;line-height:21px;tex=
+t-align:left;color:#0F1111;"><span class=3D"rio-text rio-text-2574"><span>B=
+estellnr.</span> <span>=E2=80=AB028-1905622-7468340</span></span></div></td=
+></tr><tr><td align=3D"left" style=3D"font-size:0px;padding:0;word-break:br=
+eak-word;"><!--[if mso | IE]><table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:=
+568px;" width=3D"568" ><tr><td style=3D"line-height:0px;font-size:0px;mso-l=
+ine-height-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;max-wid=
+th:568px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=
+=3D"direction:ltr;font-size:0px;padding:0;text-align:left;"><!--[if mso | I=
+E]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"><tr><td align=3D"left" class=3D"" style=3D"vertical-align:top;width:=
+568px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" =
+style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;v=
+ertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"ve=
+rtical-align:top;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%"><tbody><mj-raw>  </mj-raw><t=
+r><td align=3D"left" class=3D"rio-spacer" style=3D"font-size:0px;padding:0;=
+word-break:break-word;"><div aria-hidden=3D"true" style=3D"height:12px;line=
+-height:12px">&nbsp;</div></td></tr><tr><td align=3D"left" style=3D"font-si=
+ze:0px;padding:0;word-break:break-word;"><table cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" role=3D"presentation"><tr><td class=3D"rio-button-cta=
+-primary" style=3D"text-align:center;border-radius:24px;mso-padding-alt:6px=
+ 16px;mso-border-alt:1px solid #FCD200;background:#FFD916;"><a target=3D"_b=
+lank" class=3D"rio-button rio-button-primary rio-button-233" href=3D"https:=
+//www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:ms=
+g:202601170959551e7fa434c03144db9271aad48b90p0eu&R=3D1NDHZPE47J75V&T=3DC&U=
+=3Dhttps%3A%2F%2Fwww.amazon.de%2Fyour-orders%2Forder-details%3ForderID%3D02=
+8-1905622-7468340%26ref_%3Dpe_111929571_1111661321_p_btn_fed_veo&H=3DFDVYUA=
+NA9INAHJLADR1GVASICDCA&ref_=3Dpe_111929571_1111661321_p_btn_fed_veo" style=
+=3D"border:1px solid #FCD200;background:#FFD916;mso-border-alt:none;font-fa=
+mily:Ember,'Amazon Ember',Arial,sans-serif;color:#0F1111;text-decoration:no=
+ne;border-radius:24px;padding:6px 16px;mso-padding-alt:0;display:inline-blo=
+ck;box-shadow:1px 2px 4px rgba(153, 153, 153, 0.2);font-size:13px;line-heig=
+ht:18px;white-space:nowrap;text-shadow:0 0 0.1px transparent;"><span style=
+=3D"text-decoration: none;">Bestellung ansehen oder =C3=A4ndern</span></a><=
+/td></tr></table></td></tr></tbody></table></td></tr></tbody></table></div>=
+<!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table><=
+/div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr>  <tr><td al=
+ign=3D"left" style=3D"font-size:0px;padding:0;word-break:break-word;"><!--[=
+if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"" role=3D"presentation" style=3D"width:568px;" width=3D=
+"568" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:=
+exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:568px;"><tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;=
+font-size:0px;padding:0;text-align:left;"><!--[if mso | IE]><table role=3D"=
+presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td alig=
+n=3D"left" class=3D"" style=3D"vertical-align:top;width:568px;" ><![endif]-=
+-><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:=
+0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;w=
+idth:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-align:top;pa=
+dding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" width=3D"100%"><tbody><tr><td align=3D"left" class=3D"rio-spac=
+er" style=3D"font-size:0px;padding:0;word-break:break-word;"><div aria-hidd=
+en=3D"true" style=3D"height:12px;line-height:12px">&nbsp;</div></td></tr><t=
+r><td align=3D"left" style=3D"font-size:0px;padding:0;word-break:break-word=
+;"><!--[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"" role=3D"presentation" style=3D"width:568px;" =
+width=3D"568" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-heig=
+ht-rule:exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:568px=
+;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direct=
+ion:ltr;font-size:0px;padding:0;text-align:left;"><!--[if mso | IE]><table =
+role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr>=
+<td align=3D"left" class=3D"" style=3D"width:568px;" ><![endif]--><div clas=
+s=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0;line-heig=
+ht:0;text-align:left;display:inline-block;width:100%;direction:ltr;"><!--[i=
+f mso | IE]><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" ><tr><td style=3D"align:left;vertical-align:top;width:142px;=
+" ><![endif]--><div class=3D"mj-column-per-25 mj-outlook-group-fix" style=
+=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertic=
+al-align:top;width:25%;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vertica=
+l-align:top;padding:0;padding-right:8px;padding-left:0;"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%">=
+<tbody>       <!-- TODO fallback can be removed after at least 2week bake t=
+ime and validating that all emails are getting the link from productImageCo=
+nnection https://issues.amazon.com/issues/TxN-996 -->  <mj-raw>  </mj-raw><=
+tr><td align=3D"left" class=3D"rio-asin-image" style=3D"font-size:0px;paddi=
+ng:0;word-break:break-word;"><table style=3D"width: 100%; border-radius: 4p=
+x;" class=3D"rio-asin-image-pdzkmn2KryJkeenZyQMDvF" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><=
+td class=3D"productImageTd" style=3D"background-image:linear-gradient(rgba(=
+15, 17, 17, 0.03), rgba(15, 17, 17, 0.03));border-radius:4px;position:relat=
+ive;width:100%;height:122px;vertical-align:middle;text-align:center;padding=
+:8px;"><a target=3D"_blank" href=3D"https://www.amazon.de/gp/r.html?C=3D37C=
+GT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144db9=
+271aad48b90p0eu&R=3D3BGQAL1LUQ6GQ&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2Fd=
+p%2FB07H7JCCKM%3Fref_%3Dpe_111929571_1111661321_i_fed_asin_title&H=3D4Z1OCU=
+NFVDYQAN1HJCTKQLCROXSA&ref_=3Dpe_111929571_1111661321_i_fed_asin_title" sty=
+le=3D"background-color:transparent;display:inline-block;"><img style=3D"wid=
+th:100%;height:auto;max-height:122px;max-width:122px;margin:auto;display:bl=
+ock;" class=3D"productImage" width=3D"122" src=3D"https://m.media-amazon.co=
+m/images/I/61xrJh7jsHL._SS90_.jpg" alt=3D"UGREEN HDMI 2.0 Switch 4K@60Hz Bi=
+direktional HDMI Switch Splitter 1 in 2 Out/2 in 1 Out f=C3=BCr PS5, PS4, X=
+box,TV Box, TV Stick, Switch, Monitor, PC usw"></a></td></tr></tbody></tabl=
+e></td></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | I=
+E]></td><td style=3D"align:left;vertical-align:top;width:426px;" ><![endif]=
+--><div class=3D"mj-column-per-75 mj-outlook-group-fix" style=3D"font-size:=
+0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;w=
+idth:75%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-align:top;pad=
+ding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" width=3D"100%"><tbody><mj-raw>  </mj-raw><tr><td align=3D"left"=
+ style=3D"font-size:0px;padding:0;word-break:break-word;"><div style=3D"fon=
+t-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;font-weight:4=
+00;line-height:21px;text-align:left;color:#0F1111;"><span class=3D"rio-text=
+ rio-text-2582"><a href=3D"https://www.amazon.de/gp/r.html?C=3D37CGT2IUX1PH=
+V&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144db9271aad48b=
+90p0eu&R=3D3QLEO7FUBCXWG&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2Fdp%2FB07H7=
+JCCKM%3Fref_%3Dpe_111929571_1111661321_t_fed_asin_title&H=3DUZMXWERBS9A9XQH=
+JWEC0XPXA4QIA&ref_=3Dpe_111929571_1111661321_t_fed_asin_title" target=3D"_b=
+lank" style=3D"color: #0F1111;">UGREEN HDMI 2.0 Switch 4K@60Hz Bi...</a></s=
+pan></div></td></tr> <tr><td align=3D"left" class=3D"rio-spacer" style=3D"f=
+ont-size:0px;padding:0;word-break:break-word;"><div aria-hidden=3D"true" st=
+yle=3D"height:4px;line-height:4px">&nbsp;</div></td></tr><tr><td align=3D"l=
+eft" style=3D"font-size:0px;padding:0;word-break:break-word;"><div style=3D=
+"font-family:Ember,'Amazon Ember',Arial,sans-serif;font-size:13px;font-weig=
+ht:400;line-height:18px;text-align:left;color:#565959;"><span class=3D"rio-=
+text rio-text-2583">Verkauf durch UGREEN GROUP LIMITED UK</span></div></td>=
+</tr>  <tr><td align=3D"left" class=3D"rio-spacer" style=3D"font-size:0px;p=
+adding:0;word-break:break-word;"><div aria-hidden=3D"true" style=3D"height:=
+4px;line-height:4px">&nbsp;</div></td></tr><tr><td align=3D"left" style=3D"=
+font-size:0px;padding:0;word-break:break-word;"><div style=3D"font-family:E=
+mber,'Amazon Ember',Arial,sans-serif;font-size:13px;font-weight:400;line-he=
+ight:18px;text-align:left;color:#565959;"><span class=3D"rio-text rio-text-=
+2585">Zustand: Neu</span></div></td></tr> <tr><td align=3D"left" class=3D"r=
+io-spacer" style=3D"font-size:0px;padding:0;word-break:break-word;"><div ar=
+ia-hidden=3D"true" style=3D"height:4px;line-height:4px">&nbsp;</div></td></=
+tr><tr><td align=3D"left" style=3D"font-size:0px;padding:0;word-break:break=
+-word;"><div style=3D"font-family:Ember,'Amazon Ember',Arial,sans-serif;fon=
+t-size:13px;font-weight:400;line-height:18px;text-align:left;color:#565959;=
+"><span class=3D"rio-text rio-text-2586">Menge: 1</span></div></td></tr> <t=
+r><td align=3D"left" class=3D"rio-spacer" style=3D"font-size:0px;padding:0;=
+word-break:break-word;"><div aria-hidden=3D"true" style=3D"height:4px;line-=
+height:4px">&nbsp;</div></td></tr><tr><td align=3D"left" style=3D"font-size=
+:0px;padding:0;word-break:break-word;"><div style=3D"font-family:Ember,'Ama=
+zon Ember',Arial,sans-serif;font-size:18px;font-weight:400;line-height:22px=
+;text-align:left;color:#0F1111;"><span class=3D"rio-text rio-text-2588"><mj=
+-raw></mj-raw>  <span role=3D"region" aria-label=3D"{amount=3D5.99, currenc=
+yCode=3D{smallestAmount=3D0.01, code=3DEUR}, label=3Dnull, pricingIncrement=
+=3Dnull}" style=3D"font-size: 18px; font-weight: 400; vertical-align: basel=
+ine;"><!-- MSO-specific style for Outlook --><!--[if mso]><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" ><tr> <td style=3D"font-size: 18px; =
+font-weight: 400; vertical-align: middle; padding: 0;"><span style=3D"displ=
+ay: inline-block;">5</span></td>  <td style=3D"font-size: 18px; vertical-al=
+ign: top; padding: 0;"><sup style=3D"position: relative; top: 2px;">99</sup=
+></td> <td style=3D"font-size: 18px; vertical-align: top; padding: 0;"><sup=
+ style=3D"position: relative; top: 2px;">=E2=82=AC</sup></td></tr></table><=
+![endif]--><!-- Non-MSO rendering for other email clients --><!--[if !mso]>=
+<!-->5<sup style=3D"font-size: 10px; position: relative; top: 2px;">99</sup=
+><sup style=3D"font-size: 10px; position: relative; top: 2px;">=E2=82=AC</s=
+up><!--<![endif]--> </span><mj-raw></mj-raw></span></div></td></tr></tbody>=
+</table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table=
+><![endif]--></div><!--[if mso | IE]></td></tr></table><![endif]--></td></t=
+r></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></t=
+d></tr></tbody></table></td></tr></tbody></table></div><!--[if mso | IE]></=
+td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso | I=
+E]></td></tr></table><![endif]--></td></tr></tbody></table></td></tr></tbod=
+y></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr><=
+/tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td><=
+/tr><tr><td align=3D"left" class=3D"rio-spacer" style=3D"font-size:0px;padd=
+ing:0;word-break:break-word;"><div aria-hidden=3D"true" style=3D"height:12p=
+x;line-height:12px">&nbsp;</div></td></tr><tr><td align=3D"left" style=3D"f=
+ont-size:0px;padding:0;word-break:break-word;"><table width=3D"100%" role=
+=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tr><td =
+style=3D"width:100%;height:1px;padding-top:0px;padding-bottom:0px;padding-l=
+eft:0px;padding-right:0px;background-color:#BBBFBF;"><p style=3D"border-top=
+:solid 1px #BBBFBF;font-size:1px;margin:0px auto;width:100%;"></p><!--[if m=
+so | IE]><table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-top:solid 1px #BBBFBF;font-size:1px;margin:0px auto;=
+width:568px;" role=3D"presentation" width=3D"568px" ><tr><td style=3D"heigh=
+t:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]--></td></tr></table></td></tr><tr><td align=3D"=
+left" style=3D"font-size:0px;padding:0;word-break:break-word;"><!--[if mso =
+| IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"" role=3D"presentation" style=3D"width:568px;" width=3D"568" >=
+<tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly=
+;"><![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-si=
+ze:0px;padding:0;text-align:left;"><!--[if mso | IE]><table role=3D"present=
+ation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td align=3D"le=
+ft" class=3D"" style=3D"vertical-align:top;width:568px;" ><![endif]--><div =
+class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0px;tex=
+t-align:left;direction:ltr;display:inline-block;vertical-align:top;width:10=
+0%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" width=3D"100%"><tbody><tr><td style=3D"vertical-align:top;padding:0=
+;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" width=3D"100%"><tbody><tr><td align=3D"left" class=3D"rio-spacer" sty=
+le=3D"font-size:0px;padding:0;word-break:break-word;"><div aria-hidden=3D"t=
+rue" style=3D"height:12px;line-height:12px">&nbsp;</div></td></tr><tr><td a=
+lign=3D"left" style=3D"font-size:0px;padding:0;word-break:break-word;"><!--=
+[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"" role=3D"presentation" style=3D"width:568px;" width=
+=3D"568" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-ru=
+le:exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:568px;"><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:l=
+tr;font-size:0px;padding:0;text-align:left;"><!--[if mso | IE]><table role=
+=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td =
+align=3D"left" class=3D"" style=3D"vertical-align:top;width:568px;" ><![end=
+if]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-align:to=
+p;padding:0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"fon=
+t-size:0px;padding:0;word-break:break-word;"><table cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" border=3D"0" style=3D"color:#000000;font-family=
+:Ember,'Amazon Ember',Arial,sans-serif;font-size:15px;line-height:22px;tabl=
+e-layout:auto;width:100%;border:none;"><tr><mj-raw></mj-raw></td><td align=
+=3D"left" style=3D"width: 50%; padding-right: 30px; font-size: 14px;">Summe=
+</td><td align=3D"right" style=3D"width: 50%; font-size: 14px; font-weight:=
+ bold;"><mj-raw></mj-raw><mj-raw> </mj-raw>  5.99=E2=82=AC<mj-raw></mj-raw>=
+</td></tr></table></td></tr></tbody></table></td></tr></tbody></table></div=
+><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table>=
+</div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></t=
+able></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><!=
+[endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></tab=
+le><![endif]--></td></tr><tr><td align=3D"left" class=3D"rio-spacer" style=
+=3D"font-size:0px;padding:0;word-break:break-word;"><div aria-hidden=3D"tru=
+e" style=3D"height:12px;line-height:12px">&nbsp;</div></td></tr><tr><td ali=
+gn=3D"left" style=3D"font-size:0px;padding:0;word-break:break-word;"><table=
+ width=3D"100%" role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0"><tr><td style=3D"width:100%;height:1px;padding-top:0px;padding-=
+bottom:0px;padding-left:0px;padding-right:0px;background-color:#BBBFBF;"><p=
+ style=3D"border-top:solid 1px #BBBFBF;font-size:1px;margin:0px auto;width:=
+100%;"></p><!--[if mso | IE]><table align=3D"left" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" style=3D"border-top:solid 1px #BBBFBF;font-size:1p=
+x;margin:0px auto;width:568px;" role=3D"presentation" width=3D"568px" ><tr>=
+<td style=3D"height:0;line-height:0;"> &nbsp;
+</td></tr></table><![endif]--></td></tr></table></td></tr></tbody></table><=
+/td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif=
+]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table></t=
+d></tr><![endif]--> <!--[if mso | IE]></table><![endif]--></td></tr></tbody=
+></table></div><!--[if mso | IE]></td></tr></table></td></tr><![endif]-->  =
+<!--[if mso | IE]></table><![endif]--></td></tr></tbody></table></div><!--[=
+if mso | IE]></td></tr></table><![endif]--> <!--[if mso | IE]><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rootC=
+ontent-outlook moduleId-marketingSlot-outlook" role=3D"presentation" style=
+=3D"width:600px;" width=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"line-=
+height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div cl=
+ass=3D"rootContent moduleId-marketingSlot" style=3D"background:#ffffff;back=
+ground-color:#ffffff;margin:0px auto;max-width:600px;"><table align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"background:#ffffff;background-color:#ffffff;width:100%;"><tbody><t=
+r><td style=3D"direction:ltr;font-size:0px;padding:4px 8px 4px 8px;text-ali=
+gn:left;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0"><![endif]-->        <!--[if mso | IE]></tabl=
+e><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr><=
+/table><![endif]--> <!--[if mso | IE]><table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"rootContent-outlook moduleId-t=
+ransactionalFooter-outlook" role=3D"presentation" style=3D"width:600px;" wi=
+dth=3D"600" bgcolor=3D"#ffffff" ><tr><td style=3D"line-height:0px;font-size=
+:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"rootContent m=
+oduleId-transactionalFooter" style=3D"background:#ffffff;background-color:#=
+ffffff;margin:0px auto;max-width:600px;"><table align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"backg=
+round:#ffffff;background-color:#ffffff;width:100%;"><tbody><tr><td style=3D=
+"direction:ltr;font-size:0px;padding:4px 0px 0px 0px;text-align:left;"><!--=
+[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0"><![endif]--> <!--[if mso | IE]><tr><td align=3D"left" clas=
+s=3D"sonar-footer-outlook sonar-footer-v1-outlook" width=3D"600px" ><![endi=
+f]--><style type=3D"text/css">.footer-text, .footer-card p, .footer-card li=
+ {
+            color: #494D4D;
+        }
+        .footer-card p{margin-top:20px}
+        .footer-card a {
+            color: #007185 !important;
+            text-decoration: none !important;
+        }
+        @media (prefers-color-scheme:dark){
+            .footer-card {
+                background-color: #303333 !important;
+            }
+           =20
+            .footer-card a {
+                color: #6ED6E6 !important;
+            }
+           =20
+            .footer-text, .footer-card p, .footer-card li {
+                color: #C8CCCC !important;
+            }
+            .lightFooterImg{display:none!important}.darkFooterImg{display:b=
+lock!important}}[data-ogsb] .footer-card{background-color:#303333!important=
+}
+        [data-ogsc] .footer-card a {
+            color: #6ED6E6 !important;
+        }
+        [data-ogsc] .footer-card li,[data-ogsc] .footer-card p,[data-ogsc] =
+.footer-text{color:#c8cccc!important}[data-ogsc] .lightFooterImg{display:no=
+ne!important}[data-ogsc] .darkFooterImg{display:block!important}</style><ta=
+ble class=3D"footer-card" data-sonar-role=3D"footer" width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" style=3D"ba=
+ckground-color:#F0F2F2;width:100%;"><tr><td width=3D"100%" align=3D"left" s=
+tyle=3D"width:100%;padding-bottom:4px;text-align:left"><table width=3D"100%=
+" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" st=
+yle=3D"width:100%;"><tr><td class=3D"footer-text" style=3D"width:100%;paddi=
+ng:0 16px 16px 16px;font-family:Ember,'Amazon Ember',Arial,sans-serif;font-=
+size:14px;line-height:20px;color:#494D4D;"><div style=3D"margin-top:20px;">=
+Amazon.de ist ein Handelsname f=C3=BCr Amazon EU Sarl, f=C3=BCr Amazon Euro=
+pe Core Sarl, f=C3=BCr Amazon Media EU Sarl und f=C3=BCr Amazon Services Eu=
+rope Sarl, die alle ihren eingetragenen Sitz unter 38 avenue John F. Kenned=
+y, L-1855 Luxemburg haben und f=C3=BCr die Amazon Digital Germany GmbH, mit=
+ eingetragenem Anni-Albers-Strasse 21, 80807 Munich, Deutschland. =C2=A9202=
+6 Amazon.com, Inc. oder verbundene Unternehmen. Amazon sowie alle zugeh=C3=
+=B6rigen Marken sind Marken der Amazon.com, Inc. oder deren verbundenen Unt=
+ernehmen.
+Es k=C3=B6nnen Versandkosten anfallen. F=C3=BCr Ihren Kauf gilt der Preis u=
+nd die Verf=C3=BCgbarkeit, die zum Zeitpunkt des Kaufs auf amazon.de angeze=
+igt werden</div> <div style=3D"margin-top:20px;"><p>Diese E-Mail ist nur ei=
+ne Empfangsbest=C3=A4tigung deiner Bestellung. Dein Vertrag =C3=BCber den K=
+auf dieser Artikel kommt erst zustande, wenn wir dir eine <a href=3D"https:=
+//www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:ms=
+g:202601170959551e7fa434c03144db9271aad48b90p0eu&R=3D1UH4UAER2XNRX&T=3DC&U=
+=3Dhttps%3A%2F%2Fwww.amazon.de%2Fgp%2Fhelp%2Fcustomer%2Fdisplay.html%2F%3Fn=
+odeId%3D201909000%26ref_%3Dpe_111929571_1111661321_fed_roclt_acknowledgemen=
+t&H=3DIGKUG3R5QZINIZ9PXSOZFDMABNEA&ref_=3Dpe_111929571_1111661321_fed_roclt=
+_acknowledgement" rel=3D"nofollow">E-Mail schicken, in der wir dich =C3=BCb=
+er den Versand der Artikel informieren</a>.</p>
+<p>Artikel mit <a href=3D"https://www.amazon.de/gp/f.html?C=3D37CGT2IUX1PHV=
+&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144db9271aad48b9=
+0p0eu&R=3D2JBV3PE574T59&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2Fhelp%2Fen%2=
+Ffba%3Fref_%3Dpe_111929571_1111661321_fed_roclt_default_helpfba&H=3D7VL08CD=
+AABKSEXE3QDXVOAXTIJ8A&ref_=3Dpe_111929571_1111661321_fed_roclt_default_help=
+fba" rel=3D"nofollow">Versand durch Amazon</a> (gew=C3=B6hnlich als FBA bez=
+eichnet) werden in der Regel von Drittanbietern verkauft, aber in einem Ama=
+zon-Versandzentrum gelagert und von dort aus an dich versandt. Artikel, die=
+ von Warehouse Deals verkauft werden, sind ebenfalls mit dem Hinweis =E2=80=
+=9EVersand durch Amazon=E2=80=9C versehen. Warehouse Deals ist ein Handelsn=
+ame von Amazon EU Sarl und ist Teil der Amazon.com-Gruppe.</p>
+<p>Wenn dein(e) Artikel vom <a href=3D"https://www.amazon.de/gp/f.html?C=3D=
+37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144=
+db9271aad48b90p0eu&R=3DQXGXG7RUAOY4&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%2=
+Fhelp%2Fen%2Fmarketplace%3Fref_%3Dpe_111929571_1111661321_fed_roclt_notsold=
+byamznpen&H=3DALBA9BMHRQS0AYQKB8DYZ8APONKA&ref_=3Dpe_111929571_1111661321_f=
+ed_roclt_notsoldbyamznpen" rel=3D"nofollow">Amazon Marketplace</a> gekauft =
+werden, kann der Verk=C3=A4ufer zus=C3=A4tzliche Informationen wie deine Um=
+satzsteuer-Identifikationsnummer oder deinen Umsatzsteuercode verlangen, um=
+ eine g=C3=BCltige Rechnung ausstellen zu k=C3=B6nnen.</p></div></td></tr><=
+/table><a href=3D"https://www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLH=
+QAIDC3CTM&M=3Durn:rtn:msg:202601170959551e7fa434c03144db9271aad48b90p0eu&R=
+=3D24S8GQNFC6B87&T=3DC&U=3Dhttps%3A%2F%2Fwww.amazon.de%3Fref_%3Dpe_11192957=
+1_1111661321_LF0504LNK_LF08&H=3DA3TWDJQIZI8AHAMV9ZKIDIDOTNKA&ref_=3Dpe_1119=
+29571_1111661321_LF0504LNK_LF08" target=3D"_blank"><img src=3D"https://m.me=
+dia-amazon.com/images/G/01/outbound/OutboundTemplates/Smile_Logo_Light._BG2=
+40,242,242_.png" alt=3D"Amazon.de" height=3D"43" width=3D"86" align=3D"left=
+" class=3D"lightFooterImg" style=3D"display:block;"> <!--[if !mso]><! --><i=
+mg src=3D"https://m.media-amazon.com/images/G/01/outbound/OutboundTemplates=
+/Smile_Logo_Dark.png" alt=3D"Amazon.de" height=3D"43" width=3D"86" align=3D=
+"left" class=3D"darkFooterImg" style=3D"display:none;"><!--<![endif]--></a>=
+</td></tr></table><!--[if mso | IE]></td></tr><![endif]--> <!--[if mso | IE=
+]></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></t=
+d></tr></table><![endif]--></div><img width=3D"1" height=3D"1" src=3D"https=
+://www.amazon.de/gp/r.html?C=3D37CGT2IUX1PHV&K=3DRLHQAIDC3CTM&M=3Durn:rtn:m=
+sg:202601170959551e7fa434c03144db9271aad48b90p0eu&R=3D30GXWG1RP0C7G&T=3DE&U=
+=3Dhttps%3A%2F%2Fimages-eu.ssl-images-amazon.com%2Fimages%2FG%2F01%2Fnav%2F=
+transp.gif&H=3DBHNMSWAHUAKALWJGC22AA1AWZTKA&ref_=3Dpe_111929571_1111661321_=
+open" alt=3D"" /></body></html>
+------=_Part_7997559_160551820.1768643996515--
+

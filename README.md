@@ -17,6 +17,7 @@ pip install -r requirements.txt
 On macOS (using Homebrew):
 ```bash
 brew install python-tk pango libffi cairo
+brew install --cask libreoffice
 ```
 
 **LibreOffice** (for Office document conversion):
@@ -38,3 +39,5 @@ python converter.py input_email.eml output_file.pdf
   - PDFs: Appended as-is (resized to A4).
   - Office (Docx, Xlsx, etc): Converted via LibreOffice to PDF.
 - **Output**: All pages scaled/centered to DIN A4 (210x297mm).
+
+

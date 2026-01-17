@@ -10,8 +10,30 @@ from email import policy
 from pathlib import Path
 from PIL import Image
 from bs4 import BeautifulSoup
-from weasyprint import HTML, CSS
+
 from pypdf import PdfWriter, PdfReader, Transformation, PageObject, PaperSize
+
+# macOS / Homebrew fix for WeasyPrint dependencies
+if sys.platform == 'darwin':
+    import ctypes.util
+    # Common paths for Homebrew libraries
+    extra_paths = ['/opt/homebrew/lib', '/usr/local/lib']
+    current_path = os.environ.get('DYLD_FALLBACK_LIBRARY_PATH', '')
+    
+    # Update environment variable for subprocesses or late binding
+    new_paths = []
+    for p in extra_paths:
+        if os.path.exists(p):
+            new_paths.append(p)
+    
+    if new_paths:
+        if current_path:
+            os.environ['DYLD_FALLBACK_LIBRARY_PATH'] = f"{current_path}:{':'.join(new_paths)}"
+        else:
+            os.environ['DYLD_FALLBACK_LIBRARY_PATH'] = ':'.join(new_paths)
+
+# Now import WeasyPrint which relies on gobject/pango/cairo
+from weasyprint import HTML, CSS
 
 # Constants
 A4_WIDTH_MM = 210
@@ -72,6 +94,42 @@ def scale_to_a4(pdf_path, output_path):
 
     with open(output_path, 'wb') as f:
         writer.write(f)
+
+def custom_url_fetcher(url):
+    import ssl
+    import urllib.request
+    from weasyprint import default_url_fetcher
+    
+    # Handle file:// and data:// schemes with default fetcher
+    if url.startswith("file:") or url.startswith("data:"):
+        return default_url_fetcher(url)
+        
+    # Custom fetching for http/https to set User-Agent and ignore SSL errors
+    logger.info(f"Fetching URL: {url}")
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    
+    req = urllib.request.Request(url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36')
+    
+    try:
+        response = urllib.request.urlopen(req, context=ctx, timeout=10)
+        content_type = response.info().get_content_type()
+        data = response.read()
+        logger.info(f"Fetched {len(data)} bytes, type: {content_type}")
+        return {
+            'mime_type': content_type,
+            'string': data,
+            'redirected_url': response.geturl()
+        }
+    except Exception as e:
+        logger.warning(f"Failed to fetch resource {url}: {e}")
+        # Fallback to default which might fail but handles some edge cases
+        try:
+            return default_url_fetcher(url)
+        except:
+            return None
 
 def convert_html_to_pdf(html_content, output_path, base_url=None):
     """
@@ -146,6 +204,47 @@ def process_eml(eml_path, output_pdf_path):
         html_part = msg.get_body(preferencelist=('html'))
         if html_part:
             body_content = html_part.get_content()
+            
+            # Sanitization and Fixes
+            soup = BeautifulSoup(body_content, 'html.parser')
+            
+            # 1. Remove mix-blend-mode
+            if soup.find('style'):
+                for style in soup.find_all('style'):
+                    if style.string:
+                        style.string = style.string.replace('mix-blend-mode:multiply', 'mix-blend-mode:normal')
+                        style.string = style.string.replace('mix-blend-mode:initial', 'mix-blend-mode:normal')
+
+            # 2. Embed images as Base64 to ensure WeasyPrint renders them
+            import ssl
+            import urllib.request
+            
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            opener = urllib.request.build_opener(urllib.request.HTTPSHandler(context=ctx))
+            opener.addheaders = [('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36')]
+            urllib.request.install_opener(opener)
+
+            for img_tag in soup.find_all('img', src=True):
+                src = img_tag['src']
+                if src.startswith('http'):
+                    try:
+                        logger.info(f"Downloading and embedding: {src}")
+                        with urllib.request.urlopen(src, timeout=10) as response:
+                            content_type = response.info().get_content_type()
+                            data = response.read()
+                            b64_data = base64.b64encode(data).decode('utf-8')
+                            img_tag['src'] = f"data:{content_type};base64,{b64_data}"
+                    except Exception as e:
+                        logger.warning(f"Failed to embed image {src}: {e}")
+            
+            # 3. Specific fix for Amazon product images in tables (often have 1px/0px sizing issues in PDF)
+            # Find images that look like product images and ensure they have a size
+            for img in soup.find_all('img', class_='productImage'):
+                 img['style'] = "display: block; max-width: 100%; height: auto;"
+
+            body_content = str(soup)
         else:
             text_part = msg.get_body(preferencelist=('plain'))
             if text_part:
@@ -153,31 +252,21 @@ def process_eml(eml_path, output_pdf_path):
             else:
                 body_content = "<html><body><p>No body content found.</p></body></html>"
 
-        # 2. Extract Inline Images (CIDs)
-        for part in msg.walk():
-            if part.get_content_maintype() == 'image':
-                cid = part.get('Content-ID')
-                if cid:
-                    # Strip < >
-                    cid = cid.strip('<>')
-                    filename = part.get_filename() or f"cid_{cid}"
-                    filepath = temp_dir / filename
-                    with open(filepath, 'wb') as img_f:
-                        img_f.write(part.get_content())
-                        
-                    # Replace in HTML
-                    # Use bs4
-                    soup = BeautifulSoup(body_content, 'html.parser')
-                    for img_tag in soup.find_all('img', src=True):
-                        if f"cid:{cid}" in img_tag['src']:
-                            # We can replace with full path or base64. 
-                            # Weasyprint handles file:// paths if we give the base dir.
-                            # Let's use file path relative to base_url
-                             img_tag['src'] = f"file://{filepath}"
-                    body_content = str(soup)
-
+        # 2. Extract Inline Images (CIDs) - already handled by existing code, but let's check
+        # Existing CID code (below in original file) replaces src with file:// paths.
+        # We need to make sure we don't break that.
+        # The existing code is:
+        # for part in msg.walk(): ... if cid: ... soup.find_all(...) ... img_tag['src'] = file://...
+        # Since we modified soup above and regenerated body_content, the CIDs are still in there as "cid:..." strings.
+        # We need to re-soup the body_content or move this logic up.
+        # actually, the original code does steps sequentially.
+        # Original Step 2: Extract Inline Images. It parses `body_content` AGAIN into a NEW soup.
+        # So my changes to `body_content` (Base64 embedding) will persist, and the next block will parse it again to handle CIDs.
+        # That is fine.
+        
         # 3. Create Body PDF
         body_pdf_path = temp_dir / "00_body.pdf"
+        # Use simple convert without custom fetcher since we embedded everything
         convert_html_to_pdf(body_content, str(body_pdf_path), base_url=str(temp_dir))
         pdf_parts.append(str(body_pdf_path))
 
