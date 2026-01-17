@@ -32,6 +32,18 @@ if sys.platform == 'darwin':
         else:
             os.environ['DYLD_FALLBACK_LIBRARY_PATH'] = ':'.join(new_paths)
 
+elif sys.platform == 'win32':
+    # Windows specific setup for WeasyPrint (GTK3)
+    # Check for common GTK3 installation paths if not in PATH
+    gtk3_paths = [
+        r'C:\Program Files\GTK3-Runtime Win64\bin',
+        r'C:\Program Files (x86)\GTK3-Runtime Win64\bin'
+    ]
+    current_path = os.environ.get('PATH', '')
+    for p in gtk3_paths:
+        if os.path.exists(p) and p not in current_path:
+            os.environ['PATH'] = f"{p};{current_path}"
+
 # Now import WeasyPrint which relies on gobject/pango/cairo
 from weasyprint import HTML, CSS
 
@@ -51,11 +63,19 @@ def setup_logger():
 logger = setup_logger()
 
 def get_soffice_command():
-    # Common paths for LibreOffice on Mac
+    # Common paths for LibreOffice
     paths = [
-        '/Applications/LibreOffice.app/Contents/MacOS/soffice',
         'soffice' # If in PATH
     ]
+    
+    if sys.platform == 'darwin':
+        paths.append('/Applications/LibreOffice.app/Contents/MacOS/soffice')
+    elif sys.platform == 'win32':
+        paths.extend([
+            r'C:\Program Files\LibreOffice\program\soffice.exe',
+            r'C:\Program Files (x86)\LibreOffice\program\soffice.exe'
+        ])
+
     for p in paths:
         if shutil.which(p) or os.path.exists(p):
             return p

@@ -14,16 +14,23 @@ pip install -r requirements.txt
 ### 2. System Dependencies
 
 **WeasyPrint** (for HTML conversion) requires system libraries:
-On macOS (using Homebrew):
+
+**macOS** (using Homebrew):
 ```bash
-brew install python-tk pango libffi cairo
+brew install python-tk pango libffi cairo libxml2
 brew install --cask libreoffice
 ```
 
-**LibreOffice** (for Office document conversion):
-This script looks for `soffice` at `/Applications/LibreOffice.app/Contents/MacOS/soffice` or in your PATH.
-- If you have LibreOffice installed in the Applications folder, it should work out of the box.
-- Otherwise, install it from https://www.libreoffice.org/ or `brew install --cask libreoffice`.
+**Windows**:
+1. **GTK3 Runtime**: Download and install the [GTK3 Runtime for Windows](https://github.com/tschoonj/GTK-for-Windows-Runtime-Environment-Installer/releases).
+   - Ensure the `bin` folder (e.g., `C:\Program Files\GTK3-Runtime Win64\bin`) is added to your PATH, or the script will try to find it in standard locations.
+2. **LibreOffice**: Install [LibreOffice](https://www.libreoffice.org/download/download/).
+   - The script will look for `soffice.exe` in `C:\Program Files\LibreOffice\program\` or `C:\Program Files (x86)\LibreOffice\program\`.
+
+**Linux (Debian/Ubuntu)**:
+```bash
+sudo apt-get install python3-pip python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0 libreoffice
+```
 
 ## Usage
 
