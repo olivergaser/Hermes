@@ -55,12 +55,7 @@ DPI = 200 # User requested DPI (affects initial rasterization if needed, mostly 
 A4_WIDTH_PT = 595.28
 A4_HEIGHT_PT = 841.89
 
-def setup_logger():
-    import logging
-    logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
-    return logging.getLogger(__name__)
-
-logger = setup_logger()
+from loguru import logger
 
 def get_soffice_command():
     # Common paths for LibreOffice

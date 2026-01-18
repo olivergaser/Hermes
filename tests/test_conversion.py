@@ -1,3 +1,4 @@
+import sys
 import os
 import glob
 import subprocess
@@ -8,7 +9,7 @@ class TestEmlConversion(unittest.TestCase):
     def setUp(self):
         self.eml_dir = os.path.abspath("eml")
         self.converter_script = os.path.abspath("converter.py")
-        self.venv_python = os.path.abspath("venv/bin/python")
+        self.venv_python = sys.executable
 
     def test_convert_all_emls(self):
         eml_files = glob.glob(os.path.join(self.eml_dir, "*.eml"))

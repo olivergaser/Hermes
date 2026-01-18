@@ -4,3 +4,4 @@ Pillow
 beautifulsoup4
 lxml
 pdf2image
+loguru

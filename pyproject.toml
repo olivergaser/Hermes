@@ -1,0 +1,24 @@
+[project]
+name = "eml-converter"
+version = "0.1.0"
+description = "Convert EML files to PDF/TIFF"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "weasyprint",
+    "pypdf",
+    "pillow",
+    "beautifulsoup4",
+    "lxml",
+    "pdf2image",
+    "loguru",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+include = ["converter.py"]
+

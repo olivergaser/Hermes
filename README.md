@@ -6,9 +6,10 @@ Every page is standardized to DIN A4.
 ## Prerequisites
 
 ### 1. Python Environment
-Install the python requirements:
+Install `uv` (if not already installed) and then the requirements:
 ```bash
-pip install -r requirements.txt
+pip install uv
+uv pip install -r requirements.txt
 ```
 
 ### 2. System Dependencies
