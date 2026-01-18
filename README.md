@@ -16,8 +16,7 @@ pip install -r requirements.txt
 **WeasyPrint** (for HTML conversion) requires system libraries:
 
 **macOS** (using Homebrew):
-```bash
-brew install python-tk pango libffi cairo libxml2
+brew install python-tk pango libffi cairo libxml2 poppler
 brew install --cask libreoffice
 ```
 
@@ -26,16 +25,20 @@ brew install --cask libreoffice
    - Ensure the `bin` folder (e.g., `C:\Program Files\GTK3-Runtime Win64\bin`) is added to your PATH, or the script will try to find it in standard locations.
 2. **LibreOffice**: Install [LibreOffice](https://www.libreoffice.org/download/download/).
    - The script will look for `soffice.exe` in `C:\Program Files\LibreOffice\program\` or `C:\Program Files (x86)\LibreOffice\program\`.
+3. **Poppler**: Download [Poppler for Windows](https://github.com/oschwartz10612/poppler-windows/releases/), extract to a folder, and add the `bin` folder to your PATH.
 
 **Linux (Debian/Ubuntu)**:
 ```bash
-sudo apt-get install python3-pip python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0 libreoffice
+sudo apt-get install python3-pip python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0 libreoffice poppler-utils
 ```
 
 ## Usage
 
 ```bash
-python converter.py input_email.eml output_file.pdf
+python converter.py input_email.eml output_file.pdf [--format {pdf,tif}]
+```
+- `--format pdf`: (Default) Generates only the PDF.
+- `--format tif`: Generates the PDF **and** a multipage TIFF of the result.
 
 ## Testing
 
@@ -53,5 +56,6 @@ python -m unittest tests/test_conversion.py
   - PDFs: Appended as-is (resized to A4).
   - Office (Docx, Xlsx, etc): Converted via LibreOffice to PDF.
 - **Output**: All pages scaled/centered to DIN A4 (210x297mm).
+- **Formats**: Can generate PDF and optional Multipage TIFF (requires `poppler`).
 
 

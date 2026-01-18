@@ -211,6 +211,59 @@ def convert_office_to_pdf(input_path, output_path):
             logger.error(f"LibreOffice failed: {e}")
             return False
 
+def add_page_numbers(input_pdf_path, output_pdf_path):
+    """
+    Adds page numbers (Seite: X) to the bottom right of every page.
+    """
+    reader = PdfReader(input_pdf_path)
+    writer = PdfWriter()
+    
+    total_pages = len(reader.pages)
+    
+    for i, page in enumerate(reader.pages):
+        page_num = i + 1
+        
+        # Create a transient PDF with the page number using WeasyPrint
+        # We use a transparent body so only the text shows
+        html_content = f"""
+        <html>
+        <head>
+            <style>
+                @page {{ size: A4; margin: 0; }}
+                body {{ margin: 0; padding: 0; }}
+                .page-number {{
+                    position: absolute;
+                    bottom: 15mm;
+                    right: 15mm;
+                    font-family: sans-serif;
+                    font-size: 12px;
+                    color: #000;
+                    padding: 2px 5px;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="page-number">Seite: {page_num}</div>
+        </body>
+        </html>
+        """
+        
+        # Generate watermark PDF in memory
+        from io import BytesIO
+        watermark_pdf = BytesIO()
+        HTML(string=html_content).write_pdf(watermark_pdf)
+        watermark_pdf.seek(0)
+        
+        # Merge watermark
+        watermark_reader = PdfReader(watermark_pdf)
+        watermark_page = watermark_reader.pages[0]
+        
+        page.merge_page(watermark_page)
+        writer.add_page(page)
+        
+    with open(output_pdf_path, 'wb') as f:
+        writer.write(f)
+
 def process_eml(eml_path, output_pdf_path):
     with open(eml_path, 'rb') as f:
         msg = email.message_from_binary_file(f, policy=policy.default)
@@ -219,6 +272,38 @@ def process_eml(eml_path, output_pdf_path):
     pdf_parts = []
     
     try:
+        # 0. Extract Metadata
+        subject = msg.get('Subject', '')
+        from_ = msg.get('From', '')
+        to_ = msg.get('To', '')
+        cc_ = msg.get('Cc', '')
+        bcc_ = msg.get('Bcc', '') # Often None
+        date_ = msg.get('Date', '')
+        
+        attachment_names = []
+        for part in msg.iter_attachments():
+            fn = part.get_filename()
+            if fn:
+                attachment_names.append(fn)
+        
+        # Construct Metadata HTML Block
+        meta_html = f"""
+        <div style="font-family: sans-serif; font-size: 14px; border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px;">
+            <p style="margin: 2px 0;"><b>Von:</b> {from_}</p>
+            <p style="margin: 2px 0;"><b>An:</b> {to_}</p>
+        """
+        if cc_:
+            meta_html += f'<p style="margin: 2px 0;"><b>CC:</b> {cc_}</p>'
+        if bcc_:
+            meta_html += f'<p style="margin: 2px 0;"><b>BCC:</b> {bcc_}</p>'
+        
+        meta_html += f"""
+            <p style="margin: 2px 0;"><b>Datum:</b> {date_}</p>
+            <p style="margin: 2px 0;"><b>Betreff:</b> {subject}</p>
+            <p style="margin: 2px 0;"><b>Anhänge:</b> {", ".join(attachment_names) if attachment_names else "Keine"}</p>
+        </div>
+        """
+
         # 1. Extract Body
         body_content = ""
         html_part = msg.get_body(preferencelist=('html'))
@@ -227,6 +312,18 @@ def process_eml(eml_path, output_pdf_path):
             
             # Sanitization and Fixes
             soup = BeautifulSoup(body_content, 'html.parser')
+            
+            # Inject Metadata at top of body
+            if soup.body:
+                # Parse meta_html into a tag
+                from bs4 import BeautifulSoup as BS
+                meta_soup = BS(meta_html, 'html.parser')
+                # Insert at beginning
+                soup.body.insert(0, meta_soup)
+            else:
+                # If no body (weird), wrap it
+                body_content = f"<html><body>{meta_html}{body_content}</body></html>"
+                soup = BeautifulSoup(body_content, 'html.parser')
             
             # 1. Aggressive CSS Cleanup
             # Remove style tags that contain problematic rules causing WeasyPrint rendering issues
@@ -325,10 +422,9 @@ def process_eml(eml_path, output_pdf_path):
             body_content = str(soup)
         else:
             text_part = msg.get_body(preferencelist=('plain'))
-            if text_part:
-                body_content = f"<html><body><pre>{text_part.get_content()}</pre></body></html>"
-            else:
-                body_content = "<html><body><p>No body content found.</p></body></html>"
+            # For plain text, we create a basic HTML wrapper
+            # We inject the metadata block here too
+            body_content = f"<html><body>{meta_html}<pre style='font-family: monospace; white-space: pre-wrap;'>{text_part.get_content() if text_part else 'No body content.'}</pre></body></html>"
 
         # 2. Extract Inline Images (CIDs) - already handled by existing code, but let's check
         # Existing CID code (below in original file) replaces src with file:// paths.
@@ -397,22 +493,77 @@ def process_eml(eml_path, output_pdf_path):
         for pdf in pdf_parts:
             merger.append(pdf)
         
-        merger.write(output_pdf_path)
+        # Write to temporary file first
+        temp_merged_pdf = temp_dir / "temp_merged.pdf"
+        merger.write(str(temp_merged_pdf))
+        
+        # 6. Add Page Numbers
+        add_page_numbers(str(temp_merged_pdf), output_pdf_path)
         logger.info(f"Successfully created PDF at {output_pdf_path}")
 
     finally:
         shutil.rmtree(temp_dir)
 
+import argparse
+from pdf2image import convert_from_path
+
+# ... imports ...
+
+def convert_pdf_to_tiff(pdf_path, tiff_path):
+    """
+    Converts a PDF to a multipage TIFF with JPEG compression.
+    """
+    try:
+        # Convert PDF pages to images
+        # 200 DPI matches our generation DPI
+        images = convert_from_path(pdf_path, dpi=DPI)
+        
+        if not images:
+            logger.warning("No images extracted from PDF for TIFF conversion.")
+            return
+
+        # Save as Multipage TIFF
+        # compression='jpeg' requires the original images to be compatible, usually RGB
+        # We ensure RGB mode
+        rgb_images = []
+        for img in images:
+            if img.mode != 'RGB':
+                img = img.convert('RGB')
+            rgb_images.append(img)
+            
+        rgb_images[0].save(
+            tiff_path,
+            compression="jpeg",
+            save_all=True,
+            append_images=rgb_images[1:]
+        )
+        logger.info(f"Successfully created TIFF at {tiff_path}")
+        
+    except Exception as e:
+        logger.error(f"Failed to convert PDF to TIFF: {e}")
+        # Hint about poppler if it looks like a missing dependency
+        if "poppler" in str(e).lower():
+            logger.error("Ensure 'poppler' is installed (brew install poppler OR apt-get install poppler-utils)")
+
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python converter.py <input.eml> <output.pdf>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Convert EML file to PDF (and optionally TIFF).")
+    parser.add_argument("input_eml", help="Path to input .eml file")
+    parser.add_argument("output_pdf", help="Path to output .pdf file")
+    parser.add_argument("--format", choices=['pdf', 'tif'], default='pdf', 
+                        help="Output format: 'pdf' (default) or 'tif' (generates both PDF and TIFF)")
     
-    input_eml = sys.argv[1]
-    output_pdf = sys.argv[2]
+    args = parser.parse_args()
     
-    if not os.path.exists(input_eml):
-        print(f"Error: Input file {input_eml} does not exist.")
+    if not os.path.exists(args.input_eml):
+        print(f"Error: Input file {args.input_eml} does not exist.")
         sys.exit(1)
         
-    process_eml(input_eml, output_pdf)
+    # Generate PDF
+    process_eml(args.input_eml, args.output_pdf)
+    
+    # Generate TIFF if requested
+    if args.format == 'tif':
+        # Derive TIFF filename from PDF filename
+        base_name = os.path.splitext(args.output_pdf)[0]
+        output_tiff = f"{base_name}.tif"
+        convert_pdf_to_tiff(args.output_pdf, output_tiff)
