@@ -3,9 +3,8 @@ __pycache__/
 .DS_Store
 .env
 venv/
+.venv/
 .idea/
 .vscode/
-eml/
-meine_emails
-
-.venv/
+eml/*.pdf
+eml/*.tif

@@ -542,23 +542,80 @@ def convert_pdf_to_tiff(pdf_path, tiff_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Convert EML file to PDF (and optionally TIFF).")
-    parser.add_argument("input_eml", help="Path to input .eml file")
-    parser.add_argument("output_pdf", help="Path to output .pdf file")
-    parser.add_argument("--format", choices=['pdf', 'tif'], default='pdf', 
+    parser.add_argument("--input", "-i", required=True, help="Path to input .eml file or directory containing .eml files")
+    parser.add_argument("--output", "-o", help="Path to output file (if input is file) or directory (if input is directory)")
+    parser.add_argument("--format", "-f", choices=['pdf', 'tif'], default='pdf', 
                         help="Output format: 'pdf' (default) or 'tif' (generates both PDF and TIFF)")
     
     args = parser.parse_args()
     
-    if not os.path.exists(args.input_eml):
-        print(f"Error: Input file {args.input_eml} does not exist.")
-        sys.exit(1)
-        
-    # Generate PDF
-    process_eml(args.input_eml, args.output_pdf)
+    input_path = Path(args.input)
     
-    # Generate TIFF if requested
-    if args.format == 'tif':
-        # Derive TIFF filename from PDF filename
-        base_name = os.path.splitext(args.output_pdf)[0]
-        output_tiff = f"{base_name}.tif"
-        convert_pdf_to_tiff(args.output_pdf, output_tiff)
+    if not input_path.exists():
+        logger.error(f"Error: Input path {input_path} does not exist.")
+        sys.exit(1)
+
+    files_to_process = []
+    if input_path.is_dir():
+        # Batch mode: find all .eml files
+        files_to_process = list(input_path.glob("*.eml"))
+        if not files_to_process:
+            logger.warning(f"No .eml files found in {input_path}")
+    else:
+        # Single file mode
+        files_to_process = [input_path]
+
+    # Determine output directory
+    if args.output:
+        output_arg = Path(args.output)
+        # If input is dir, output should be dir (create if needed)
+        if input_path.is_dir():
+            if not output_arg.exists():
+                output_arg.mkdir(parents=True, exist_ok=True)
+            elif not output_arg.is_dir():
+                 logger.error(f"Error: Input is a directory but output {output_arg} is a file.")
+                 sys.exit(1)
+            output_dir = output_arg
+        else:
+            # Input is file. 
+            # Output can be a file path OR a directory.
+            # We assume if it ends in .pdf it is a file path, otherwise a directory ?? 
+            # Actually, to be safe: valid check.
+            if output_arg.suffix.lower() == '.pdf':
+                output_dir = output_arg.parent
+                # Special case: direct filename provided for single file
+                # We handle this inside loop? No, simpler to just set the target path.
+            else:
+                # Assume directory
+                if not output_arg.exists():
+                    output_arg.mkdir(parents=True, exist_ok=True)
+                output_dir = output_arg
+    else:
+        # Default output to same directory as input file(s)
+        if input_path.is_dir():
+            output_dir = input_path
+        else:
+            output_dir = input_path.parent
+
+    for eml_file in files_to_process:
+        try:
+            # Determine effective output PDF path
+            base_name = eml_file.stem
+            
+            # If explicit output file path was given for single file input
+            if not input_path.is_dir() and args.output and Path(args.output).suffix.lower() == '.pdf':
+                target_pdf = Path(args.output)
+            else:
+                target_pdf = output_dir / f"{base_name}.pdf"
+            
+            logger.info(f"Processing {eml_file} -> {target_pdf}")
+            process_eml(str(eml_file), str(target_pdf))
+            
+            # Generate TIFF if requested
+            if args.format == 'tif':
+                output_tiff = target_pdf.with_suffix('.tif')
+                convert_pdf_to_tiff(str(target_pdf), str(output_tiff))
+                
+        except Exception as e:
+            logger.error(f"Failed to process {eml_file}: {e}")
+
