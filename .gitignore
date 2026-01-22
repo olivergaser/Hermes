@@ -7,5 +7,5 @@ venv/
 .vscode/
 eml/
 meine_emails
-
+*.log
 .venv/

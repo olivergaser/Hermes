@@ -7,14 +7,19 @@ import shutil
 
 class TestEmlConversion(unittest.TestCase):
     def setUp(self):
-        self.eml_dir = os.path.abspath(r"z:\ALL\Hermes-Testdaten")
-        self.converter_script = os.path.abspath("converter.py")
+        print(f"Current working directory: {os.getcwd()}")
+        # Determine the directory of this test file to construct absolute paths
+        test_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(test_dir)
+        
+        self.eml_dir = os.path.join(project_root, "eml")
+        self.converter_script = os.path.join(project_root, "converter.py")
         self.venv_python = sys.executable
 
     def test_convert_all_emls(self):
         eml_files = glob.glob(os.path.join(self.eml_dir, "*.eml"))
         if not eml_files:
-            self.fail("No .eml files found in 'eml' directory to test.")
+            self.fail(f"No .eml files found in {self.eml_dir} directory to test.")
 
         for eml_file in eml_files:
             base_name = os.path.splitext(os.path.basename(eml_file))[0]
@@ -27,7 +32,7 @@ class TestEmlConversion(unittest.TestCase):
             print(f"Testing conversion of: {eml_file}")
             
             # Run conversion
-            cmd = [self.venv_python, self.converter_script, eml_file, output_pdf]
+            cmd = [self.venv_python, self.converter_script, "--input", eml_file, "--output", output_pdf]
             env = os.environ.copy()
             # Ensure dyld fallback for mac if needed, though script handles it internally mostly
             if 'DYLD_FALLBACK_LIBRARY_PATH' not in env:
