@@ -7,7 +7,7 @@ import shutil
 
 class TestEmlConversion(unittest.TestCase):
     def setUp(self):
-        self.eml_dir = os.path.abspath("eml")
+        self.eml_dir = os.path.abspath(r"z:\ALL\Hermes-Testdaten")
         self.converter_script = os.path.abspath("converter.py")
         self.venv_python = sys.executable
 

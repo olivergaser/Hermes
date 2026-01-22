@@ -1,0 +1,2 @@
+2026-01-22 16:12:09.819 | ERROR    | __main__:<module>:79 - Failed to load WeasyPrint dependencies: cannot load library 'C:\Program Files\GTK3-Runtime Win64\bin\libgobject-2.0-0.dll': error 0xc1
+2026-01-22 16:12:09.820 | ERROR    | __main__:<module>:81 - Please ensure GTK3 Runtime is installed and matches Python architecture (32/64 bit).

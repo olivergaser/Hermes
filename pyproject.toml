@@ -12,6 +12,7 @@ dependencies = [
     "lxml",
     "pdf2image",
     "loguru",
+    "filetype",
 ]
 
 [build-system]

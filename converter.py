@@ -10,8 +10,21 @@ from email import policy
 from pathlib import Path
 from PIL import Image
 from bs4 import BeautifulSoup
-
 from pypdf import PdfWriter, PdfReader, Transformation, PageObject, PaperSize
+import filetype
+from loguru import logger
+import argparse
+from pdf2image import convert_from_path
+# Constants
+A4_WIDTH_MM = 210
+A4_HEIGHT_MM = 297
+DPI = 200 # User requested DPI (affects initial rasterization if needed, mostly for image scaling)
+# A4 in points (1/72 inch) - PDF standard
+A4_WIDTH_PT = 595.28
+A4_HEIGHT_PT = 841.89
+
+# Configure logger to write to file
+logger.add("conversion.log", rotation="100 MB", level="INFO")
 
 # macOS / Homebrew fix for WeasyPrint dependencies
 if sys.platform == 'darwin':
@@ -35,27 +48,40 @@ if sys.platform == 'darwin':
 elif sys.platform == 'win32':
     # Windows specific setup for WeasyPrint (GTK3)
     # Check for common GTK3 installation paths if not in PATH
-    gtk3_paths = [
-        r'C:\Program Files\GTK3-Runtime Win64\bin',
-        r'C:\Program Files (x86)\GTK3-Runtime Win64\bin'
-    ]
+    
+    # Detect Python Architecture (32 vs 64 bit)
+    is_64bits = sys.maxsize > 2**32
+    
+    gtk3_paths = []
+    if is_64bits:
+        gtk3_paths = [
+            r'C:\Program Files\GTK3-Runtime Win64\bin',
+            r'C:\Program Files (x86)\GTK3-Runtime Win64\bin'
+        ]
+    else:
+        # 32-bit Python needs 32-bit GTK
+        gtk3_paths = [
+            r'C:\Program Files (x86)\GTK3-Runtime Win32\bin',
+            r'C:\Program Files\GTK3-Runtime Win32\bin'
+        ]
+
     current_path = os.environ.get('PATH', '')
     for p in gtk3_paths:
         if os.path.exists(p) and p not in current_path:
             os.environ['PATH'] = f"{p};{current_path}"
+            logger.info(f"Added GTK3 path: {p}")
 
 # Now import WeasyPrint which relies on gobject/pango/cairo
-from weasyprint import HTML, CSS
+# MUST BE DONE AFTER PATH SETUP
+try:
+    from weasyprint import HTML, CSS
+except OSError as e:
+    logger.error(f"Failed to load WeasyPrint dependencies: {e}")
+    if sys.platform == 'win32':
+        logger.error("Please ensure GTK3 Runtime is installed and matches Python architecture (32/64 bit).")
+    sys.exit(1)
 
-# Constants
-A4_WIDTH_MM = 210
-A4_HEIGHT_MM = 297
-DPI = 200 # User requested DPI (affects initial rasterization if needed, mostly for image scaling)
-# A4 in points (1/72 inch) - PDF standard
-A4_WIDTH_PT = 595.28
-A4_HEIGHT_PT = 841.89
 
-from loguru import logger
 
 def get_soffice_command():
     # Common paths for LibreOffice
@@ -200,11 +226,10 @@ def convert_office_to_pdf(input_path, output_path):
                 shutil.move(resulting_pdf, output_path)
                 return True
             else:
-                logger.error("LibreOffice conversion failed to produce a PDF.")
-                return False
+                raise RuntimeError("LibreOffice conversion failed to produce a PDF output file.")
         except subprocess.CalledProcessError as e:
-            logger.error(f"LibreOffice failed: {e}")
-            return False
+            # Re-raise with context so we can log it properly upstream
+            raise RuntimeError(f"LibreOffice command failed: {e.stderr.decode('utf-8') if e.stderr else str(e)}")
 
 def add_page_numbers(input_pdf_path, output_pdf_path):
     """
@@ -455,18 +480,67 @@ def process_eml(eml_path, output_pdf_path):
             ext = filepath.suffix.lower()
             output_part_path = temp_dir / f"{attach_idx:02d}_{filename}.pdf"
             
+            # Detect file type based on headers (Magic Bytes)
+            kind = filetype.guess(str(filepath))
+            detected_mime = kind.mime if kind else None
+            
+            # Fallback if filetype fails (e.g. text files or obscure formats)
+            if not detected_mime:
+                detected_mime, _ = mimetypes.guess_type(filepath)
+            
+            logger.info(f"Attachment {filename}: Detected MIME={detected_mime}, Extension={ext}")
+            
             success = False
-            if ext in ['.pdf']:
-                success = True # Already PDF, just verify/copy
-                shutil.copy(filepath, output_part_path)
-            elif ext in ['.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.gif']:
-                try:
-                    convert_image_to_pdf(filepath, output_part_path)
-                    success = True
-                except Exception as e:
-                    logger.error(f"Failed to convert image {filename}: {e}")
-            elif ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']:
-                success = convert_office_to_pdf(str(filepath), str(output_part_path))
+            
+            
+            # --- CONVERSION LOGIC START ---
+            try:
+                # 1. PDF
+                if detected_mime == 'application/pdf':
+                    shutil.copy(filepath, output_part_path)
+                    success = True 
+                
+                # 2. Images
+                elif detected_mime and detected_mime.startswith('image/'):
+                    if detected_mime in ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff', 'image/webp']:
+                        convert_image_to_pdf(filepath, output_part_path)
+                        success = True
+                
+                # 3. Office Documents
+                elif detected_mime in [
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                    'application/vnd.ms-excel',
+                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                    'application/vnd.ms-powerpoint',
+                    'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+                ] or ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']: 
+                    
+                    is_office = False
+                    if detected_mime in [
+                        'application/msword',
+                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                        'application/vnd.ms-excel',
+                        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                        'application/vnd.ms-powerpoint',
+                        'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+                    ]:
+                        is_office = True
+                    elif detected_mime == 'application/zip' and ext in ['.docx', '.xlsx', '.pptx']:
+                        is_office = True
+                    elif ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']:
+                        is_office = True
+                    
+                    if is_office:
+                        success = convert_office_to_pdf(str(filepath), str(output_part_path))
+
+            except Exception as e:
+                # DETAILED LOGGING as requested
+                logger.error(f"FAILED to convert attachment. EML='{Path(eml_path).name}' | Attachment='{filename}' | MIME='{detected_mime}' | Error='{e}'")
+                success = False
+            # --- CONVERSION LOGIC END ---
+            
+            
             
             if success and os.path.exists(output_part_path):
                 # Normalize to A4 immediately
@@ -498,11 +572,6 @@ def process_eml(eml_path, output_pdf_path):
 
     finally:
         shutil.rmtree(temp_dir)
-
-import argparse
-from pdf2image import convert_from_path
-
-# ... imports ...
 
 def convert_pdf_to_tiff(pdf_path, tiff_path):
     """
