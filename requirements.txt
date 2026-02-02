@@ -6,3 +6,4 @@ lxml
 pdf2image
 loguru
 filetype
+extract-msg

@@ -6,7 +6,9 @@ import mimetypes
 import subprocess
 import shutil
 import base64
+import base64
 from email import policy
+from email.message import EmailMessage
 from pathlib import Path
 from PIL import Image
 from bs4 import BeautifulSoup
@@ -15,6 +17,13 @@ import filetype
 from loguru import logger
 import argparse
 from pdf2image import convert_from_path
+import re
+import unicodedata
+import xml.etree.ElementTree as ET
+from xml.dom import minidom
+import zipfile
+import extract_msg
+
 # Constants
 A4_WIDTH_MM = 210
 A4_HEIGHT_MM = 297
@@ -56,7 +65,7 @@ elif sys.platform == 'win32':
     if is_64bits:
         gtk3_paths = [
             r'C:\Program Files\GTK3-Runtime Win64\bin',
-            r'C:\Program Files (x86)\GTK3-Runtime Win64\bin'
+            r'C:\Program Files (x86)\GTK3-Runtime Win64\bin'            
         ]
     else:
         # 32-bit Python needs 32-bit GTK
@@ -284,12 +293,334 @@ def add_page_numbers(input_pdf_path, output_pdf_path):
     with open(output_pdf_path, 'wb') as f:
         writer.write(f)
 
+def extract_pdf_data(pdf_path):
+    """
+    Extracts metadata, text, and form fields from a PDF.
+    Returns a dictionary with 'metadata' (dict), 'pages' (list of dicts), and 'form_fields' (list of dicts).
+    """
+    try:
+        reader = PdfReader(pdf_path)
+        data = {
+            'metadata': {},
+            'pages': [],
+            'form_fields': []
+        }
+        
+        # Metadata
+        if reader.metadata:
+            for key, value in reader.metadata.items():
+                clean_key = key.replace('/', '')
+                data['metadata'][clean_key] = str(value) if value else ""
+                
+        # Form Fields
+        try:
+            fields = reader.get_fields()
+            if fields:
+                for key, value in fields.items():
+                    # Value is usually a dictionary or Field object
+                    # We want the actual value ('/V')
+                    field_val = None
+                    if isinstance(value, dict):
+                        field_val = value.get('/V')
+                    
+                    # Store as name/value pari
+                    data['form_fields'].append({
+                        'name': key,
+                        'value': str(field_val) if field_val is not None else "" 
+                    })
+        except Exception as e:
+            logger.warning(f"Failed to extract form fields from {pdf_path}: {e}")
+                
+        # Content
+        for i, page in enumerate(reader.pages):
+            page_text = ""
+            try:
+                page_text = page.extract_text()
+            except Exception as e:
+                logger.warning(f"Failed to extract text from page {i+1} of {pdf_path}: {e}")
+                page_text = "[Error extracting text]"
+            
+            data['pages'].append({
+                'id': i + 1,
+                'text': page_text
+            })
+            
+        return data
+    except Exception as e:
+        logger.error(f"Failed to extract info from PDF {pdf_path}: {e}")
+        return None
+
+def save_msg_as_eml(msg_path, output_eml_path):
+    """
+    Manually converts an MSG file (extract-msg object) to an EML file.
+    """
+    try:
+        msg = extract_msg.Message(str(msg_path))
+        
+        email_msg = EmailMessage()
+        
+        # Copy Headers
+        # Map common headers. extract-msg properties usually match closely or we access header dict.
+        # Safer to use properties where available.
+        if msg.subject: email_msg['Subject'] = msg.subject
+        if msg.sender: email_msg['From'] = msg.sender
+        if msg.to: email_msg['To'] = msg.to
+        if msg.cc: email_msg['Cc'] = msg.cc
+        if msg.bcc: email_msg['Bcc'] = msg.bcc
+        if msg.date: email_msg['Date'] = msg.date
+        
+        # Determine Body
+        # Prefer HTML, fallback to Text
+        body_text = msg.body
+        body_html = None
+        try:
+            body_html = msg.htmlBody
+        except:
+             pass # Some MSGs don't have HTML body or it fails
+        
+        if body_html:
+            # Ensure body_html is string
+            if isinstance(body_html, bytes):
+                try:
+                    body_html = body_html.decode('utf-8')
+                except UnicodeDecodeError:
+                    try:
+                        body_html = body_html.decode('latin-1')
+                    except:
+                        logger.warning("Could not decode HTML body of MSG")
+                        body_html = None
+            
+            if body_html:
+                if body_text:
+                    email_msg.set_content(body_text)
+                    email_msg.add_alternative(body_html, subtype='html')
+                else:
+                    email_msg.set_content(body_html, subtype='html')
+        else:
+            if body_text:
+                email_msg.set_content(body_text)
+            else:
+                email_msg.set_content("(No Body)")
+
+        # Handle Attachments
+        for attachment in msg.attachments:
+            # extract-msg attachments have .data (bytes) and properties for filename
+            try:
+                data = attachment.data
+                if not data: continue
+                
+                long_filename = getattr(attachment, 'longFilename', None)
+                short_filename = getattr(attachment, 'shortFilename', None)
+                filename = long_filename or short_filename or "untitled"
+                
+                # Guess mime type
+                # attachment might have mimetype property? Not reliable.
+                mime_type = filetype.guess_mime(data)
+                if not mime_type:
+                     mime_type, _ = mimetypes.guess_type(filename)
+                
+                if not mime_type:
+                    mime_type = 'application/octet-stream'
+                
+                maintype, subtype = mime_type.split('/', 1)
+                
+                email_msg.add_attachment(
+                    data,
+                    maintype=maintype,
+                    subtype=subtype,
+                    filename=filename
+                )
+            except Exception as e:
+                logger.warning(f"Skipping MSG attachment {attachment}: {e}")
+
+        # Save to file
+        with open(output_eml_path, 'wb') as f:
+            f.write(email_msg.as_bytes())
+            
+        msg.close()
+        return True
+
+    except Exception as e:
+        logger.error(f"Failed manual MSG->EML conversion: {e}")
+        return False
+
+# --- REFACTORED ATTACHMENT PROCESSING ---
+
+def convert_attachment(filepath, output_pdf_path):
+    """
+    Converts a single file (attachment) to PDF.
+    Handles: PDF, Images, Office, EML, MSG, ZIP.
+    Returns True on success, False otherwise.
+    """
+    filepath = Path(filepath)
+    output_pdf_path = Path(output_pdf_path)
+    filename = filepath.name
+    
+    # Simple check for empty files
+    if filepath.stat().st_size == 0:
+        logger.warning(f"Skipping empty file: {filepath}")
+        return False
+
+    # Detect file type based on headers (Magic Bytes)
+    kind = filetype.guess(str(filepath))
+    detected_mime = kind.mime if kind else None
+    ext = filepath.suffix.lower()
+
+    # Fallback if filetype fails
+    if not detected_mime:
+        detected_mime, _ = mimetypes.guess_type(filepath)
+    
+    logger.info(f"Converting attachment {filename}: MIME={detected_mime}, Ext={ext}")
+
+    try:
+        # 1. PDF
+        if detected_mime == 'application/pdf':
+            shutil.copy(filepath, output_pdf_path)
+            # Normalize to A4 will happen in caller or require explicit call? 
+            # The caller `process_eml` loops result and normalizing. 
+            # Let's ensure this function produces a valid PDF at `output_pdf_path`.
+            return True
+
+        # 2. Images
+        elif detected_mime and detected_mime.startswith('image/'):
+            if detected_mime in ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff', 'image/webp']:
+                convert_image_to_pdf(filepath, output_pdf_path)
+                return True
+        
+        # 3. Office Documents
+        elif detected_mime in [
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+            'application/vnd.ms-excel',
+            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            'application/vnd.ms-powerpoint',
+            'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+            'application/vnd.oasis.opendocument.text',
+            'application/vnd.oasis.opendocument.spreadsheet',
+            'application/vnd.oasis.opendocument.presentation'
+        ] or ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.odt', '.ods', '.odp']:
+            
+            is_office = False
+            # MIME check
+            if detected_mime in [
+                'application/msword',
+                'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                'application/vnd.ms-excel',
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                'application/vnd.ms-powerpoint',
+                'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                'application/vnd.oasis.opendocument.text',
+                'application/vnd.oasis.opendocument.spreadsheet',
+                'application/vnd.oasis.opendocument.presentation'
+            ] and ext != '.msg':
+                is_office = True
+            # Extension/Zip fallback
+            elif detected_mime == 'application/zip' and ext in ['.docx', '.xlsx', '.pptx', '.odt', '.ods', '.odp']:
+                 is_office = True
+            elif ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.odt', '.ods', '.odp']:
+                 is_office = True
+            
+            if is_office:
+                return convert_office_to_pdf(str(filepath), str(output_pdf_path))
+
+        # 4. EML Files (Nested)
+        # filetype might identify as 'message/rfc822' or similar, or just text.
+        # Strict check on extension or content?
+        # filetype doesn't always detect EML well (it's text).
+        if ext == '.eml' or detected_mime == 'message/rfc822':
+             # Recursively process this EML
+             logger.info(f"Recursively processing EML: {filename}")
+             # process_eml creates a PDF from an EML.
+             process_eml(str(filepath), str(output_pdf_path))
+             return True
+
+        # 5. MSG Files (Outlook)
+        if ext == '.msg' or detected_mime == 'application/vnd.ms-outlook':
+             logger.info(f"Converting MSG to EML then processing: {filename}")
+             try:
+                 with tempfile.TemporaryDirectory() as temp_msg_dir:
+                     temp_eml_path = Path(temp_msg_dir) / f"{filepath.stem}.eml"
+                     
+                     if save_msg_as_eml(filepath, temp_eml_path):
+                         # Recursively process the generated EML
+                         process_eml(str(temp_eml_path), str(output_pdf_path))
+                         return True
+                     else:
+                         return False
+             except Exception as e:
+                 logger.error(f"Failed to convert MSG {filename}: {e}")
+                 return False
+
+        # 6. ZIP / Archives
+        if detected_mime == 'application/zip' or ext == '.zip':
+             logger.info(f"Processing ZIP archive: {filename}")
+             # We need to extract, convert all contents, and merge them into one PDF (output_pdf_path)
+             with tempfile.TemporaryDirectory() as zip_temp_dir:
+                 zip_path = Path(zip_temp_dir)
+                 try:
+                     with zipfile.ZipFile(filepath, 'r') as zf:
+                         zf.extractall(zip_path)
+                 except Exception as e:
+                     logger.error(f"Failed to extract ZIP {filename}: {e}")
+                     return False
+                 
+                 # Collect all valid PDFs
+                 generated_pdfs = []
+                 
+                 # Walk strictly to find files
+                 # We sort to have deterministic order
+                 file_list = []
+                 for root, dirs, files in os.walk(zip_path):
+                     for f in files:
+                         file_list.append(Path(root) / f)
+                 file_list.sort(key=lambda x: str(x)) # Sort by path
+                 
+                 for i, subfile in enumerate(file_list):
+                     # Skip __MACOSX and hidden files
+                     if '__MACOSX' in subfile.parts or subfile.name.startswith('.'):
+                         continue
+                     
+                     sub_output_pdf = zip_path / f"zip_part_{i:04d}.pdf"
+                     
+                     # Recursion!
+                     if convert_attachment(subfile, sub_output_pdf):
+                         # Ensure it is normalized to A4
+                         sub_output_a4 = zip_path / f"zip_part_{i:04d}_a4.pdf"
+                         scale_to_a4(str(sub_output_pdf), str(sub_output_a4))
+                         generated_pdfs.append(str(sub_output_a4))
+                 
+                 if generated_pdfs:
+                     # Merge
+                     merger = PdfWriter()
+                     for pdf in generated_pdfs:
+                         merger.append(pdf)
+                     merger.write(output_pdf_path)
+                     return True
+                 else:
+                     logger.warning(f"ZIP {filename} contained no convertible files.")
+                     return False
+
+    except Exception as e:
+        logger.error(f"Error converting {filename}: {e}")
+        # Traceback could be helpful for debugging
+        # import traceback
+        # logger.error(traceback.format_exc())
+        return False
+    
+    return False
+
 def process_eml(eml_path, output_pdf_path):
     with open(eml_path, 'rb') as f:
         msg = email.message_from_binary_file(f, policy=policy.default)
 
     temp_dir = Path(tempfile.mkdtemp())
     pdf_parts = []
+    
+    # List to store analysis data for XML output
+    analysis_data = {
+        'source': Path(eml_path).name,
+        'attachments': []
+    }
     
     try:
         # 0. Extract Metadata
@@ -299,6 +630,8 @@ def process_eml(eml_path, output_pdf_path):
         cc_ = msg.get('Cc', '')
         bcc_ = msg.get('Bcc', '') # Often None
         date_ = msg.get('Date', '')
+        
+        analysis_data['subject'] = subject
         
         attachment_names = []
         for part in msg.iter_attachments():
@@ -469,74 +802,97 @@ def process_eml(eml_path, output_pdf_path):
         for part in msg.iter_attachments():
             filename = part.get_filename()
             if not filename:
-                continue # Skip inline processing if already done? 
-                # Actually attachments might be inline images too if they were not referenced by CID or if policy differs.
-                # policy.default usually handles this separation.
+                continue 
+            
+            # --- FILENAME SANITIZATION START ---
+            # 1. Normalize Unicode (NFKD) and drop non-ASCII (removes UTF-8 chars like Umlaute -> base letter)
+            filename = unicodedata.normalize('NFKD', filename).encode('ascii', 'ignore').decode('ascii')
+            
+            # 2. Remove spaces and remaining non-alphanumeric chars (keep dot, underscore, dash)
+            # User requirement: "keine spaces" -> replace with underscore for readability
+            filename = filename.replace(' ', '_')
+            filename = re.sub(r'[^a-zA-Z0-9._-]', '', filename)
+            
+            # 3. Truncate to max 50 chars while preserving extension
+            MAX_LEN = 50
+            if len(filename) > MAX_LEN:
+                stem, suffix = os.path.splitext(filename)
+                # Ensure we have at least 1 char for stem
+                limit = MAX_LEN - len(suffix)
+                if limit < 1: 
+                    limit = 1
+                    # If extension itself is super long, we might still exceed 50, but we must protect extension.
+                    # Or we hard truncate everything.
+                    # User: "variable filename maximal 50 Zeichen gross sein". 
+                    # Strict interpretation: trunc whole string.
+                    # But cutting extension breaks file type detection later (suffix check).
+                    # I will try to preserve suffix if possible.
+                
+                stem = stem[:limit]
+                filename = stem + suffix
+                
+                # Final safety check if suffix was huge
+                if len(filename) > MAX_LEN:
+                     filename = filename[:MAX_LEN]
+            
+            # --- FILENAME SANITIZATION END ---
+             
             
             filepath = temp_dir / filename
-            with open(filepath, 'wb') as att_f:
-                att_f.write(part.get_content())
+            try:    
+                if part.get_content_type() == 'message/rfc822':
+                     with open(filepath, 'wb') as att_f:
+                        att_f.write(part.as_bytes())
+                else:
+                    with open(filepath, 'wb') as att_f:
+                        att_f.write(part.get_content())
+            except Exception as e:
+                logger.error(f"Failed to write attachment {filename}: {str(e)}")
+                continue
             
-            ext = filepath.suffix.lower()
             output_part_path = temp_dir / f"{attach_idx:02d}_{filename}.pdf"
-            
-            # Detect file type based on headers (Magic Bytes)
-            kind = filetype.guess(str(filepath))
-            detected_mime = kind.mime if kind else None
-            
-            # Fallback if filetype fails (e.g. text files or obscure formats)
-            if not detected_mime:
-                detected_mime, _ = mimetypes.guess_type(filepath)
-            
-            logger.info(f"Attachment {filename}: Detected MIME={detected_mime}, Extension={ext}")
             
             success = False
             
-            
-            # --- CONVERSION LOGIC START ---
+            # Use universal converter
             try:
-                # 1. PDF
-                if detected_mime == 'application/pdf':
-                    shutil.copy(filepath, output_part_path)
-                    success = True 
+                success = convert_attachment(filepath, output_part_path)
                 
-                # 2. Images
-                elif detected_mime and detected_mime.startswith('image/'):
-                    if detected_mime in ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/tiff', 'image/webp']:
-                        convert_image_to_pdf(filepath, output_part_path)
-                        success = True
-                
-                # 3. Office Documents
-                elif detected_mime in [
-                    'application/msword',
-                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                    'application/vnd.ms-excel',
-                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-                    'application/vnd.ms-powerpoint',
-                    'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                ] or ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']: 
+                # If conversion was successful and resulted in a PDF, extract data if it's a PDF
+                if success and os.path.exists(output_part_path):
+                    # Check if the original attachment was a PDF or an Office file that got converted
+                    # This logic was previously inside the attachment conversion block, now it's here.
+                    # We need to re-detect the type of the *original* attachment to decide if we should extract data.
+                    # For now, let's assume if it successfully converted to PDF, we can try to extract data.
+                    # This might be too broad, but matches the spirit of "analyze PDF files that are processed".
                     
-                    is_office = False
-                    if detected_mime in [
-                        'application/msword',
-                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                        'application/vnd.ms-excel',
-                        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-                        'application/vnd.ms-powerpoint',
-                        'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                    ]:
-                        is_office = True
-                    elif detected_mime == 'application/zip' and ext in ['.docx', '.xlsx', '.pptx']:
-                        is_office = True
-                    elif ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx']:
-                        is_office = True
-                    
-                    if is_office:
-                        success = convert_office_to_pdf(str(filepath), str(output_part_path))
+                    # Re-detect type of original attachment for analysis decision
+                    original_kind = filetype.guess(str(filepath))
+                    original_detected_mime = original_kind.mime if original_kind else None
+                    original_ext = filepath.suffix.lower()
 
+                    is_original_pdf_or_office = False
+                    if original_detected_mime == 'application/pdf':
+                        is_original_pdf_or_office = True
+                    elif original_detected_mime in [
+                        'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+                        'application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                        'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                        'application/vnd.oasis.opendocument.text', 'application/vnd.oasis.opendocument.spreadsheet',
+                        'application/vnd.oasis.opendocument.presentation'
+                    ] or original_ext in ['.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.odt', '.ods', '.odp']:
+                        is_original_pdf_or_office = True
+                    
+                    if is_original_pdf_or_office:
+                        logger.info(f"Extracting XML data for: {filename}")
+                        pdf_data = extract_pdf_data(str(output_part_path)) # Extract from the *converted* PDF
+                        if pdf_data:
+                            pdf_data['filename'] = filename
+                            analysis_data['attachments'].append(pdf_data)
+                
             except Exception as e:
                 # DETAILED LOGGING as requested
-                logger.error(f"FAILED to convert attachment. EML='{Path(eml_path).name}' | Attachment='{filename}' | MIME='{detected_mime}' | Error='{e}'")
+                logger.error(f"FAILED to convert attachment. EML='{Path(eml_path).name}' | Attachment='{filename}' | Error='{e}'")
                 success = False
             # --- CONVERSION LOGIC END ---
             
@@ -569,6 +925,58 @@ def process_eml(eml_path, output_pdf_path):
         # 6. Add Page Numbers
         add_page_numbers(str(temp_merged_pdf), output_pdf_path)
         logger.info(f"Successfully created PDF at {output_pdf_path}")
+        
+        # 7. Write Analysis XML
+        try:
+            root = ET.Element("EmailAnalysis")
+            
+            source_node = ET.SubElement(root, "Source")
+            source_node.text = analysis_data.get('source', '')
+            
+            subject_node = ET.SubElement(root, "Subject")
+            subject_node.text = analysis_data.get('subject', '')
+            
+            atts_node = ET.SubElement(root, "Attachments")
+            
+            for att_data in analysis_data['attachments']:
+                att_node = ET.SubElement(atts_node, "Attachment", filename=att_data.get('filename', ''))
+                
+                # Metadata
+                meta_node = ET.SubElement(att_node, "Metadata")
+                for k, v in att_data.get('metadata', {}).items():
+                    # Sanitize tag name (remove spaces, etc to be valid XML tag if needed, but best to use generic item with key attr or just children)
+                    # Let's just use the key as tag if valid, otherwise Item
+                    try:
+                        node = ET.SubElement(meta_node, k.replace(' ', '_'))
+                        node.text = v
+                    except:
+                        # Fallback
+                        node = ET.SubElement(meta_node, "MetaItem", key=k)
+                        node.text = v
+                
+                # Form Fields
+                if att_data.get('form_fields'):
+                    fields_node = ET.SubElement(att_node, "FormFields")
+                    for field in att_data['form_fields']:
+                        f_node = ET.SubElement(fields_node, "Field", name=field['name'])
+                        f_node.text = field['value']
+
+                # Content
+                content_node = ET.SubElement(att_node, "Content")
+                for page in att_data.get('pages', []):
+                    p_node = ET.SubElement(content_node, "Page", id=str(page['id']))
+                    p_node.text = page['text']
+            
+            # Save
+            output_xml_path = Path(output_pdf_path).with_suffix('.xml')
+            xml_str = minidom.parseString(ET.tostring(root)).toprettyxml(indent="    ")
+            
+            with open(output_xml_path, "w", encoding="utf-8") as f:
+                f.write(xml_str)
+            logger.info(f"Successfully created XML Analysis at {output_xml_path}")
+            
+        except Exception as e:
+            logger.error(f"Failed to write XML analysis: {e}")
 
     finally:
         shutil.rmtree(temp_dir)
@@ -686,5 +1094,6 @@ if __name__ == "__main__":
                 convert_pdf_to_tiff(str(target_pdf), str(output_tiff))
                 
         except Exception as e:
-            logger.error(f"Failed to process {eml_file}: {e}")
+            import traceback
+            logger.error(f"Failed to process {eml_file}: {e}\n{traceback.format_exc()}")
 
