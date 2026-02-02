@@ -14,7 +14,7 @@ class TestEmlConversion(unittest.TestCase):
     def test_convert_all_emls(self):
         eml_files = glob.glob(os.path.join(self.eml_dir, "**", "*.eml"), recursive=True)
         if not eml_files:
-            self.fail("No .eml files found in 'eml' directory to test.")
+            self.fail(f"No .eml files found in {self.eml_dir} directory to test.")
 
         for eml_file in eml_files:
             output_pdf = os.path.splitext(eml_file)[0] + ".pdf"

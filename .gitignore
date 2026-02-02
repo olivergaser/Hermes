@@ -7,7 +7,6 @@ venv/
 .vscode/
 eml/
 meine_emails
-*.pdf
-*.xml
+
 .venv/
 *.old

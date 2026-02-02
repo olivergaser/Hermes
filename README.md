@@ -54,11 +54,8 @@ docker build -t eml-converter .
 You need to mount the directory containing your EML files to `/app/data` (or any path) inside the container.
 
 ```bash
-# General syntax
-docker run --rm -v $(pwd)/eml:/data eml-converter /data/input.eml /data/output.pdf [--format tif]
+docker run --rm -v $(pwd)/eml:/data eml-converter --input /data/ --output /data/ [--format tif]
 
-# Example
-docker run --rm -v $(pwd)/eml:/data eml-converter /data/ugreen.eml /data/ugreen.pdf
 ```
 *Note: Make sure to use absolute paths or mapped paths inside the container arguments.*
 
