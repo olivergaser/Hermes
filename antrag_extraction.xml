@@ -1,0 +1,819 @@
+<?xml version="1.0" ?>
+<PdfAnalysis>
+    <Metadata>
+        <CreationDate>D:20240702142142+02'00'</CreationDate>
+        <ModDate>D:20260101125040+01'00'</ModDate>
+        <Producer>iText® 5.5.13.3 ©2000-2022 iText Group NV (AGPL-version); modified using iText® 5.5.13.3 ©2000-2022 iText Group NV (AGPL-version)</Producer>
+    </Metadata>
+    <FormFields>
+        <Field name="[Formular][Metadaten]Formularart">HanseMerkur</Field>
+        <Field name="[Formular][Metadaten]Produkt">TOP</Field>
+        <Field name="[Formular][Metadaten]Generation">202007</Field>
+        <Field name="[Formular][Metadaten]ErstellungsdatumUhrzeit">01.01.2026 12:50:40</Field>
+        <Field name="[Formular][Vermittler]VE">951</Field>
+        <Field name="[Formular][Vertrag]Personennummer"/>
+        <Field name="[Formular][Vermittler]AVADNR">3604337</Field>
+        <Field name="[Formular][Vermittler]BVADNR">3604337</Field>
+        <Field name="[Formular][Vermittler]ADVersand">/Off</Field>
+        <Field name="[Formular][Vertrag]KooperationspartnerID"/>
+        <Field name="[Formular][Vertrag]KooperationspartnerMitarbeiter">/An2</Field>
+        <Field name="[Formular][Vertrag]Kooperationspartner"/>
+        <Field name="[Formular][VN]Titel"/>
+        <Field name="[Formular][VN]Anrede">/Aus</Field>
+        <Field name="[Formular][VN]Name">Lauinger</Field>
+        <Field name="[Formular][VN]Vorname">Heidi</Field>
+        <Field name="[Formular][VN]Zustellergaenzung"/>
+        <Field name="[Formular][VN]Geburtsdatum">05.08.1969</Field>
+        <Field name="[Formular][VN]Strasse">Dörnigweg</Field>
+        <Field name="[Formular][VN]Hausnummer">19</Field>
+        <Field name="[Formular][VN]PLZ">76275</Field>
+        <Field name="[Formular][VN]Wohnort">Ettlingen</Field>
+        <Field name="[Formular][VN]Staatsangehoerigkeit"/>
+        <Field name="[Formular][VN]TelefonPrivat"> </Field>
+        <Field name="[Formular][VN]TelefonGeschaeftlich"/>
+        <Field name="[Formular][VN]Mail">heidi.lauinger@web.de</Field>
+        <Field name="[Formular][VN]Familienstand"/>
+        <Field name="[Formular][BZ]AbweichenderBeitragszahler">/Off</Field>
+        <Field name="[Formular][BZ]IBAN">DE72660908000001338900</Field>
+        <Field name="[Formular][BZ]SEPAMandatsdatum">01.01.2026</Field>
+        <Field name="[Formular][BZ]UnterschriftBankverbindung"/>
+        <Field name="[Formular][BZ]Beitragszahlweise">/An1</Field>
+        <Field name="[Formular][BZ]Inkassoart">/An1</Field>
+        <Field name="[Formular][Vertrag]Antragstyp">/An1</Field>
+        <Field name="[Formular][Vertrag]ErsatzantragNummer"/>
+        <Field name="[Formular][Vertrag]ErsatzantragNummerZusatz"/>
+        <Field name="[Formular][Vertrag]Vertragsbeginn">02.01.2026</Field>
+        <Field name="[Formular][Vertrag]Vertragssende">02.01.2027</Field>
+        <Field name="[Formular][Risikoobjekt]VersichertesTier">/An1</Field>
+        <Field name="[Formular][Risikoobjekt]Tiername">Henry</Field>
+        <Field name="[Formular][Risikoobjekt]Geburtsdatum">19.02.2024</Field>
+        <Field name="[Formular][Risikoobjekt]Geschlecht">/An1</Field>
+        <Field name="[Formular][Risikoobjekt]Tierrasse">Labrador</Field>
+        <Field name="[Formular][Risikoobjekt]Mischling">/An2</Field>
+        <Field name="[Formular][Risikoobjekt]Schulterhoehe">/Aus</Field>
+        <Field name="[Formular][Risikoobjekt]Haltungsform">/Aus</Field>
+        <Field name="[Formular][Risikoobjekt]KennzeichnungNummer">276090010883068</Field>
+        <Field name="[Formular][Risikoschutz]Produktvariante">/An3</Field>
+        <Field name="[Formular][Risikoschutz]EasySelbstbehalt">/Aus</Field>
+        <Field name="[Formular][Risikoschutz]BestSelbstbehalt">/An2</Field>
+        <Field name="[Formular][Risikoschutz]EasyZahn">/Aus</Field>
+        <Field name="[Formular][Risikoschutz]BestZahn">/An1</Field>
+        <Field name="[Formular][Risikoschutz]Gesamtbeitrag">21,30</Field>
+        <Field name="[Formular][Metadaten]FormularBezeichnung">MS 108</Field>
+        <Field name="[Formular][Metadaten]FormularVersionBezeichnung">04.23</Field>
+        <Field name="[Formular][Metadaten]Barcode">003279-080-000773-000000000001</Field>
+        <Field name="[Formular][Metadaten]Zugangsweg">OLA</Field>
+        <Field name="[Formular][Metadaten]VNS">VNS32256O</Field>
+        <Field name="[Formular][Vertrag]RisikofrageAntwort[1]">/An1</Field>
+        <Field name="[Formular][Vertrag]RisikofrageAntwort[2]">/An1</Field>
+        <Field name="[Formular][Vertrag]RisikofrageAntwort[3]">/An2</Field>
+        <Field name="[Formular][Vertrag]NameTierarzt[1]"/>
+        <Field name="[Formular][Vertrag]NameTierarzt[2]"/>
+        <Field name="[Formular][Vertrag]NameTierarzt[3]"/>
+        <Field name="[Formular][Vertrag]ZeitpunktBehandlung[1]"/>
+        <Field name="[Formular][Vertrag]ZeitpunktBehandlung[2]"/>
+        <Field name="[Formular][Vertrag]ZeitpunktBehandlung[3]"/>
+        <Field name="[Formular][Vertrag]Vorversicherung">/An1</Field>
+        <Field name="[Formular][Vertrag]VorversicherungArtZeile[1]"/>
+        <Field name="[Formular][Vertrag]VorversicherungArtZeile[2]"/>
+        <Field name="[Formular][Vertrag]VorversicherungArtZeile[3]"/>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsunternehmenZeile[1]"/>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsunternehmenZeile[2]"/>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsunternehmenZeile[3]"> </Field>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsnummerZeile[1]"/>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsnummerZeile[2]"/>
+        <Field name="[Formular][Vertrag]VorversicherungVersicherungsnummerZeile[3]"/>
+        <Field name="[Formular][Vertrag]VorversicherungKuendigungZeile[1]"/>
+        <Field name="[Formular][Vertrag]VorversicherungKuendigungZeile[2]"/>
+        <Field name="[Formular][Vertrag]VorversicherungKuendigungZeile[3]"/>
+        <Field name="[Formular][Vertrag]Antragsanlagen">/An1</Field>
+        <Field name="[Formular][Vertrag]Anlagenanzahl"/>
+        <Field name="[Formular][Vertrag]Verbraucherinfo">/An</Field>
+        <Field name="[Formular][Vertrag]VerbraucherinfoDatumEmpfangsbestaetigung">01.01.2026</Field>
+        <Field name="[Formular][Vertrag]Werbeeinwilligung">/Aus</Field>
+        <Field name="[Formular][Unterschrift]Ort"/>
+        <Field name="[Formular][Unterschrift]Antragsteller"/>
+        <Field name="[Formular][Unterschrift]Datum">01.01.2026</Field>
+        <Field name="[Formular][Unterschrift]Vermittler"/>
+        <Field name="[Formular][Vermittler]Name"/>
+        <Field name="[Formular][Metadaten]Dokumentart">1</Field>
+        <Field name="[Formular][Vertrag]BeschreibungEingriff[1]"/>
+        <Field name="[Formular][Vertrag]BeschreibungEingriff[2]"/>
+        <Field name="[Formular][Vertrag]BeschreibungEingriff[3]"/>
+        <Field name="[Formular][Metadaten]LandISO">DE</Field>
+        <Field name="[Formular][Metadaten]VKAUF_PRKT_BEZNG">Tierkrankenversicherung</Field>
+        <Field name="[Formular][Metadaten]ANTR_UUID">ddf0f772-fff2-4d0f-8f32-2518ec560ec3</Field>
+        <Field name="[Formular][Metadaten]BIPRO_CONSUMER_ID"/>
+        <Field name="[Formular][Metadaten]IS_MOLA">false</Field>
+        <Field name="[Formular][Metadaten]EING_KANAL_ID">18</Field>
+        <Field name="[Formular][Risikoobjekt]BeschreibungTier[1]"/>
+        <Field name="[Formular][Risikoobjekt]BeschreibungTier[2]"/>
+        <Field name="[Formular][Vertrag]BesondereVereinbarungen[1]"/>
+        <Field name="[Formular][Vertrag]BesondereVereinbarungen[2]"/>
+        <Field name="[Formular][Risikoobjekt]KennzeichnungArt">/An1</Field>
+        <Field name="[Formular][Metadaten]VKAUF_TRF_BEZNG">Best</Field>
+    </FormFields>
+    <Content>
+        <Page id="1">
+            <Text>
+MS 108  04.23  BIPRO   003279 - 085 - 000773 - 000000000001 
+ 
+VE Personen-Nr. (Vers.-Nr.) Abschlussverm. AD-Nr. Bestandsbetr. AD-Nr.
+Wird von der HanseMerkur ausgefüllt
+Identifikationsnr./Kooperations-/Gruppenversicherungspartner Mitarbeiter/-in bei Kooperations-/Gruppenversicherungspartner
+ja, bei
+  
+Beitrag Beitrag in EUR 
+gemäß Zahlungsweise inkl. Vers.-Steuer
+nein
+AD-Versand    ja
+MS 108 04.23 BIPRO 
+003279-085-000773
+HanseMerkur Allgemeine Versicherung AG
+Postfach, 20352 Hamburg
+Versicherungsantrag zum Abschluss einer Tier-OP Versicherung
+* Diese An gaben sind frei willig.
+Seite 1 von 5
+Bitte in Blockbuch-
+staben ausfüllen!
+Antrag-
+steller
+Versicherungs-
+nehmer
+Herr
+ 
+Frau 
+Name
+Titel
+Zustellergänzung
+E-Mail*
+Straße
+Postleitzahl,
+Wohnort
+Staats-
+angehörigkeit
+Telefon*
+(privat)
+Telefon*
+(geschäftlich)
+Geburts-
+datum
+Haus-Nr.
+Vorname
+Bank-
+verbindung
+Deckungs-
+umfang
+Mandat für SEPA-
+Basislastschriften 
+für wiederkehrende 
+Zahlungen
+abweichender Beitragszahler (Beitragszahler nicht Antragsteller). Wenn der Antragsteller nicht der Beitragszahler ist, muss das Formular 
+RW 010 (Mandatserteilung für abweichende Beitragszahler) ausgefüllt werden.
+IBAN
+Ihre IBAN finden Sie auf Ihrer Bankkarte (die deutsche IBAN besteht inkl. Länderkennzeichen aus 22 Stellen).
+ Land Graue Felder nur für nicht deutsche IBAN erforderlich.
+1. Unterschrift 
+des AntragstellersDatum ✘
+SEPA-Mandats-
+erteilung 
+siehe Schluss-
+erklärungen
+Neuantrag 
+Ersatzantrag für
+Versicherungsnummer
+C
+Vertragsbeginn, 00:00 Uhr Vertragsende, 00:00 Uhr
+Kennzeich- 
+nung  Chipnummer  Tätowierungsnummer 
+    Hunde ohne Kennzeichnung können nicht versichert werden.
+Bitte hier die Chip-/Tätowierungsnummer eintragen.  
+Sofern Ihre Katze nicht gechipt oder tätowiert ist, versichern wir die Katze unter Angabe einer eindeutigen Beschreibung (Fellfarbe, Muster und besondere Merkmale).
+Angaben 
+zum Tier
+Wir bieten Versicherungsschutz für Hunde und Katzen. Das Alter des Tieres darf zum Vertragsbeginn maximal 8 Jahre betragen. Halter des Haustiers sind Sie selbst als 
+Versicherungsnehmer, Ihr Ehe- bzw. Lebenspartner in häuslicher Gemeinschaft oder Ihr Kind in häuslicher Gemeinschaft.
+Oder ist das Tier ein Mischling?
+  ja      nein 
+Rasse
+Tiername Geburtsdatum des Tieres
+Ist Ihr Hund ein Mischling, bitte die Schulterhöhe angeben:     bis 44 cm   ab 45 cm 
+Ist das zu versichernde Tier eine Katze, geben Sie bitte die Haltungsform an:    Wohnung   Freigänger
+Geschlecht   männlich      weiblich
+Versichertes Tier     Hund      Katze
+Zahlung erfolgt per:  Abruf
+   Rechnung  
+ monatlich    vierteljährlich     halbjährlich     jährlich
+(siehe Schlusserklärungen für weitere Informationen)Zahlungs-
+weise
+ Beschreibung 
+der Katze 
+(Fellfarbe, 
+Muster, 
+besondere 
+Merkmale)
+Familienstand*  ledig          verheiratet          geschieden          verwitwet          eingetragene Partnerschaft          eheähnliche Gemeinschaft 
+ Smart  Easy  Best
+ 250 EUR Selbstbeteiligung   ohne Selbstbeteiligung        250 EUR Selbstbeteiligung   ohne Selbstbeteiligung        250 EUR Selbstbeteiligung  
+Sollen Kosten für Zahnextrationen und Wurzelbehandlungen mit-
+versichert werden?    ja      nein
+Sollen Kosten für Zahnextrationen und Wurzelbehandlungen mit-
+versichert werden?    ja      nein
+Falls Antwort ja: Haben Sie einen Tarif mit Selbstbeteiligung vereinbart, gilt diese Selbstbeteiligung auch hierfür.
+Die genauen Regelungen zur Selbstbeteiligung entnehmen Sie bitte der Kundeninformation Tier-OP Versicherung.</Text>
+        </Page>
+        <Page id="2">
+            <Text>Angaben 
+zum Vor-
+versicherer
+Besteht oder bestand für Sie und/oder das Tier bereits eine der nachstehenden Versicherungen oder wur de eine solche Versicherung bei einem anderen Unternehmen 
+beantragt? Die Auskünfte bitte unbedingt erteilen; gleichgültig, ob bei der HanseMerkur oder anderen Gesellschaften.
+ nein  ja, und zwar: 
+  
+Risikofragen
+Gesundheits-
+zustand des 
+Tieres
+Wir können keine Tiere versichern, die nicht gesund sind. 
+Können Sie bestätigen, dass das Tier gesund ist?      
+  ja         nein 
+Bitte lesen Sie hierzu unbedingt den Hinweistext auf Seite 4 (IV. Besondere Hinweise 2. Definition - Gesund)
+Wir können keine Tiere versichern, die angeborene, genetisch bedingte oder erworbene anatomische Fehlentwicklungen haben.  
+Können Sie bestätigen, dass das Tier nach Ihrem Wissensstand keine dieser genannten Fehlentwicklungen besitzt?    ja         nein
+Ort 2. Unterschrift Antragsteller
+✘
+Unterschrift Vermittler Name Vermittler (bitte in Druckbuchstaben ausfüllen)Datum
+MS 108 04.23 BIPRO
+Seite 1 von 5 Seite 2 von 5
+Ja, ich möchte auch weiterhin gut informiert bleiben und keine aktuellen Aktionen der HanseMerkur 
+Versicherungsgruppe verpassen!
+Ich bin einverstanden, dass mich die Unternehmen der HanseMerkur Versicherungsgruppe* zu 
+versicherungsbezogenen Produkten (Kranken-, Lebens-, Reise- oder Sachversicherung) oder Services 
+(z. B. Gesundheitsservices oder Apps) der HanseMerkur Versicherungsgruppe über die nachfolgend von 
+mir ausgewählten Kommunikationswege kontaktieren. 
+ 
+*  Die HanseMerkur Versicherungsgruppe umfasst die folgenden Unternehmen: 
+HanseMerkur Krankenversicherung AG, HanseMerkur Speziale Krankenversicherung AG, 
+HanseMerkur Lebensversicherung AG, HanseMerkur Allgemeine Versicherung AG, 
+HanseMerkur Reiseversicherung AG, Advigon Versicherung AG, HanseMerkur International AG, 
+H.B.C. Hanse Betreuungscenter GmbH sowie die mich betreuenden Ausschließlichkeitsvermittler 
+der vorgenannten Unternehmen
+Dazu wird die HanseMerkur Allgemeine Versicherung AG meine bei ihr verfügbaren 
+personenbezogenen Daten (z. B. Name, E-Mail-Adresse oder Telefonnummer) an 
+die weiteren Gesellschaften der HanseMerkur Versicherungsgruppe übermitteln.
+Bitte informieren Sie mich per:
+ 
+  E-Mail und Telefon      E-Mail      Telefon
+Diese Einwilligung kann ich jederzeit per Post (HanseMerkur Allgemeine 
+Versicherung AG, Postfach, 20352 Hamburg), E-Mail (info@hansemerkur.de) 
+oder Telefon (040 4119-0) formlos mit Wirkung für die Zukunft widerrufen.  
+Bis dahin bleibt diese Einwilligung in Kraft.
+Belehrung 
+über ihre vor-
+vertragliche 
+Anzeigepflicht
+Alle Angaben dieses Antrags, insbesondere die nachfolgenden Risikofragen und Angaben zum Vorversicherer, sind nach bestem Wissen sorgfältig, vollständig und
+richtig zu beantworten. Eine Verletzung Ihrer vorvertraglichen Anzeigepflicht kann den Versicherer zu einem Rücktritt oder einer Kündigung berechtigen oder zu einer 
+Vertragsanpassung führen. Bitte beachten Sie hierzu die Ausführungen zur Bedeutung der vorvertraglichen Anzeigepflicht gemäß § 19 Abs. 5 VVG in der gesonderten 
+Belehrung der Ihnen ausgehändigten Kundeninformation auf den Seiten 7 und 8.
+Anlagen Ist dem Antrag mindestens eine Anlage beigefügt außer einem Beratungsprotokoll, einer Mandatserteilung für abweichende Beitragszahler oder einer Maklervollmacht?
+Beitrags-
+anpassung
+Auf die Möglichkeit einer Beitragsanpassung nach Ziffer 6 der Versicherungsbedingungen für die HanseMerkur Tier-OP Versicherung wird besonders hingewiesen.
+ nein  ja, und zwar    Anlagen  Hinweise des Antragstellers/Versicherungsnehmers sind beigefügt.
+Nebenabreden sind nur nach schriftlicher Bestätigung durch den Versicherer verbindlich.Besondere 
+Verein-
+barungen
+ Tier-OP Versicherung (Juli 2020) 
+und das Produktinformationsblatt sowie die gesonderte Mitteilung nach § 19 Abs. 5 VVG über die Folgen einer Verletzung der gesetzlichen Anzeigepflicht
+am  erhalten.
+Bevor Sie diesen Antrag unterschreiben, lesen Sie bitte die Schlusserklärungen am Ende dieses Antrags. Diese sind vom Antragsteller zu bestätigen.
+Sie machen mit Ihrer Unterschrift die Schlusserklärungen, die auch Hinweise zu den Verhaltensregeln zum Datenschutz und die Information über den Datenaustausch mit der informa
+HIS GmbH enthalten, zum Inhalt dieses Antrags.
+Ich habe die Kundeninformation
+Art des Eingriffs durchführender Tierarzt wann? Monat/Jahr
+Ärztliche 
+Behandlungen
+Ist in den letzten 3 Jahren ein operativer Eingriff am Tier durchgeführt worden?       ja         nein
+Art der Versicherung Versicherungsunternehmen (Vorversicherer) Versicherungsnummer Falls gekündigt, von wem?
+ Tier-Krankenversicherung  Versicherungsnehmer  Versicherer
+ Tier-OP Versicherung  Versicherungsnehmer  Versicherer
+ Tier-Unfallversicherung  Versicherungsnehmer  Versicherer</Text>
+        </Page>
+        <Page id="3">
+            <Text>I. Allgemeine Hinweise
+ Die gegenseitigen Rechte und Pflichten regeln sich nach dem Antrag und – soweit ent -
+sprechender Versicherungsschutz beantragt und vereinbart wird –   nach den
+ -  Versicherungsbedingungen für die HanseMerkur Tier-OP Versicherung Juli 2020
+    (Fassung November 2021) 
+ - gesetzlichen Bestimmungen und besonderen Vereinbarungen.
+ Vertragsdauer, Kündigung
+ Der Versicherungsvertrag wird nach Ihrem Wunsch für die Dauer von einem Jahr ge -
+schlossen, sofern nicht eine Vertragslaufzeit von weniger als einem Jahr vereinbart wird 
+(Kurzfris
+tvertrag). 
+ Der Vertrag verlängert sich nach Ablauf der vereinbarten festen Vertragsdauer still-
+schweigend jeweils um ein Jahr, sofern er nicht bedingungsgemäß gekündigt wird.
+ Beginn des Versicherungsschutzes
+ Der Versicherungsschutz beginnt, sobald der erste Beitrag gezahlt ist, 
+jedoch frühestens 
+zu dem im Versicherungsschein angegebenen Zeitpunkt. Wird der erste Beitrag erst 
+danach angefordert, dann aber innerhalb von 14 Tagen gezahlt, so beginnt der Versiche -
+rungsschutz zu dem im Versicherungsschein angegebenen Zeitpunkt.
+ Ich bin damit einverstanden, dass der Versicherungsschutz zum vorgenannten Beginn, 
+ggf. schon vor dem Ende der Widerrufsfrist, bes
+teht.
+ 
+ 
+Versicherungsteuer/Zahlungsperiode 
+ Der Versicherungsbeitrag enthält grundsätzlich die vom Gesetzgeber vorgeschriebene 
+Versicherungsteuer. D
+er Beitrag ist von der Zahlungsperiode abhängig. Sie haben die 
+Möglichkeit die Zahlungsperiode für den Vertrag zu wählen (jährlich, halbjährlich, viertel-
+jährlich oder monatlich). Der Beitrag für eine jährliche Zahlungsperiode ist günstiger.
+ Zuständiger Ombudsmann bzw. Aufsichtsbehörde
+ Versicherungsombudsmann e.V.
+ Postfach 08 06 32, 10006 Berlin, www.versicherungsombudsmann.de
+ Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin), Bereich Versicherungen
+ Graurheindorfer Straße 108, 53117 Bonn, www.bafin.de
+II. Datenschutzhinweise
+ Mit diesen Hinweisen informieren wir Sie über die Verarbeitung Ihrer personenbezogenen 
+Daten durch die HanseMerkur Allgemeine Versicherung AG (HanseMerkur) und die Ihnen 
+nach dem Datenschutzrecht zustehenden Rechte.
+ Verantwortlicher für die Datenverarbeitung
+ HanseMerkur Allgemeine Versicherung AG
+ Siegfried-Wedells-Platz 1
+ 20354 Hamburg
+ Telefon: 040 4119-1100
+ Fax: 040 4119-3257
+ E-Mail-Adresse: info@hansemerkur.de
+ Unseren Datenschutzbeauftragten erreichen Sie per Post unter der o.g. Adresse oder per 
+E
+-Mail unter: datenschutz@hansemerkur.de
+ Zwecke und Rechtsgrundlagen der Datenverarbeitung
+ Wir verarbeiten Ihre personenbezogenen Daten unter Beachtung der EU-Datenschutz-
+Grundveror
+dnung (DSGVO), des Bundesdatenschutzgesetzes (BDSG), der datenschutz -
+rechtlich relevanten Bestimmungen des Versicherungsvertragsgesetzes (VVG) sowie 
+aller weiteren maßgeblichen Gesetze. Darüber hinaus hat sich unser Unternehmen auf 
+die „Verhaltensregeln für den Umgang mit personenbezogenen Daten durch die deutsche 
+Versicherungswirtschaft“ verpflichtet, die die oben genannten Gesetze für die Versiche -
+rungswirtschaft präzisieren. Diese können Sie im Internet unter www.hansemerkur.de/
+datenschutz abrufen.
+ Stellen Sie einen Antrag auf Versicherungsschutz, benötigen wir die von Ihnen hierbei 
+gemachten Angaben für den Abschluss des Vertrages und zur Einschätzung des von 
+uns zu üb
+ernehmenden Risikos. Kommt der Versicherungsvertrag zustande, verarbeiten 
+wir diese Daten zur Durchführung des Vertragsverhältnisses, z. B. zur Policierung oder 
+Rechnungsstellung. Angaben zum Schaden benötigen wir etwa, um prüfen zu können, ob 
+ein Versicherungsfall eingetreten und wie hoch der Schaden ist.
+ Der Abschluss bzw. die Durchführung des Versicherungsvertrages ist ohne die Verarbei-
+tung Ihrer personenbezo
+genen Daten nicht möglich. 
+ Darüber hinaus benötigen wir Ihre personenbezogenen Daten zur Erstellung von versi-
+cherungssp
+ezifischen Statistiken, z. B. für die Entwicklung neuer Tarife oder zur Erfüllung 
+aufsichtsrechtlicher Vorgaben. Die Daten aller mit einer HanseMerkur-Gesellschaft 
+bestehenden Verträge nutzen wir für eine Betrachtung der gesamten Kundenbeziehung, 
+beispielsweise zur Beratung hinsichtlich einer Vertragsanpassung, -ergänzung, für Ku-
+lanzentscheidungen oder für umfassende Auskunftserteilungen.
+ Rechtsgrundlage für diese Verarbeitungen personenbezogener Daten für vorvertragliche 
+und vertragliche Z
+wecke ist Art. 6 Abs. 1 b) DSGVO. Soweit dafür besondere Kategorien 
+personenbezogener Daten (z. B. Ihre Gesundheitsdaten bei Abschluss eines Unfallversi-
+cherungsvertrages) erforderlich sind, holen wir Ihre Einwilligung nach Art. 9 Abs. 2 a) i. V. m. 
+Art. 7 DSGVO ein. Erstellen wir Statistiken mit diesen Datenkategorien, erfolgt dies auf 
+Grundlage von Art. 9 Abs. 2 j) DSGVO i. V. m. § 27 BDSG. 
+ Ihre Daten verarbeiten wir auch, um berechtigte Interessen von uns oder von Dritten zu 
+wahren (Art. 6 Abs. 1 f
+) DSGVO). Dies kann insbesondere erforderlich sein:
+ - zur Gewährleistung der IT-Sicherheit und des IT-Betriebs,
+ - zur Werbung für unsere eigenen Versicherungsprodukte und für andere Produkte 
+der Unternehmen der HanseMerkur-Gruppe und deren K
+ooperationspartner sowie für 
+Markt- und Meinungsumfragen,
+ - zur Verhinderung und Aufklärung von Straftaten, insbesondere nutzen wir Da-
+tenanalysen zur Erkennung von Hinweisen, die auf Ver
+sicherungsmissbrauch hindeuten 
+können.
+ Darüber hinaus verarbeiten wir Ihre personenbezogenen Daten zur Erfüllung gesetzlicher 
+Verpflichtungen wie z. B. auf
+sichtsrechtlicher Vorgaben, handels- und steuerrechtlicher 
+Aufbewahrungspflichten oder unserer Beratungspflicht. Als Rechtsgrundlage für die 
+Verarbeitung dienen in diesem Fall die jeweiligen gesetzlichen Regelungen i. V. m. Art. 6 
+Abs. 1 c) DSGVO.
+ Kategorien von Empfängern der personenbezogenen Daten
+ Rückversicherer:
+ Von uns übernommene Risiken versichern wir bei speziellen Versicherungsunternehmen 
+(Rückversicherer). Dafür kann es 
+erforderlich sein, Ihre Vertrags- und ggf. Schadendaten 
+an einen Rückversicherer zu übermitteln, damit dieser sich ein eigenes Bild über das 
+Risiko oder den Versicherungsfall machen kann. Darüber hinaus ist es möglich, dass der 
+Rückversicherer unser Unternehmen aufgrund seiner besonderen Sachkunde bei der  
+Risiko- oder Leistungsprüfung sowie bei der Bewertung von Verfahrensabläufen  
+unterstützt. Wir übermitteln Ihre Daten an den Rückversicherer nur soweit dies für die 
+Erfüllung unseres Versicherungsvertrages mit Ihnen erforderlich ist bzw. im zur Wahrung 
+unserer berechtigten Interessen erforderlichen Umfang. Nähere Informationen zum ein-
+gesetzten Rückversicherer können Sie unter den oben genannten Kontaktinformationen 
+anfordern.
+MS 108 04.23 BIPRO
+Schlusserklärungen
+  
+Seite 3 von 5
+11.  Angaben zur Beendigung des Vertrags, insbesondere zu den vertraglichen Kündi-
+gungsbedingungen einschließlich etwaiger Vertragsstrafen; soweit die Mitteilung 
+durch Übermittlung der Vertragsbestimmungen einschließlich der Allgemeinen Ver -
+sicherungsbedingungen erfolgt, bedürf
+en die Informationen einer hervorgehobenen 
+und deutlich gestalteten Form;
+12.  die Mitgliedstaaten der Europäischen Union, deren Recht der Versicherer der Aufnah-
+me von Beziehungen zu Ihnen vor Abschluss des Versicherungs
+vertrags zugrunde legt;
+13.  das auf den Vertrag anwendbare Recht, eine Vertragsklausel über das auf den Vertrag 
+anwendbare Recht oder über das zuständige Gericht;
+14. 
+ die Sprachen, in denen die Vertragsbedingungen und die in diesem Abschnitt 
+genannten Vorabinformationen mitget
+eilt werden, sowie die Sprachen, in denen sich 
+der Versicherer verpflichtet, mit Ihrer Zustimmung die Kommunikation während der 
+Laufzeit dieses Vertrags zu führen;
+15. 
+ einen möglichen Zugang für Sie zu einem außergerichtlichen Beschwerde- und 
+Rechtsbehelfsverfahren und gegebenenfalls die Voraussetz
+ungen für diesen Zugang; 
+dabei ist ausdrücklich darauf hinzuweisen, dass die Möglichkeit für Sie, den Rechts-
+weg zu beschreiten, hiervon unberührt bleibt;
+16. 
+ Name und Anschrift der zuständigen Aufsichtsbehörde sowie die Möglichkeit einer 
+Beschwerde bei dieser Aufsichtsbehörde.
+Ende der Widerrufsbelehrung
+Widerrufsbelehrung
+Abschnitt 1    
+Widerrufsrecht, Widerrufsfolgen und besondere Hinweise
+Widerrufsrecht 
+Sie können Ihre V
+ertragserklärung innerhalb einer Frist von 14 Tagen ohne Angabe 
+von Gründen in Textform (z. B. Brief, Fax, E-Mail) widerrufen.
+Die Widerrufsfrist beginnt, nachdem Ihnen
+• der Versicherungsschein, 
+• 
+ die Vertragsbestimmungen, 
+einschließlich der für das Vertragsverhältnis geltenden Allgemeinen Versicherungsbe-
+dingungen, diese wiederum einschließlich der Tarifbestimmungen,
+• diese B
+elehrung, 
+• das Informationsblatt zu Versicherungsprodukten 
+• 
+ und die weiteren in Abschnitt 2 aufgeführten Informationen
+jeweils in Textform zugegangen sind. 
+Zur Wahrung der Widerrufsfris
+t genügt die rechtzeitige Absendung des Widerrufs. 
+Der Widerruf ist zu richten an:
+HanseMerkur Allgemeine Versicherung AG
+Siegfried-Wedells-Platz 1
+20354 Hamburg
+E-Mail: shuk-kundenbetreuung@hansemerkur.de, Fax: 040 4119-3257.
+Widerrufsfolgen
+Im Falle eines wirksamen Widerrufs endet der Versicherungsschutz und der Versi-
+cherer hat Ihnen den auf die Zeit nach Zugang des Widerrufs entfallenden Teil der 
+Prämien zu erstatten, wenn Sie zugestimmt haben, dass der Versicherungsschutz vor 
+dem Ende der Widerrufsfrist beginnt. Den Teil der Prämie, der auf die Zeit bis zum 
+Zugang des Widerrufs entfällt, darf der Versicherer in diesem Fall einbehalten; dabei 
+handelt es sich um einen Betrag, der sich zeitanteilig vom Beginn des Vertrags bis 
+zum Zugang des Widerrufs errechnet. Der Versicherer hat zurückzuzahlende Beträge 
+unverzüglich, spätestens 30 Tage nach Zugang des Widerrufs, zu erstatten. 
+Beginnt der Versicherungsschutz nicht vor dem Ende der Widerrufsfrist, so hat der 
+wirksame Widerruf zur Folge, dass empfangene Leistungen zurückzugewähren und 
+gezogene Nutzungen (z. B. Zinsen) herauszugeben sind.
+Haben Sie Ihr Widerrufsrecht hinsichtlich des Versicherungsvertrags wirksam ausge-
+übt, so sind Sie auch an einen mit dem Versicherungsvertrag zusammenhängenden 
+Vertrag nicht mehr gebunden. Ein zusammenhängender Vertrag liegt vor, wenn er 
+einen Bezug zu dem widerrufenen Vertrag aufweist und eine Dienstleistung des 
+Versicherers oder eines Dritten auf der Grundlage einer Vereinbarung zwischen dem 
+Dritten und dem Versicherer betrifft. Eine Vertragsstrafe darf weder vereinbart noch 
+verlangt werden.
+Besondere Hinweise
+Ihr Widerrufsrecht erlischt, wenn der Vertrag auf Ihren ausdrücklichen Wunsch 
+sowohl von Ihnen als auch vom Versicherer vollständig erfüllt ist, bevor Sie Ihr Wider-
+rufsrecht ausgeübt haben. 
+Abschnitt 2 
+  
+Auflistung der für den Fristbeginn erforderlichen weiteren Informationen 
+Hinsichtlich der in Abschnitt 1 Satz 2 genannten weiteren Informationen werden die 
+Informationspflichten im Folgenden im Einzelnen aufgeführt:
+Der Versicherer hat Ihnen folgende Informationen z
+ur Verfügung zu stellen:
+1.  die Identität des Versicherers und der etwaigen Niederlassung, über die der Vertrag 
+abgeschlossen werden soll; anzugeben ist auch das Handelsregister, b
+ei dem der 
+Rechtsträger eingetragen ist, und die zugehörige Registernummer;
+2.  die ladungsfähige Anschrift des Versicherers und jede andere Anschrift, die für die 
+Geschäftsbeziehung zwischen dem Versicherer und Ihnen maßgeblich ist, bei juris
+ti-
+schen Personen, Personenvereinigungen oder -gruppen auch den Namen eines Ver -
+tretungsberechtigten; soweit die Mitteilung durch Übermittlung der Vertragsbestim-
+mungen einschließlich der Allgemeinen Versicherungsbedingungen erfolgt, bedürfen 
+die Informationen einer hervorgehobenen und deutlich gestalteten Form;
+3. die Hauptgeschäftstätigkeit des Versicherers;
+4. 
+ die wesentlichen Merkmale der Versicherungsleistung, insbesondere Angaben über 
+Art, Umfang und Fälligkeit der Leistung des Ver
+sicherers;
+5.  den Gesamtpreis der Versicherung einschließlich aller Steuern und sonstigen Preis-
+bestandteile, wobei die Prämien einzeln auszuweisen sind, wenn das V
+ersicherungs-
+verhältnis mehrere selbständige Versicherungsverträge umfassen soll, oder, wenn 
+ein genauer Preis nicht angegeben werden kann, Angaben zu den Grundlagen seiner 
+Berechnung, die Ihnen eine Überprüfung des Preises ermöglichen;
+6. 
+ Einzelheiten hinsichtlich der Zahlung und der Erfüllung, insbesondere zur Zahlungs-
+weise der Prämien;
+7. 
+ die Befristung der Gültigkeitsdauer der zur Verfügung gestellten Informationen, 
+beispielsweise die Gültigkeitsdauer befristet
+er Angebote, insbesondere hinsichtlich 
+des Preises;
+8.  Angaben darüber, wie der Vertrag zustande kommt, insbesondere über den Beginn der 
+Versicherung und des Versicherungsschutzes sowie die D
+auer der Frist, während der 
+der Antragsteller an den Antrag gebunden sein soll;
+9.  das Bestehen oder Nichtbestehen eines Widerrufsrechts sowie die Bedingungen, 
+Einzelheiten der Ausübung, insbesondere Namen und Anschrift derjenigen Per
+son, 
+gegenüber der der Widerruf zu erklären ist, und die Rechtsfolgen des Widerrufs ein-
+schließlich Informationen über den Betrag, den Sie im Falle des Widerrufs gegebenen-
+falls zu zahlen haben; soweit die Mitteilung durch Übermittlung der Vertragsbestim-
+mungen einschließlich der Allgemeinen Versicherungsbedingungen erfolgt, bedürfen 
+die Informationen einer hervorgehobenen und deutlich gestalteten Form;
+10. 
+ Angaben zur Laufzeit des Vertrags;</Text>
+        </Page>
+        <Page id="4">
+            <Text>MS 108 04.23 BIPRO
+MS 108 04.23 BIPRO
+Schlusserklärungen
+ Vermittler:
+ Soweit Sie hinsichtlich Ihrer Versicherungsverträge von einem Vermittler betreut werden, 
+verarbeitet Ihr Vermittler die zum Abschluss und zur Durchführung de
+s Vertrages benötigten 
+Antrags-, Vertrags- und Schadendaten. Auch übermittelt unser Unternehmen diese Daten 
+an die Sie betreuenden Vermittler, soweit diese die Informationen zu Ihrer Betreuung und 
+Beratung in Ihren Versicherungs- und Finanzdienstleistungsangelegenheiten benötigen.
+ Datenverarbeitung in der Unternehmensgruppe:
+ Spezialisierte Unternehmen bzw. Bereiche unserer Unternehmensgruppe nehmen be -
+stimmte Datenverarbeitungsauf
+gaben für die in der Gruppe verbundenen Unternehmen 
+zentral wahr. Soweit ein Versicherungsvertrag zwischen Ihnen und einem oder mehreren 
+Unternehmen unserer Gruppe besteht, können Ihre Daten etwa zur zentralen Verwaltung 
+von Anschriftendaten, für den telefonischen Kundenservice, zur Vertrags- und Leistungs-
+bearbeitung, für In- und Exkasso oder zur gemeinsamen Postbearbeitung zentral durch 
+ein Unternehmen der Gruppe verarbeitet werden. In unserer Dienstleisterliste finden Sie 
+die Unternehmen, die an einer zentralisierten Datenverarbeitung teilnehmen.
+ Externe Dienstleister:
+ Wir bedienen uns zur Erfüllung unserer vertraglichen und gesetzlichen Pflichten zum Teil 
+e
+xterner Dienstleister. 
+ Eine Auflistung der von uns eingesetzten Auftragnehmer und Dienstleister, zu denen 
+nicht nur vorübergehende Geschäftsb
+eziehungen bestehen, können Sie auf unserer 
+Internetseite unter www.hansemerkur.de/datenschutz entnehmen.
+ Weitere Empfänger:
+ Darüber hinaus können wir Ihre personenbezogenen Daten an weitere Empfänger 
+übermitteln, wie etwa an Behörden z
+ur Erfüllung gesetzlicher Mitteilungspflichten (z. B. 
+Sozialversicherungsträger, Finanzbehörden oder Strafverfolgungsbehörden).
+ Dauer der Datenspeicherung 
+ Wir löschen Ihre personenbezogenen Daten sobald sie für die oben genannten Zwecke 
+nicht mehr erforderlich sind. Dabei kann es vorkommen, dass p
+ersonenbezogene Daten 
+für die Zeit aufbewahrt werden, in der Ansprüche gegen unser Unternehmen geltend 
+gemacht werden können (gesetzliche Verjährungsfrist von drei oder bis zu dreißig Jah-
+ren). Zudem speichern wir Ihre personenbezogenen Daten, soweit wir dazu gesetzlich 
+verpflichtet sind. Entsprechende Nachweis- und Aufbewahrungspflichten ergeben sich 
+unter anderem aus dem Handelsgesetzbuch, der Abgabenordnung und dem Geldwäsche-
+gesetz. Die Speicherfristen betragen danach bis zu zehn Jahren. 
+ Betroffenenrechte
+ Sie können unter der o. g. Adresse Auskunft über die zu Ihr
+er Person gespeicherten 
+Daten verlangen. Darüber hinaus können Sie unter bestimmten Voraussetzungen die 
+Berichtigung oder die Löschung Ihrer Daten verlangen. Ihnen kann weiterhin ein Recht 
+auf Einschränkung der Verarbeitung Ihrer Daten sowie ein Recht auf Herausgabe der von 
+Ihnen bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren 
+Format zustehen. 
+ Beschwerderecht
+ Sie haben die Möglichkeit, sich mit einer Beschwerde an den oben genannten Daten-
+schutzbeauftragten oder an die Datenschutzauf
+sichtsbehörde zu wenden. 
+ Hinweis- und Informationssystem der Versicherungswirtschaft
+ Die Versicherungswirtschaft nutzt das Hinweis- und Informationssystem (HIS) der 
+informa HIS GmbH zur Unterstütz
+ung der Risikobeurteilung im Antragsfall, zur Sachver -
+haltsaufklärung bei der Leistungsprüfung sowie bei der Bekämpfung von Versicherungs-
+missbrauch. Dafür ist ein Austausch bestimmter personenbezogener Daten mit dem HIS 
+erforderlich. Nähere Informationen dazu entnehmen Sie bitte den beiliegenden Hinweisen 
+zum HIS.
+ Datenaustausch mit Ihrem früheren Versicherer
+ Um Ihre Angaben bei Abschluss des Versicherungsvertrags (z. B. zur Mitnahme eines 
+Schadensfr
+eiheitsrabattes in der Kfz-Haftpflichtversicherung) bzw. Ihre Angaben bei 
+Eintritt des Versicherungsfalls überprüfen und bei Bedarf ergänzen zu können, kann im 
+dafür erforderlichen Umfang ein Austausch von personenbezogenen Daten mit dem von 
+Ihnen im Antrag benannten früheren Versicherer erfolgen.
+ Automatisierte Einzelfallentscheidungen
+ Auf Basis Ihrer Angaben zum Risiko, zu denen wir Sie bei Antragstellung befragen, ent -
+scheiden wir vollautomatisiert etwa über das Zust
+andekommen oder die Kündigung des 
+Vertrages, mögliche Risikoausschlüsse oder über die Höhe des von Ihnen zu zahlenden 
+Versicherungsbeitrags.
+III. Information über den Datenaustausch mit der informa 
+ HIS GmbH auf Grundlage der Artikel 13 und 14 DSGVO
+ Hiermit möchten wir Sie darüber informieren, dass wir bei Abschluss eines Versiche -
+rungsvertrags oder im Rahmen der Schadenbearbeitung Daten zum Versicherungsobjekt 
+(F
+ahrzeugidentifikationsdaten oder Adresse des Gebäudes) sowie Angaben zu Ihrer 
+Person (Name, Vorname, Geburtsdatum, Anschrift, frühere Anschriften) an die informa 
+HIS GmbH übermitteln (HIS-Anfrage). Die informa HIS GmbH überprüft anhand dieser 
+Daten, ob zu Ihrer Person und/oder zu Ihrem Versicherungsobjekt im „Hinweis- und In-
+formationssystem der Versicherungswirtschaft“ (HIS) Informationen gespeichert sind, die 
+auf ein erhöhtes Risiko oder Unregelmäßigkeiten in einem Versicherungsfall hindeuten 
+können. Solche Informationen können nur aufgrund einer früheren Meldung eines Ver -
+sicherungsunternehmens an das HIS vorliegen (HIS-Einmeldung), über die Sie ggf. von 
+dem einmeldenden Versicherungsunternehmen gesondert informiert worden sind. Daten, 
+die aufgrund einer HIS-Einmeldung im HIS gespeichert sind, werden von der informa HIS 
+GmbH an uns, das anfragende Versicherungsunternehmen, übermittelt.
+ Nähere Informationen zum HIS finden Sie auf folgenden Internetseiten: www.informa-his.de
+ Zwecke der Datenverarbeitung der informa HIS GmbH
+ Die informa HIS GmbH betreibt als datenschutzrechtlich Verantwortliche das Hin-
+weis- und Informationssystem HIS der Versicherungswirtschaft. Sie v
+erarbeitet darin 
+personenbeziehbare Daten, um die Versicherungswirtschaft bei der Bearbeitung von 
+Versicherungsanträgen und -schäden zu unterstützen. Es handelt sich bei diesen Daten 
+um Angaben zu erhöhten Risiken oder um Auffälligkeiten, die auf Unregelmäßigkeiten (z. 
+B. Mehrfachabrechnung eines Versicherungsschadens bei verschiedenen Versicherungs-
+unternehmen) hindeuten können.
+Widerspruchsrecht
+Sie haben das Recht, einer Verarbeitung Ihrer personenbezogenen Daten zu Zwecken 
+der Direktwerbung zu widersprechen. 
+Verarbeiten wir Ihre Daten zur Wahrung berechtigter Interessen, können Sie dieser Ver-
+arbeitung widersprechen, wenn sich aus Ihrer besonderen Situation Gründe ergeben, 
+die gegen die Datenverarbeitung sprechen.
+  
+ Rechtsgrundlage für die Datenverarbeitung
+ Die informa HIS GmbH verarbeitet personenbezogene Daten auf Grundlage des Art. 6 
+Abs. 1 lit. f DSGVO. Dies is
+t zulässig, soweit die Verarbeitung zur Wahrung der berech-
+tigten Interessen des Verantwortlichen oder eines Dritten erforderlich ist, sofern nicht die 
+Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz 
+personenbezogener Daten erfordern, überwiegen.
+ Die informa HIS GmbH selbst trifft keine Entscheidungen über den Abschluss eines Versi-
+cherungsvertrages oder über die Regulierung von Schäden. Sie stellt den V
+ersicherungs-
+unternehmen lediglich die Informationen für die diesbezügliche Entscheidungsfindung 
+zur Verfügung.
+ Herkunft der Daten der informa HIS GmbH
+ Die Daten im HIS stammen ausschließlich von Versicherungsunternehmen, die diese in 
+das HIS einmelden. 
+ Kategorien der personenbezogenen Daten
+ Basierend auf der HIS-Anfrage oder der HIS-Einmeldung eines Versicherungsunterneh-
+mens werden von der informa HIS GmbH – abhängig von der Versicherungsart bzw. 
+-sparte – die Dat
+en der Anfrage oder Einmeldung mit den dazu genutzten personen-
+bezogenen Daten (Name, Vorname, Geburtsdatum, Anschrift, frühere Anschriften) bzw. 
+Informationen zum Versicherungsobjekt (z. B. Fahrzeug- bzw. Gebäudeinformationen) so-
+wie das anfragende bzw. einmeldende Versicherungsunternehmen gespeichert. Bei einer 
+HIS-Einmeldung durch ein Versicherungsunternehmen, über die Sie gegebenenfalls von 
+diesem gesondert informiert werden, speichert die informa HIS GmbH erhöhte Risiken 
+oder Auffälligkeiten, die auf Unregelmäßigkeiten hindeuten können, sofern solche Infor -
+mationen an das HIS gemeldet wurden. In der Versicherungssparte Leben können dies z. 
+B. Informationen zu möglichen Erschwernissen (ohne Hinweis auf Gesundheitsdaten) und 
+Versicherungssumme/Rentenhöhe sein. Zu Fahrzeugen sind ggf. z. B. Totalschäden, fik -
+tive Abrechnungen oder Auffälligkeiten bei einer früheren Schadenmeldung gespeichert. 
+Gebäudebezogene Daten sind Anzahl und Zeitraum geltend gemachter Gebäudeschäden.
+ Kategorien von Empfängern der personenbezogenen Daten
+ Empfänger sind ausschließlich Versicherungsunternehmen mit Sitz in Deutschland sowie 
+im Einzelfall im Rahmen von Ermittlungsverfahren staatliche Ermittlungsbehörden.
+ Dauer der Datenspeicherung
+ Die informa HIS GmbH speichert Informationen über Personen gem. Art. 17 Abs. 1 lit. a) 
+DSGVO nur für eine bestimmte Zeit. Angaben über HIS-Anfragen werden t
+aggenau nach 
+zwei Jahren gelöscht.
+ Für HIS-Einmeldungen gelten folgende Speicherfristen:
+ •  Personenbezogene Daten (Name, Adresse und Geburtsdatum) sowie Fahrzeug- und Ge-
+bäudedaten werden am Ende de
+s vierten Kalenderjahres nach erstmaliger Speicherung 
+gelöscht. Sofern in dem genannten Zeitraum eine erneute Einmeldung zu einer Person 
+erfolgt, führt dies zur Verlängerung der Speicherung der personenbezogenen Daten um 
+weitere vier Jahre. Die maximale Speicherdauer beträgt in diesen Fällen 10 Jahre.
+ •  Daten aus der Versicherungssparte Leben werden bei nicht zustande gekommenen 
+Verträgen am Ende des dritten Jahres nach der erstmaligen Sp
+eicherung gelöscht. 
+ Betroffenenrechte
+ Jede betroffene Person hat das Recht auf Auskunft, auf Berichtigung, auf Löschung sowie 
+auf Einschränkung der Verarbeitung. Diese Rechte nach Art
+. 15 bis 18 DSGVO können 
+gegenüber der informa HIS GmbH unter der unten genannten Adresse geltend gemacht 
+werden. Darüber hinaus besteht die Möglichkeit, sich an die für die für die informa HIS 
+GmbH zuständige Aufsichtsbehörde – Der Hessische Datenschutzbeauftragte, Gustav- 
+Stresemann-Ring 1, 65189 Wiesbaden – zu wenden. Hinsichtlich der Meldung von Daten 
+an das HIS, ist die für das Versicherungsunternehmen zuständige Datenschutzaufsichts-
+behörde zuständig.
+ Sofern Sie wissen wollen, welche Daten die informa HIS GmbH zu Ihrer Person, zu Ihrem 
+Fahrzeug oder zu Ihrem Gebäude gespeichert hat und an wen welche D
+aten übermittelt 
+worden sind, teilt Ihnen die informa HIS GmbH dies gerne mit. Sie können dort unent -
+geltlich eine sog. Selbstauskunft anfordern. Wir bitten Sie, zu berücksichtigen, dass die 
+informa HIS GmbH aus datenschutzrechtlichen Gründen keinerlei telefonische Auskünfte 
+erteilen darf, da eine eindeutige Identifizierung Ihrer Person am Telefon nicht möglich 
+ist. Um einen Missbrauch durch Dritte zu vermeiden, benötigt die informa HIS GmbH 
+folgende Angaben von Ihnen:
+ • Name (ggf. Geburtsname), Vorname(n), Geburtsdatum
+ •  Aktuelle Anschrift (Straße, Hausnummer, Postleitzahl und Ort) sowie ggf. Voranschriften 
+der letz
+ten fünf Jahre
+ •  Ggf. FIN des Fahrzeugs. Bei Anfragen zum Fahrzeug ist die Beifügung einer Kopie der 
+Zulassungsbescheinigung I. oder II. zum Nachweis der Haltereigenschaf
+t erforderlich.
+ •  Bei Anfragen zum Gebäude ist die Beifügung des letzten Versicherungsscheins oder 
+eines sonstigen Dokuments erforderlich, das das Eigentum belegt (z. B
+. Kopie des 
+Grundbuchauszugs oder Kaufvertrags).
+ Wenn Sie – auf freiwilliger Basis – eine Kopie Ihres Ausweises (Vorder- und Rückseite) 
+beifügen, erleichtern Sie der informa HIS GmbH die Identifizierung Ihrer Person und 
+vermeiden 
+damit mögliche Rückfragen. Sie können die Selbstauskunft auch via Internet 
+unter: www.infoma-HIS.de/selbstauskunft/ bei der informa HIS GmbH beantragen.
+ Kontaktdaten des Unternehmens und des Datenschutzbeauftragten
+ informa HIS GmbH
+ Kreuzberger Ring 68
+ 65205 Wiesbaden
+ Telefon: 0611/880870-0
+ Der betriebliche Datenschutzbeauftragte der informa HIS GmbH ist zudem unter der 
+o. a. Anschrift, zu Hd. Abteilung Dat
+enschutz, oder per E-Mail unter folgender Adresse 
+erreichbar: his-datenschutz@informa.de.
+IV. Besondere Hinweise
+1. Annahmerichtlinien 
+ Es können keine Tiere versichert werden:
+ • die nicht gesund sind;
+ •  welche angeborene, genetisch bedingte oder erworbene anatomische Fehlentwick -
+lungen haben;
+ •  welche keine Kennzeichnung (Chip oder Tätowierungsnummer) haben*;
+Nach Art. 21 Abs. 1 DSGVO kann der Datenverarbeitung aus Gründen, die sich aus der 
+besonderen Situation der betroffenen Person ergeben, unter der unten genannten 
+Adresse widersprochen werden.
+Seite 3 von 5 Seite 4 von 5
+HanseMerkur Allgemeine Versicherung AG
+Siegfried-Wedells-Platz 1, 20354 Hamburg Vorstand: Eberhard Sautter (Vors.), Aufsichtsrat:
+Sitz: Hamburg • HRB: Hamburg 16768 Eric Bussert, Holger Ehses, Johannes Ganser, Raik Mildner Dr. Andreas Gent (Vors.)</Text>
+        </Page>
+        <Page id="5">
+            <Text>SEPA-Mandatserteilung
+Kontoinhaber/Zahlungsgläubiger
+HanseMerkur Versicherungen 
+Gesellschaft bürgerlichen Rechts (GbR) 
+20354 Hamburg, Siegfried-Wedells-Platz 1
+Gläubiger-Identifikationsnummer: DE74ZZZ00000066149
+Mandatsreferenz ist die Versicherungsnummer und wird beim Neugeschäft nachträg-
+lich bekannt gegeben.
+Ich ermächtige/Wir ermächtigen die HanseMerkur Versicherungen GbR zugunsten 
+der HanseMerkur Allgemeine Versicherung AG Zahlungen von meinem/unserem  
+Konto mittels Lastschrift einzuziehen. 
+Zugleich weise ich meinen/weisen wir unseren Zahlungsdienstleister an, die von  
+HanseMerkur Versicherungen GbR auf mein/unser Konto gezogenen Lastschriften 
+einzulösen.
+Hinweis: Ich kann/Wir können innerhalb von acht Wochen, beginnend mit dem Belas- 
+ tungs datum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei 
+die mit 
+meinem/unserem Zahlungsdienstleister vereinbarten Bedingungen. 
+Zahlungstermin
+Ich bin/Wir sind damit einverstanden, dass die Abbuchung des Beitrages frühes-
+tens 5 Tage ab Ausstellungsdatum des Versicherungsscheines erfolgen wird.
+ •  bei denen in den letzten 6 Monaten vor Antragstellung/Angebotserstellung ein, bzw. in 
+den letzten 36 Monaten zwei oder mehr operative Eingriffe aufgrund von Krankheit oder 
+Unfall vorgenommen wurden;
+ • bei denen ein Versicherungsvertrag durch den Vorversicherer gekündigt wurde.
+ Ferner gelten Altersgrenzen für bestimmte Produkte mit und ohne Selbstbeteiligung. 
+ Bitte sehen Sie hierzu Seite 1 des Antrags.
+ *Ausnahme: Falls eine Katze nicht gechipt ist, darf abweichend eine eindeutige Beschreibung (Fellfarbe, 
+Muster und besondere Merkmale) der Katze eingereicht werden.
+2. Definition - Gesund
+ Ihr Tier gilt als gesund, wenn zurzeit keine Behandlung stattfindet, keine 
+geplant ist und 
+Ihr Tier auch keine Symptome einer Krankheit aufweist, bzw. wenn keine angeborene 
+oder erworbene Erkrankung Ihres Tieres bekannt ist. Für kurzköpfige Hunderassen 
+(z.B. Mops, Französische Bulldogge, Deutscher Boxer) gelten bereits Atemnebenge -
+räusche wie röcheln, schnarchen und pfeifen als Symptome. Sollte Ihr Tier solche oder 
+andere Symptome aufweisen, gilt er leider nicht als gesund.
+3.
+ Versicherungssumme
+ Die vereinbarte Versicherungssumme gilt für alle Leistungen, die für den jeweiligen 
+Versicherungsfall anfallen. Gleichzeitig ist diese Summe auf alle im Versicherungsjahr 
+eintretenden Versicherungsfälle b
+egrenzt (= Jahreshöchstentschädigung). 
+Schlusserklärungen
+Seite 5 von 5
+  
+MS 108 04.23 BIPRO</Text>
+        </Page>
+    </Content>
+</PdfAnalysis>
