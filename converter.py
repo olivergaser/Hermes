@@ -6,7 +6,6 @@ import mimetypes
 import subprocess
 import shutil
 import base64
-import base64
 from email import policy
 from email.message import EmailMessage
 from pathlib import Path
@@ -272,7 +271,7 @@ def add_page_numbers(input_pdf_path, output_pdf_path):
             </style>
         </head>
         <body>
-            <div class="page-number">Seite: {page_num}</div>
+            <div class="page-number">Seite: {page_num}/{total_pages}</div>
         </body>
         </html>
         """
@@ -466,6 +465,11 @@ def convert_attachment(filepath, output_pdf_path):
     detected_mime = kind.mime if kind else None
     ext = filepath.suffix.lower()
 
+    #ignore XML and JSON attachments
+    if ext == '.xml' or ext == '.json' or detected_mime == 'application/xml' or detected_mime == 'text/xml' or detected_mime == 'application/json':
+        logger.info(f"Skipping unsupported attachment type: {filename}")
+        return False
+
     # Fallback if filetype fails
     if not detected_mime:
         detected_mime, _ = mimetypes.guess_type(filepath)
@@ -588,6 +592,8 @@ def convert_attachment(filepath, output_pdf_path):
                          sub_output_a4 = zip_path / f"zip_part_{i:04d}_a4.pdf"
                          scale_to_a4(str(sub_output_pdf), str(sub_output_a4))
                          generated_pdfs.append(str(sub_output_a4))
+                     else:
+                         logger.error(f"Failed to convert file in ZIP: {subfile}")
                  
                  if generated_pdfs:
                      # Merge
@@ -792,7 +798,7 @@ def process_eml(eml_path, output_pdf_path):
         # That is fine.
         
         # 3. Create Body PDF
-        body_pdf_path = temp_dir / "00_body.pdf"
+        body_pdf_path = temp_dir / "00_mailbody.pdf"
         # Use simple convert without custom fetcher since we embedded everything
         convert_html_to_pdf(body_content, str(body_pdf_path), base_url=str(temp_dir))
         pdf_parts.append(str(body_pdf_path))
@@ -859,7 +865,7 @@ def process_eml(eml_path, output_pdf_path):
                 success = convert_attachment(filepath, output_part_path)
                 
                 # If conversion was successful and resulted in a PDF, extract data if it's a PDF
-                if success and os.path.exists(output_part_path):
+                if success and os.path.exists(output_part_path):                    
                     # Check if the original attachment was a PDF or an Office file that got converted
                     # This logic was previously inside the attachment conversion block, now it's here.
                     # We need to re-detect the type of the *original* attachment to decide if we should extract data.
@@ -889,6 +895,9 @@ def process_eml(eml_path, output_pdf_path):
                         if pdf_data:
                             pdf_data['filename'] = filename
                             analysis_data['attachments'].append(pdf_data)
+                else:
+                    success = False
+                    logger.error(f"Conversion returned success=False or output PDF missing for attachment: {filename}")
                 
             except Exception as e:
                 # DETAILED LOGGING as requested
@@ -904,7 +913,7 @@ def process_eml(eml_path, output_pdf_path):
                 scale_to_a4(str(output_part_path), normalized_path)
                 pdf_parts.append(normalized_path)
             else:
-                logger.warning(f"Skipping attachment {filename}: Unsupported format or conversion failed.")
+                logger.error(f"Skipping attachment {filename}: Unsupported format or conversion failed.")
             
             attach_idx += 1
 

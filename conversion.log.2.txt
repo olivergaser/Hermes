@@ -1,5 +1,5 @@
-2026-02-03 12:51:40.468 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml -> z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.pdf
-2026-02-03 12:51:45.936 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml: cannot unpack non-iterable NoneType object
+2026-02-03 12:31:42.729 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml -> z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.pdf
+2026-02-03 12:31:43.032 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml: cannot unpack non-iterable NoneType object
 Traceback (most recent call last):
   File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
     process_eml(str(eml_file), str(target_pdf))
@@ -69,88 +69,159 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^
 TypeError: cannot unpack non-iterable NoneType object
 
-2026-02-03 12:51:49.824 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.eml -> z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.pdf
-2026-02-03 12:51:53.411 | INFO     | __main__:convert_attachment:477 - Converting attachment Anforderung_Kostenzusage_Arzt.oxps: MIME=application/zip, Ext=.oxps
-2026-02-03 12:51:53.411 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: Anforderung_Kostenzusage_Arzt.oxps
-2026-02-03 12:51:54.666 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: DiscardControl.xml
-2026-02-03 12:51:54.667 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\DiscardControl.xml
-2026-02-03 12:51:56.946 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
-2026-02-03 12:51:56.947 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Documents\1\FixedDocument.fdoc
-2026-02-03 12:51:56.948 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
-2026-02-03 12:51:56.948 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Documents\1\Pages\1.fpage
-2026-02-03 12:51:56.949 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:56.949 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Documents\1\Pages\_rels\1.fpage.rels
-2026-02-03 12:51:56.949 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:56.949 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Documents\1\_rels\FixedDocument.fdoc.rels
-2026-02-03 12:51:56.950 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
-2026-02-03 12:51:56.950 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\FixedDocumentSequence.fdseq
-2026-02-03 12:51:56.951 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT-206q75dc72rgifio0lv_zi0kc.xml
-2026-02-03 12:51:56.951 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Metadata\Job_PT-206q75dc72rgifio0lv_zi0kc.xml
-2026-02-03 12:51:56.951 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: SharedEmpty_PT-g6ggslnz2g61b6p87t8kkcxte.xml
-2026-02-03 12:51:56.951 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Metadata\SharedEmpty_PT-g6ggslnz2g61b6p87t8kkcxte.xml
-2026-02-03 12:51:56.952 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: SharedEmpty_PT-jqicave3qngd2yzq8z2iuvmld.xml
-2026-02-03 12:51:56.952 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Metadata\SharedEmpty_PT-jqicave3qngd2yzq8z2iuvmld.xml
-2026-02-03 12:51:56.953 | INFO     | __main__:convert_attachment:477 - Converting attachment 3ECA0A8A-6AEF-42BA-A350-5E640F0761E5.odttf: MIME=None, Ext=.odttf
-2026-02-03 12:51:56.953 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Resources\Fonts\3ECA0A8A-6AEF-42BA-A350-5E640F0761E5.odttf
-2026-02-03 12:51:56.953 | INFO     | __main__:convert_attachment:477 - Converting attachment 63D29055-FE24-4157-8949-7652142BFB78.odttf: MIME=None, Ext=.odttf
-2026-02-03 12:51:56.953 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Resources\Fonts\63D29055-FE24-4157-8949-7652142BFB78.odttf
-2026-02-03 12:51:56.954 | INFO     | __main__:convert_attachment:477 - Converting attachment D16BE5C0-2097-41C9-9377-BC7FFF4724FB.odttf: MIME=None, Ext=.odttf
-2026-02-03 12:51:56.954 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\Resources\Fonts\D16BE5C0-2097-41C9-9377-BC7FFF4724FB.odttf
-2026-02-03 12:51:56.954 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
-2026-02-03 12:51:56.955 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\[Content_Types].xml
-2026-02-03 12:51:56.955 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:56.955 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp3n9apsbh\_rels\FixedDocumentSequence.fdseq.rels
-2026-02-03 12:51:56.955 | WARNING  | __main__:convert_attachment:606 - ZIP Anforderung_Kostenzusage_Arzt.oxps contained no convertible files.
-2026-02-03 12:51:56.959 | ERROR    | __main__:process_eml:900 - Conversion returned success=False or output PDF missing for attachment: Anforderung_Kostenzusage_Arzt.oxps
-2026-02-03 12:51:56.959 | ERROR    | __main__:process_eml:916 - Skipping attachment Anforderung_Kostenzusage_Arzt.oxps: Unsupported format or conversion failed.
-2026-02-03 12:51:56.974 | INFO     | __main__:convert_attachment:477 - Converting attachment RG_Arzt_CHF.oxps: MIME=application/zip, Ext=.oxps
-2026-02-03 12:51:56.974 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: RG_Arzt_CHF.oxps
-2026-02-03 12:51:56.985 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
-2026-02-03 12:51:56.985 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Documents\1\FixedDocument.fdoc
-2026-02-03 12:51:56.986 | INFO     | __main__:convert_attachment:477 - Converting attachment Page1_Thumbnail.JPG: MIME=image/jpeg, Ext=.jpg
-2026-02-03 12:51:57.107 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
-2026-02-03 12:51:57.107 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Documents\1\Pages\1.fpage
-2026-02-03 12:51:57.108 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.108 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Documents\1\Pages\_rels\1.fpage.rels
-2026-02-03 12:51:57.109 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.JPG: MIME=image/jpeg, Ext=.jpg
-2026-02-03 12:51:57.183 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.183 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Documents\1\_rels\FixedDocument.fdoc.rels
-2026-02-03 12:51:57.184 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
-2026-02-03 12:51:57.184 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\FixedDocumentSequence.fdseq
-2026-02-03 12:51:57.185 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT.xml
-2026-02-03 12:51:57.185 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Metadata\Job_PT.xml
-2026-02-03 12:51:57.186 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: MXDC_Empty_PT.xml
-2026-02-03 12:51:57.186 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\Metadata\MXDC_Empty_PT.xml
-2026-02-03 12:51:57.187 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
-2026-02-03 12:51:57.187 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\[Content_Types].xml
-2026-02-03 12:51:57.188 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.188 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp0yt367h2\_rels\FixedDocumentSequence.fdseq.rels
-2026-02-03 12:51:57.209 | INFO     | __main__:convert_attachment:477 - Converting attachment Uberweisung_RG_Euro.oxps: MIME=application/zip, Ext=.oxps
-2026-02-03 12:51:57.210 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: Uberweisung_RG_Euro.oxps
-2026-02-03 12:51:57.219 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
-2026-02-03 12:51:57.220 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Documents\1\FixedDocument.fdoc
-2026-02-03 12:51:57.220 | INFO     | __main__:convert_attachment:477 - Converting attachment Page1_Thumbnail.JPG: MIME=image/jpeg, Ext=.jpg
-2026-02-03 12:51:57.225 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
-2026-02-03 12:51:57.225 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Documents\1\Pages\1.fpage
-2026-02-03 12:51:57.226 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.226 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Documents\1\Pages\_rels\1.fpage.rels
-2026-02-03 12:51:57.227 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.JPG: MIME=image/jpeg, Ext=.jpg
-2026-02-03 12:51:57.292 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.293 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Documents\1\_rels\FixedDocument.fdoc.rels
-2026-02-03 12:51:57.293 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
-2026-02-03 12:51:57.293 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\FixedDocumentSequence.fdseq
-2026-02-03 12:51:57.294 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT.xml
-2026-02-03 12:51:57.294 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Metadata\Job_PT.xml
-2026-02-03 12:51:57.295 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: MXDC_Empty_PT.xml
-2026-02-03 12:51:57.295 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\Metadata\MXDC_Empty_PT.xml
-2026-02-03 12:51:57.296 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
-2026-02-03 12:51:57.296 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\[Content_Types].xml
-2026-02-03 12:51:57.296 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
-2026-02-03 12:51:57.297 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmp75thwxhg\_rels\FixedDocumentSequence.fdseq.rels
-2026-02-03 12:51:58.486 | INFO     | __main__:process_eml:936 - Successfully created PDF at z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.pdf
-2026-02-03 12:51:58.498 | INFO     | __main__:process_eml:985 - Successfully created XML Analysis at z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.xml
-2026-02-03 12:52:02.421 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.eml -> z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.pdf
-2026-02-03 12:52:03.462 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.eml: maximum recursion depth exceeded
+2026-02-03 12:32:44.462 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml -> z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.pdf
+2026-02-03 12:32:44.789 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\1_TestMail_Convert_Outlook_Contact1.eml: cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
+    process_eml(str(eml_file), str(target_pdf))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SOURCE\Hermes\converter.py", line 803, in process_eml
+    convert_html_to_pdf(body_content, str(body_pdf_path), base_url=str(temp_dir))
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\SOURCE\Hermes\converter.py", line 189, in convert_html_to_pdf
+    HTML(string=html_content, base_url=base_url).write_pdf(output_path, stylesheets=[css], resolution=DPI)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\__init__.py", line 270, in write_pdf
+    self.render(font_config, counter_style, color_profiles, **options)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    .write_pdf(target, zoom, finisher, **options))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\document.py", line 392, in write_pdf
+    pdf = generate_pdf(self, target, zoom, **options)
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\pdf\__init__.py", line 222, in generate_pdf
+    page.paint(stream, scale)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\document.py", line 87, in paint
+    draw_page(self._page_box, stream)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 28, in draw_page
+    draw_stacking_context(stream, stacking_context)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 122, in draw_stacking_context
+    draw_stacking_context(stream, child_context)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 117, in draw_stacking_context
+    draw_block_level(
+    ~~~~~~~~~~~~~~~~^
+        stacking_context.page, stream, {box: stacking_context.blocks_and_cells})
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 538, in draw_block_level
+    draw_block_level(page, stream, blocks_and_cells)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 538, in draw_block_level
+    draw_block_level(page, stream, blocks_and_cells)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 538, in draw_block_level
+    draw_block_level(page, stream, blocks_and_cells)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 537, in draw_block_level
+    draw_inline_level(stream, page, child)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 518, in draw_inline_level
+    draw_inline_level(
+    ~~~~~~~~~~~~~~~~~^
+        stream, page, child, child_offset_x, text_overflow, ellipsis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 518, in draw_inline_level
+    draw_inline_level(
+    ~~~~~~~~~~~~~~~~~^
+        stream, page, child, child_offset_x, text_overflow, ellipsis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\__init__.py", line 515, in draw_inline_level
+    draw_text(
+    ~~~~~~~~~^
+        stream, child, child_offset_x, text_overflow, ellipsis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\draw\text.py", line 59, in draw_text
+    stream.set_color(textbox.style['color'])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\weasyprint\pdf\stream.py", line 88, in set_color
+    *channels, alpha = color
+    ^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+2026-02-03 12:32:48.593 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.eml -> z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.pdf
+2026-02-03 12:33:26.454 | INFO     | __main__:convert_attachment:477 - Converting attachment Anforderung_Kostenzusage_Arzt.oxps: MIME=application/zip, Ext=.oxps
+2026-02-03 12:33:43.358 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: Anforderung_Kostenzusage_Arzt.oxps
+2026-02-03 12:36:00.680 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: DiscardControl.xml
+2026-02-03 12:36:07.623 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\DiscardControl.xml
+2026-02-03 12:36:32.959 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
+2026-02-03 12:36:53.378 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Documents\1\FixedDocument.fdoc
+2026-02-03 12:36:56.090 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
+2026-02-03 12:36:56.091 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Documents\1\Pages\1.fpage
+2026-02-03 12:36:56.092 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.092 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Documents\1\Pages\_rels\1.fpage.rels
+2026-02-03 12:36:56.092 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.093 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Documents\1\_rels\FixedDocument.fdoc.rels
+2026-02-03 12:36:56.093 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
+2026-02-03 12:36:56.093 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\FixedDocumentSequence.fdseq
+2026-02-03 12:36:56.094 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT-206q75dc72rgifio0lv_zi0kc.xml
+2026-02-03 12:36:56.094 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Metadata\Job_PT-206q75dc72rgifio0lv_zi0kc.xml
+2026-02-03 12:36:56.094 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: SharedEmpty_PT-g6ggslnz2g61b6p87t8kkcxte.xml
+2026-02-03 12:36:56.094 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Metadata\SharedEmpty_PT-g6ggslnz2g61b6p87t8kkcxte.xml
+2026-02-03 12:36:56.095 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: SharedEmpty_PT-jqicave3qngd2yzq8z2iuvmld.xml
+2026-02-03 12:36:56.095 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Metadata\SharedEmpty_PT-jqicave3qngd2yzq8z2iuvmld.xml
+2026-02-03 12:36:56.095 | INFO     | __main__:convert_attachment:477 - Converting attachment 3ECA0A8A-6AEF-42BA-A350-5E640F0761E5.odttf: MIME=None, Ext=.odttf
+2026-02-03 12:36:56.096 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Resources\Fonts\3ECA0A8A-6AEF-42BA-A350-5E640F0761E5.odttf
+2026-02-03 12:36:56.096 | INFO     | __main__:convert_attachment:477 - Converting attachment 63D29055-FE24-4157-8949-7652142BFB78.odttf: MIME=None, Ext=.odttf
+2026-02-03 12:36:56.096 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Resources\Fonts\63D29055-FE24-4157-8949-7652142BFB78.odttf
+2026-02-03 12:36:56.097 | INFO     | __main__:convert_attachment:477 - Converting attachment D16BE5C0-2097-41C9-9377-BC7FFF4724FB.odttf: MIME=None, Ext=.odttf
+2026-02-03 12:36:56.097 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\Resources\Fonts\D16BE5C0-2097-41C9-9377-BC7FFF4724FB.odttf
+2026-02-03 12:36:56.097 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
+2026-02-03 12:36:56.097 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\[Content_Types].xml
+2026-02-03 12:36:56.098 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.098 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpl4lt3s5f\_rels\FixedDocumentSequence.fdseq.rels
+2026-02-03 12:36:56.098 | WARNING  | __main__:convert_attachment:606 - ZIP Anforderung_Kostenzusage_Arzt.oxps contained no convertible files.
+2026-02-03 12:36:56.102 | ERROR    | __main__:process_eml:900 - Conversion returned success=False or output PDF missing for attachment: Anforderung_Kostenzusage_Arzt.oxps
+2026-02-03 12:36:56.103 | ERROR    | __main__:process_eml:916 - Skipping attachment Anforderung_Kostenzusage_Arzt.oxps: Unsupported format or conversion failed.
+2026-02-03 12:36:56.109 | INFO     | __main__:convert_attachment:477 - Converting attachment RG_Arzt_CHF.oxps: MIME=application/zip, Ext=.oxps
+2026-02-03 12:36:56.109 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: RG_Arzt_CHF.oxps
+2026-02-03 12:36:56.121 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
+2026-02-03 12:36:56.121 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Documents\1\FixedDocument.fdoc
+2026-02-03 12:36:56.123 | INFO     | __main__:convert_attachment:477 - Converting attachment Page1_Thumbnail.JPG: MIME=image/jpeg, Ext=.jpg
+2026-02-03 12:36:56.223 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
+2026-02-03 12:36:56.223 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Documents\1\Pages\1.fpage
+2026-02-03 12:36:56.224 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.224 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Documents\1\Pages\_rels\1.fpage.rels
+2026-02-03 12:36:56.225 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.JPG: MIME=image/jpeg, Ext=.jpg
+2026-02-03 12:36:56.292 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.292 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Documents\1\_rels\FixedDocument.fdoc.rels
+2026-02-03 12:36:56.293 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
+2026-02-03 12:36:56.293 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\FixedDocumentSequence.fdseq
+2026-02-03 12:36:56.294 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT.xml
+2026-02-03 12:36:56.294 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Metadata\Job_PT.xml
+2026-02-03 12:36:56.294 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: MXDC_Empty_PT.xml
+2026-02-03 12:36:56.294 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\Metadata\MXDC_Empty_PT.xml
+2026-02-03 12:36:56.295 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
+2026-02-03 12:36:56.295 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\[Content_Types].xml
+2026-02-03 12:36:56.296 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.296 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpt728kbff\_rels\FixedDocumentSequence.fdseq.rels
+2026-02-03 12:36:56.318 | INFO     | __main__:convert_attachment:477 - Converting attachment Uberweisung_RG_Euro.oxps: MIME=application/zip, Ext=.oxps
+2026-02-03 12:36:56.319 | INFO     | __main__:convert_attachment:560 - Processing ZIP archive: Uberweisung_RG_Euro.oxps
+2026-02-03 12:36:56.328 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc: MIME=None, Ext=.fdoc
+2026-02-03 12:36:56.328 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Documents\1\FixedDocument.fdoc
+2026-02-03 12:36:56.329 | INFO     | __main__:convert_attachment:477 - Converting attachment Page1_Thumbnail.JPG: MIME=image/jpeg, Ext=.jpg
+2026-02-03 12:36:56.332 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage: MIME=None, Ext=.fpage
+2026-02-03 12:36:56.333 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Documents\1\Pages\1.fpage
+2026-02-03 12:36:56.333 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.fpage.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.333 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Documents\1\Pages\_rels\1.fpage.rels
+2026-02-03 12:36:56.334 | INFO     | __main__:convert_attachment:477 - Converting attachment 1.JPG: MIME=image/jpeg, Ext=.jpg
+2026-02-03 12:36:56.399 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocument.fdoc.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.399 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Documents\1\_rels\FixedDocument.fdoc.rels
+2026-02-03 12:36:56.400 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq: MIME=None, Ext=.fdseq
+2026-02-03 12:36:56.400 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\FixedDocumentSequence.fdseq
+2026-02-03 12:36:56.401 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: Job_PT.xml
+2026-02-03 12:36:56.401 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Metadata\Job_PT.xml
+2026-02-03 12:36:56.401 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: MXDC_Empty_PT.xml
+2026-02-03 12:36:56.402 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\Metadata\MXDC_Empty_PT.xml
+2026-02-03 12:36:56.402 | INFO     | __main__:convert_attachment:470 - Skipping unsupported attachment type: [Content_Types].xml
+2026-02-03 12:36:56.402 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\[Content_Types].xml
+2026-02-03 12:36:56.403 | INFO     | __main__:convert_attachment:477 - Converting attachment FixedDocumentSequence.fdseq.rels: MIME=None, Ext=.rels
+2026-02-03 12:36:56.403 | ERROR    | __main__:convert_attachment:596 - Failed to convert file in ZIP: C:\Temp\tmpgko32arg\_rels\FixedDocumentSequence.fdseq.rels
+2026-02-03 12:36:57.252 | INFO     | __main__:process_eml:936 - Successfully created PDF at z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.pdf
+2026-02-03 12:36:57.262 | INFO     | __main__:process_eml:985 - Successfully created XML Analysis at z:\ALL\Hermes-Testdaten\test\NEG_TestMail_Convert_XPS.xml
+2026-02-03 12:37:01.584 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.eml -> z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.pdf
+2026-02-03 12:37:02.691 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\TestMail_Convert_PDF15_pdfalsdat.eml: maximum recursion depth exceeded
 Traceback (most recent call last):
   File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
     process_eml(str(eml_file), str(target_pdf))
@@ -6204,8 +6275,8 @@ Traceback (most recent call last):
            ~~~~~~~~~~~~~~~~~~~~^^
 RecursionError: maximum recursion depth exceeded
 
-2026-02-03 12:52:07.677 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.eml -> z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.pdf
-2026-02-03 12:52:08.069 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.eml: cannot unpack non-iterable NoneType object
+2026-02-03 12:37:06.783 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.eml -> z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.pdf
+2026-02-03 12:37:07.199 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\Testmail_utf8_from_3.eml: cannot unpack non-iterable NoneType object
 Traceback (most recent call last):
   File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
     process_eml(str(eml_file), str(target_pdf))
@@ -6275,8 +6346,8 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^
 TypeError: cannot unpack non-iterable NoneType object
 
-2026-02-03 12:52:11.866 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.eml -> z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.pdf
-2026-02-03 12:52:12.891 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.eml: cannot unpack non-iterable NoneType object
+2026-02-03 12:37:11.385 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.eml -> z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.pdf
+2026-02-03 12:37:12.386 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\Testmail_xml_defekt.eml: cannot unpack non-iterable NoneType object
 Traceback (most recent call last):
   File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
     process_eml(str(eml_file), str(target_pdf))
@@ -6341,11 +6412,11 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^
 TypeError: cannot unpack non-iterable NoneType object
 
-2026-02-03 12:52:16.627 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.eml -> z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.pdf
-2026-02-03 12:52:18.554 | INFO     | __main__:convert_attachment:477 - Converting attachment 2018_06_25_18_23_51.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:18.561 | INFO     | __main__:process_eml:893 - Extracting XML data for: 2018_06_25_18_23_51.pdf
-2026-02-03 12:52:18.596 | ERROR    | __main__:extract_pdf_data:349 - Failed to extract info from PDF C:\Temp\tmp5qu1jprm\01_2018_06_25_18_23_51.pdf.pdf: File has not been decrypted
-2026-02-03 12:52:18.612 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.eml: File has not been decrypted
+2026-02-03 12:37:16.491 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.eml -> z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.pdf
+2026-02-03 12:37:21.369 | INFO     | __main__:convert_attachment:477 - Converting attachment 2018_06_25_18_23_51.pdf: MIME=application/pdf, Ext=.pdf
+2026-02-03 12:37:21.375 | INFO     | __main__:process_eml:893 - Extracting XML data for: 2018_06_25_18_23_51.pdf
+2026-02-03 12:37:21.427 | ERROR    | __main__:extract_pdf_data:349 - Failed to extract info from PDF C:\Temp\tmp9wzwlf5w\01_2018_06_25_18_23_51.pdf.pdf: File has not been decrypted
+2026-02-03 12:37:21.459 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\WG  117 062 512 232 A 00016 Upietz  Tim.eml: File has not been decrypted
 Traceback (most recent call last):
   File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
     process_eml(str(eml_file), str(target_pdf))
@@ -6378,55 +6449,3 @@ Traceback (most recent call last):
     raise FileNotDecryptedError("File has not been decrypted")
 pypdf.errors.FileNotDecryptedError: File has not been decrypted
 
-2026-02-03 12:52:22.445 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\X03004_01968ae6-d38e-40e2-9e70-46c19f7947a6.eml -> z:\ALL\Hermes-Testdaten\test\X03004_01968ae6-d38e-40e2-9e70-46c19f7947a6.pdf
-2026-02-03 12:52:23.540 | INFO     | __main__:convert_attachment:477 - Converting attachment Stornorechnung.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:23.552 | INFO     | __main__:process_eml:893 - Extracting XML data for: Stornorechnung.pdf
-2026-02-03 12:52:23.559 | ERROR    | __main__:extract_pdf_data:349 - Failed to extract info from PDF C:\Temp\tmpq0rc1qhm\01_Stornorechnung.pdf.pdf: File has not been decrypted
-2026-02-03 12:52:23.571 | ERROR    | __main__:<module>:1107 - Failed to process z:\ALL\Hermes-Testdaten\test\X03004_01968ae6-d38e-40e2-9e70-46c19f7947a6.eml: File has not been decrypted
-Traceback (most recent call last):
-  File "C:\SOURCE\Hermes\converter.py", line 1098, in <module>
-    process_eml(str(eml_file), str(target_pdf))
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\SOURCE\Hermes\converter.py", line 913, in process_eml
-    scale_to_a4(str(output_part_path), normalized_path)
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\SOURCE\Hermes\converter.py", line 120, in scale_to_a4
-    for page in reader.pages:
-                ^^^^^^^^^^^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\_page.py", line 2247, in __iter__
-    for i in range(len(self)):
-                   ~~~^^^^^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\_page.py", line 2172, in __len__
-    return self.length_function()
-           ~~~~~~~~~~~~~~~~~~~~^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\_doc_common.py", line 347, in get_num_pages
-    return self.root_object["/Pages"]["/Count"]  # type: ignore
-           ^^^^^^^^^^^^^^^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\_reader.py", line 217, in root_object
-    if is_null_or_none(root):
-       ~~~~~~~~~~~~~~~^^^^^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\generic\_base.py", line 936, in is_null_or_none
-    and (x.get_object() is None or isinstance(x.get_object(), NullObject))
-         ~~~~~~~~~~~~^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\generic\_base.py", line 378, in get_object
-    return self.pdf.get_object(self)
-           ~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "c:\SOURCE\Hermes\.venv\Lib\site-packages\pypdf\_reader.py", line 485, in get_object
-    raise FileNotDecryptedError("File has not been decrypted")
-pypdf.errors.FileNotDecryptedError: File has not been decrypted
-
-2026-02-03 12:52:27.292 | INFO     | __main__:<module>:1097 - Processing z:\ALL\Hermes-Testdaten\test\X05001_fb83b2cc-b444-41fa-8e35-736a594ae5c5.eml -> z:\ALL\Hermes-Testdaten\test\X05001_fb83b2cc-b444-41fa-8e35-736a594ae5c5.pdf
-2026-02-03 12:52:28.665 | INFO     | __main__:convert_attachment:477 - Converting attachment Mail_bestandsuebertragungenhansemerkurde_C49B0.eml: MIME=message/rfc822, Ext=.eml
-2026-02-03 12:52:28.665 | INFO     | __main__:convert_attachment:536 - Recursively processing EML: Mail_bestandsuebertragungenhansemerkurde_C49B0.eml
-2026-02-03 12:52:29.338 | INFO     | __main__:convert_attachment:477 - Converting attachment SMV_6A8B9D6C-D7AE-422A-8FE4-E6011F1EFF71.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:29.342 | INFO     | __main__:process_eml:893 - Extracting XML data for: SMV_6A8B9D6C-D7AE-422A-8FE4-E6011F1EFF71.pdf
-2026-02-03 12:52:29.870 | INFO     | __main__:process_eml:936 - Successfully created PDF at C:\Temp\tmpzefpm_76\01_Mail_bestandsuebertragungenhansemerkurde_C49B0.eml.pdf
-2026-02-03 12:52:29.874 | INFO     | __main__:process_eml:985 - Successfully created XML Analysis at C:\Temp\tmpzefpm_76\01_Mail_bestandsuebertragungenhansemerkurde_C49B0.eml.xml
-2026-02-03 12:52:29.976 | INFO     | __main__:convert_attachment:477 - Converting attachment Maklervertrag_E92AB048-0AE3-4F10-998C-4D488A5A.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:29.979 | INFO     | __main__:process_eml:893 - Extracting XML data for: Maklervertrag_E92AB048-0AE3-4F10-998C-4D488A5A.pdf
-2026-02-03 12:52:29.986 | INFO     | __main__:convert_attachment:477 - Converting attachment Maklervollmacht_20015589-58F9-4C48-9923-4DE8C5.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:29.988 | INFO     | __main__:process_eml:893 - Extracting XML data for: Maklervollmacht_20015589-58F9-4C48-9923-4DE8C5.pdf
-2026-02-03 12:52:29.994 | INFO     | __main__:convert_attachment:477 - Converting attachment MV_C1711875-4F60-4ED8-8D7F-DCE03603AA5D.pdf: MIME=application/pdf, Ext=.pdf
-2026-02-03 12:52:29.996 | INFO     | __main__:process_eml:893 - Extracting XML data for: MV_C1711875-4F60-4ED8-8D7F-DCE03603AA5D.pdf
-2026-02-03 12:52:31.390 | INFO     | __main__:process_eml:936 - Successfully created PDF at z:\ALL\Hermes-Testdaten\test\X05001_fb83b2cc-b444-41fa-8e35-736a594ae5c5.pdf
-2026-02-03 12:52:31.396 | INFO     | __main__:process_eml:985 - Successfully created XML Analysis at z:\ALL\Hermes-Testdaten\test\X05001_fb83b2cc-b444-41fa-8e35-736a594ae5c5.xml

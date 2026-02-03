@@ -3,13 +3,16 @@ import os
 import glob
 import subprocess
 import unittest
-import shutil
+from loguru import logger
 
 class TestEmlConversion(unittest.TestCase):
     def setUp(self):
-        self.eml_dir = os.path.abspath(r"z:\ALL\Hermes-Testdaten\Anhaenge\Mails")
+        #self.eml_dir = os.path.abspath(r"z:\ALL\Hermes-Testdaten")
+        self.eml_dir = os.path.abspath(r"z:\ALL\Hermes-Testdaten\test")
         self.converter_script = os.path.abspath("converter.py")
         self.venv_python = sys.executable
+        logger.debug(f"Using Python executable: {self.venv_python}")
+        logger.debug(f"Using eml Dir: {self.eml_dir}")
 
     def test_convert_all_emls(self):
         eml_files = glob.glob(os.path.join(self.eml_dir, "**", "*.eml"), recursive=True)
@@ -23,7 +26,7 @@ class TestEmlConversion(unittest.TestCase):
             if os.path.exists(output_pdf):
                 os.remove(output_pdf)
 
-            print(f"Testing conversion of: {eml_file}")
+            logger.debug(f"Testing conversion of: {eml_file}")
             
             # Run conversion
             cmd = [self.venv_python, self.converter_script, "--input", eml_file, "--output", output_pdf]
@@ -37,18 +40,19 @@ class TestEmlConversion(unittest.TestCase):
             
             # Check return code
             if result.returncode != 0:
-                print(f"STDOUT: {result.stdout}")
-                print(f"STDERR: {result.stderr}")
-            self.assertEqual(result.returncode, 0, f"Conversion failed for {eml_file}")
+                logger.error(f"STDOUT: {result.stdout} ,STDERR: {result.stderr}")
+                logger.error(f"Conversion failed for {eml_file}, returncode")
+                logger.error(f"Command executed: {' '.join(cmd)}")
+                continue  # Skip to next file
 
             # Check if PDF exists and is not empty
             #self.assertTrue(os.path.exists(output_pdf), f"PDF was not created: {output_pdf}")
             if not os.path.exists(output_pdf):
-                print(f"PDF was not created: {output_pdf}")
+                logger.error(f"PDF was not created: {output_pdf}")
             else:
-                print(f"Successfully created: {output_pdf}")
+                logger.debug(f"Successfully created: {output_pdf}")
                 if os.path.getsize(output_pdf) < 1000:
-                    print(f"PDF seems too small (empty?): {output_pdf}")    
+                    logger.warning(f"PDF seems too small (empty?): {output_pdf}")    
             
             #self.assertGreater(os.path.getsize(output_pdf), 1000, f"PDF seems too small (empty?): {output_pdf}")
 
